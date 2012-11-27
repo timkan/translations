@@ -4,16 +4,16 @@ classification: :lesson
 created_at: 2012-09-19 14:32:04.000000000 Z
 domain: :freestyle
 down_votes: 402
-entry: This tutorial will introduce you to Ruby, an object-oriented scripting language
-  you can use on its own or as part of the Ruby on Rails web framework.
+entry: 这篇教程将介绍Ruby，一种面相对象的脚本语言。
+  你可以单独使用Ruby，也可以在Ruby on Rails中使用。
 feedback_total: 335
 is_project: false
 language_id: !ruby/object:Moped::BSON::ObjectId
   raw_data: !binary |-
     TyFOXyFuzxlcRMGV
 level: :beginner
-locale: en
-name: Introduction to Ruby
+locale: zh
+name: Ruby 简介
 num_exercises: 16
 num_published_exercises: 16
 num_published_sections: 4
@@ -43,43 +43,33 @@ sections:
 - !ruby/hash:Moped::BSON::Document
   created_at: 2012-09-19 14:32:04.000000000 Z
   default_view: console_and_editor
-  entry: Ruby was designed to be clear, succinct, and fun to use. We'll start with
-    a brief history of Ruby and how it's used, then we'll jump right into writing
-    code! This course assumes no prior knowledge of Ruby.
+  entry: Ruby是一门简洁清新并且有趣的语言。接下去我们先简要了解下Ruby的历史和用法，
+    然后就开始动手写代码！这是一篇Ruby的入门教程，所以你没了解过Ruby也没关系。
   exercises:
   - _id: !ruby/object:Moped::BSON::ObjectId
       raw_data: !binary |-
         UFnXZeiJ4wACAAbJ
     created_at: 2012-09-19 14:32:05.000000000 Z
-    default_code: ! '# Welcome to Ruby!'
-    entry: ! 'Ruby is a powerful, flexible programming language you can use in web/Internet
-      development, to process text, to create games, and as part of the popular Ruby
-      on Rails web framework. Ruby is:
+    default_code: ! '# 欢迎来到 Ruby 世界!'
+    entry: ! 'Ruby是一门强大，灵活的编程语言，你可以用Ruby来做Web开发、文本处理、游戏开发，
+      同时它也是Web开发框架Ruby on Rails的一部分。Ruby有如下特性：
 
 
-      * **High-level**, meaning reading and writing Ruby is really easy—it looks a
-      lot like regular English!
+      * **高级语言**, 读写Ruby就像写一般英语一样简单。
 
 
-      * **Interpreted**, meaning you don''t need a compiler to write and run Ruby.
-      You can write it here at Codecademy or even on your own computer (many are shipped
-      with the Ruby interpreter built in—we''ll get to the interpreter later in this
-      lesson).
+      * **解释执行**, 你不需要先编译再运行Ruby。你可以在Codecademy网站上直接写，
+      或者在你自己电脑上（很多系统都预装了Ruby解释器，后续课程将有介绍）。 
+
+      * **面向对象**, 用户在编程时可以用「对象」的形式来操纵数据结构。
+      后面我们会介绍什么是对象，现在你只需知道，在Ruby里，*所有东西*都是对象。
 
 
-      * **Object-oriented**, meaning it allows users to manipulate data structures
-      called objects in order to build and execute programs. We''ll learn more about
-      objects later, but for now, all you need to know is *everything* in Ruby is
-      an object.
+      * **易用**. 1995年，松本行弘（Yukihiro Matsumoto，简称"Matz"）创造了Ruby。
+      在设计之初，Ruby就主张从人的角度来让机器工作，强调易用性。
 
 
-      * **Easy to use**. Ruby was designed by Yukihiro Matsumoto (often just called
-      "Matz") in 1995. Matz set out to design a language that emphasized human needs
-      over those of the computer, which is why Ruby is so easy to pick up.
-
-
-      This course assumes no previous knowledge of Ruby in particular or programming/computer
-      science in general.'
+      本课程受众对象是没学过Ruby，甚至没学过编程/计算机的人。'
     expect_error: false
     feedback_stats:
       positive_feedback: 10
