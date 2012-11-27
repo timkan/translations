@@ -1,0 +1,784 @@
+--- !ruby/hash:Moped::BSON::Document
+avg_user_rating: 4.422962226640159
+classification: :lesson
+created_at: 2012-09-19 14:32:04.000000000 Z
+domain: :freestyle
+down_votes: 402
+entry: This tutorial will introduce you to Ruby, an object-oriented scripting language
+  you can use on its own or as part of the Ruby on Rails web framework.
+feedback_total: 335
+is_project: false
+language_id: !ruby/object:Moped::BSON::ObjectId
+  raw_data: !binary |-
+    TyFOXyFuzxlcRMGV
+level: :beginner
+locale: en
+name: Introduction to Ruby
+num_exercises: 16
+num_published_exercises: 16
+num_published_sections: 4
+num_readiness_feedbacks: 182
+num_sections: 4
+num_user_ratings: 8048
+published: true
+published_at: 2012-09-20 01:46:12.000000000 Z
+rating: 5622.819215045559
+read_feedback_total: 250
+readiness: 96.71794871794872
+recommended: false
+review_status: :approved
+roles:
+  manager: []
+  editor: []
+topic_id: !ruby/object:Moped::BSON::ObjectId
+  raw_data: !binary |-
+    T5Ws8pVtgwADABwX
+total_user_rating: 35596.0
+up_votes: 6066
+updated_at: 2012-11-26 16:45:17.380000000 Z
+user_id: !ruby/object:Moped::BSON::ObjectId
+  raw_data: !binary |-
+    TwTxhHBXEgADAGwS
+sections:
+- !ruby/hash:Moped::BSON::Document
+  created_at: 2012-09-19 14:32:04.000000000 Z
+  default_view: console_and_editor
+  entry: Ruby was designed to be clear, succinct, and fun to use. We'll start with
+    a brief history of Ruby and how it's used, then we'll jump right into writing
+    code! This course assumes no prior knowledge of Ruby.
+  exercises:
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFnXZeiJ4wACAAbJ
+    created_at: 2012-09-19 14:32:05.000000000 Z
+    default_code: ! '# Welcome to Ruby!'
+    entry: ! 'Ruby is a powerful, flexible programming language you can use in web/Internet
+      development, to process text, to create games, and as part of the popular Ruby
+      on Rails web framework. Ruby is:
+
+
+      * **High-level**, meaning reading and writing Ruby is really easy—it looks a
+      lot like regular English!
+
+
+      * **Interpreted**, meaning you don''t need a compiler to write and run Ruby.
+      You can write it here at Codecademy or even on your own computer (many are shipped
+      with the Ruby interpreter built in—we''ll get to the interpreter later in this
+      lesson).
+
+
+      * **Object-oriented**, meaning it allows users to manipulate data structures
+      called objects in order to build and execute programs. We''ll learn more about
+      objects later, but for now, all you need to know is *everything* in Ruby is
+      an object.
+
+
+      * **Easy to use**. Ruby was designed by Yukihiro Matsumoto (often just called
+      "Matz") in 1995. Matz set out to design a language that emphasized human needs
+      over those of the computer, which is why Ruby is so easy to pick up.
+
+
+      This course assumes no previous knowledge of Ruby in particular or programming/computer
+      science in general.'
+    expect_error: false
+    feedback_stats:
+      positive_feedback: 10
+      total: 18
+      other: 5
+      correctness_test_issue: 3
+    from_console: false
+    hint: ''
+    instruction: Ready to learn Ruby? Click the green Run button to continue!
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Overview & Sneak Peek
+    solution_code: ''
+    solution_entry: ''
+    tabs: []
+    test_functions: return true
+    updated_at: 2012-10-26 03:16:21.660000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFnX3ibViwACAAtW
+    created_at: 2012-09-19 14:34:06.000000000 Z
+    default_code: ! 'my_num =     # Add your code here!
+
+
+      my_boolean =     # And here!
+
+
+      my_string =     # Also here.'
+    entry: ! 'In Ruby, your information (or data) can come in different types. There
+      are three **data types** in Ruby that we''re interested in right now: **numbers**,
+      **booleans** (which can be true or false), and **strings** (words or phrases
+      like `"I''m learning Ruby!"`).
+
+
+      Computer programs exist to quickly analyze and manipulate data. For that reason,
+      it''s important for us to understand the different data types that we can use
+      in our programs.
+
+
+      Reminder: never use quotation marks ('' or ") with booleans, or Ruby will think
+      you''re talking about a string (a word or phrase) instead of a value that can
+      be true or false. It''s also important to remember that Ruby is case-sensitive
+      (it cares about capitalization).'
+    expect_error: false
+    feedback_stats:
+      instructional_text_issue: 5
+      total: 23
+      positive_feedback: 8
+      other: 9
+      correctness_test_issue: 1
+    from_console: false
+    hint: You can set a variable to a value just by typing the value after the `=`
+      sign.
+    instruction: ! 'Set the following variables to the corresponding values:
+
+
+      * `my_num` to the value `25`
+
+      * `my_boolean` to the value `true`
+
+      * `my_string` to the value `"Ruby"` (note the capitalization!)'
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: ! 'Data Types: Numbers, Strings, Booleans'
+    solution_code: ''
+    solution_entry: ''
+    tabs: []
+    test_functions: ! "if code == nil\n  return \"You gotta type something!\"\nend\n\nif
+      exception.kind_of? SyntaxError\n  return \"Make sure to put the value of each
+      variable after the equals sign!\"\nend\n\nif my_num != 25\n  return \"It looks
+      like you didn't set my_num equal to 25.\"\nend\n\nif !my_boolean\n  return \"It
+      looks like you didn't set my_boolean to true.\"\nend\n\nif my_string != \"Ruby\"\n
+      \ return \"It looks like you didn't set my_string to \\\"Ruby\\\".\"\nend\n\nreturn
+      true"
+    updated_at: 2012-11-24 06:47:14.760000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFnX34qTxQACAAuI
+    created_at: 2012-09-19 14:34:07.000000000 Z
+    default_code: ''
+    entry: ! "One of the most basic concepts in computer programming is the **variable**.
+      You can think of a variable as a word or name that grasps a single value. For
+      example, let's say you needed the number 25 from our last example, but you're
+      not going to use it right away. You can set a variable, say `my_num`, to grasp
+      the value 25 and hang onto it for later use, like this:\n\n    my_num = 25\n\nDeclaring
+      variables in Ruby is easy: you just write out a name like `my_num`, use `=`
+      to assign it a value, and you're done! If you need to change a variable, no
+      sweat: just type it again and hit `=` to assign it a new value."
+    expect_error: false
+    feedback_stats:
+      instructional_text_issue: 3
+      total: 16
+      positive_feedback: 6
+      other: 6
+      correctness_test_issue: 1
+    from_console: false
+    hint: ''
+    instruction: Set the variable `my_num` to the value `100`, then click the Run
+      button to run your code.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Variables
+    solution_code: ''
+    solution_entry: ''
+    tabs: []
+    test_functions: ! "if code == nil\n  return \"You gotta type something!\"\nend\n\nbegin\n
+      \ my_num\nrescue NameError\n  return \"Did you create a variable called my_num?\"\nend\n\nif
+      my_num != 100\n  return \"Did you set my_num equal to 100?\"\nend\n\nreturn
+      true"
+    updated_at: 2012-11-02 16:19:37.349000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFnX4OiJ4wACAAuL
+    created_at: 2012-09-19 14:34:08.000000000 Z
+    default_code: ''
+    entry: ! 'Ruby isn''t limited to simple expressions of assignment like `my_num
+      = 100`; it can also do all the math you learned about in school.
+
+
+      There are six arithmetic operators we''re going to focus on:
+
+
+      Addition (`+`)
+
+      Subtraction (`-`)
+
+      Multiplication (`*`)
+
+      Division (`/`)
+
+      Exponentiation (`**`)
+
+      Modulo (`%`)
+
+
+      The only ones that probably look weird to you are exponentiation and modulo.
+      Exponentiation raises one number (the base) to the power of the other (the exponent).
+      For example, `2**3` is `8`, since `2**3` means "give me 2 * 2 * 2" (2 multiplied
+      together 3 times). `3**2` is `9` (3 * 3), and so on.
+
+
+      Modulo returns the remainder of division. For example, `25 % 7` would be `4`,
+      since 7 goes into 25 3 times with 4 left over.'
+    expect_error: false
+    feedback_stats:
+      positive_feedback: 6
+      total: 23
+      correctness_test_issue: 4
+      other: 8
+      instructional_text_issue: 5
+    from_console: false
+    hint: ''
+    instruction: Do a little math practice in the editor (the window to the right).
+      When you're ready, click Run to move on to the next exercise.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Math
+    solution_code: ''
+    solution_entry: ''
+    tabs: []
+    test_functions: ! "if code == nil\n  return \"You gotta type something!\"\nend\n\nif
+      result == nil\n  return \"Make sure to do at least one math calculation in the
+      editor!\"\nend\n\nreturn true"
+    updated_at: 2012-10-03 04:51:42.000000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFnX4Zro+AACAAx3
+    created_at: 2012-09-19 14:34:09.000000000 Z
+    default_code: ''
+    entry: ! "The `print` command just takes whatever you give it and prints it to
+      the screen. `puts` (for \"put string\") is slightly different: it adds a new
+      (blank) line after the thing you want it to print. You use them like this:\n\n
+      \   puts \"What's up?\"\n    print \"Oxnard Montalvo\"\n\nNo parentheses or
+      semicolons needed!"
+    expect_error: false
+    feedback_stats:
+      other: 14
+      total: 59
+      instructional_text_issue: 24
+      correctness_test_issue: 6
+      positive_feedback: 15
+    from_console: false
+    hint: ''
+    instruction: ! 'In the editor, use at least one `print` statement and at least
+      one `puts` statement. You can print out any strings you like! (Make sure to
+      put your strings between quotes, like this: `"Hello!"`.)'
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: ! '''puts'' and ''print'''
+    solution_code: ''
+    solution_entry: ''
+    tabs: []
+    test_functions: ! "if code == nil\n  return \"You gotta type something!\"\nend\n\nif
+      code.scan(\"print\").length == 0 || prints.length == 0\n  return \"Did you remember
+      to put in at least one print statement?\"\nend\n\nif code.scan(\"puts\").length
+      == 0 || prints.length == 0\n  return \"Did you remember to put in at least one
+      puts statement?\"\nend\n\nreturn true"
+    updated_at: 2012-10-09 02:00:52.000000000 Z
+    view: console_and_editor
+  feedback_total: 139
+  index: 0
+  language_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TyFOXyFuzxlcRMGV
+  name: Variables & Data Types
+  num_forum_answers: 58
+  num_forum_questions: 21
+  published: true
+  read_feedback_total: 9
+  updated_at: 2012-11-24 06:47:14.788000000 Z
+  user_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TwTxhHBXEgADAGwS
+  viewable: false
+- !ruby/hash:Moped::BSON::Document
+  created_at: 2012-09-19 14:45:35.000000000 Z
+  default_view: console_and_editor
+  entry: Strings (words or phrases) have a lot of built-in abilities. These abilities
+    are called methods, and in this section, we'll learn how to use them to control
+    text!
+  exercises:
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFnakALvRgACADao
+    created_at: 2012-09-19 14:45:36.000000000 Z
+    default_code: ''
+    entry: ! 'Because everything in Ruby is an object (more on this later), everything
+      in Ruby has certain built-in abilities called **methods**. You can think of
+      methods as "skills" that certain objects have. For instance, strings (words
+      or phrases) have built-in methods that can tell you the length of the string,
+      reverse the string, and more.
+
+
+      We also promised to tell you more about the **interpreter**. The interpreter
+      is the program that takes the code you write and runs it. You type code in the
+      **editor**, the interpreter reads your code, and it shows you the result of
+      running your code in the **console** (the bottom window on the right).'
+    expect_error: false
+    feedback_stats:
+      positive_feedback: 6
+      total: 13
+      typo: 1
+      instructional_text_issue: 3
+      other: 2
+      correctness_test_issue: 1
+    from_console: false
+    hint: ''
+    instruction: Enough small talk. Click Run to start learning about string methods!
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Everything in Ruby is an Object
+    solution_code: ''
+    solution_entry: ''
+    tabs: []
+    test_functions: return true
+    updated_at: 2012-10-31 20:09:24.618000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFnapa34sgACADrm
+    created_at: 2012-09-19 14:45:57.000000000 Z
+    default_code: ''
+    entry: ! "Methods are summoned using a `.`. If you have a string, `\"I love espresso\"`,
+      and take the `.length` of it, Ruby will return the length of the string (that
+      is, the number of characters—words, numbers, spaces, and symbols). Check it
+      out:\n\n    \"I love espresso\".length\n    # ==> 15\n\n(That little line starting
+      with the `#` isn't part of what you need to write—it just shows you the output
+      Ruby will provide. More on this in the next section!)\n\nTaking the length of
+      input can be useful if, for example, you want to make a website that takes credit
+      card payments. Ruby can check to make sure the credit card number appears to
+      be valid."
+    expect_error: false
+    feedback_stats:
+      positive_feedback: 4
+      total: 18
+      instructional_text_issue: 3
+      other: 7
+      correctness_test_issue: 3
+      typo: 1
+    from_console: false
+    hint: ''
+    instruction: Call the `.length` method on your name (remember to use quotes around
+      your name).
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: The '.length' Method
+    solution_code: ''
+    solution_entry: ''
+    tabs: []
+    test_functions: ! "if code == nil\n  return \"You gotta type something!\"\nend\n\nif
+      code.scan(\".length\").length == 0\n  return \"Make sure to call the .length
+      method on your name!\"\nend\n\nreturn true"
+    updated_at: 2012-10-18 13:37:24.084000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFnappGJpQACAEKn
+    created_at: 2012-09-19 14:45:58.000000000 Z
+    default_code: ''
+    entry: ! "The `.reverse` method is called the same way `.length` is, but instead
+      of asking Ruby to tell you how long a string is, it spits out a backwards version
+      of the string you gave it. For instance,\n\n    \"Eric\".reverse\n\nwill result
+      in\n\n    \"cirE\"\n\nReversing input can be useful if you want to sort a list
+      of values from highest to lowest instead of lowest to highest. (We'll get to
+      sorting in later lesson.)"
+    expect_error: false
+    feedback_stats:
+      correctness_test_issue: 4
+      total: 11
+      positive_feedback: 2
+      other: 4
+      instructional_text_issue: 1
+    from_console: false
+    hint: ''
+    instruction: Call the `.reverse` method on your name. Don't forget those quotation
+      marks around your name to make it a string!
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: The '.reverse' Method
+    solution_code: ''
+    solution_entry: ''
+    tabs: []
+    test_functions: ! "if code == nil\n  return \"You gotta type something!\"\nend\n\nif
+      exception.kind_of? SyntaxError\n  return \"Did you remember to put quotes around
+      your name? Take a look at the example to the left if you're stuck.\"\nend\n\nif
+      code.scan(\".reverse\").length == 0\n  return \"Make sure to call the .reverse
+      method on your name!\"\nend\n\nreturn true"
+    updated_at: 2012-11-13 20:05:53.326000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFnap5S4YAACADfu
+    created_at: 2012-09-19 14:45:59.000000000 Z
+    default_code: ''
+    entry: Let's try one more method (er, *two* methods). As you might have guessed,
+      the `.upcase` and `.downcase` methods convert a string to ALL UPPER CASE or
+      all lower case, respectively.
+    expect_error: false
+    feedback_stats:
+      positive_feedback: 6
+      total: 31
+      other: 8
+      instructional_text_issue: 9
+      typo: 2
+      correctness_test_issue: 6
+    from_console: false
+    hint: ''
+    instruction: ! "Call `.upcase` on your name to make your name ALL CAPS and use
+      `puts` to print it to the screen, like this:\n\n    puts \"eric\".upcase\n    #
+      ==> ERIC\n\nOn the next line, call `.downcase` to make your name all lower case.
+      Make sure to use `puts` so you can see it printed out!"
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: ! '''.upcase'' & ''.downcase'''
+    solution_code: ''
+    solution_entry: ''
+    tabs: []
+    test_functions: ! "if code == nil\n  return \"You gotta type something!\"\nend\n\nif
+      code.scan(\".upcase\").length == 0\n  return \"Make sure you call the .upcase
+      method on your name.\"\nend\n\nif code.scan(\".downcase\").length == 0\n  return
+      \"Don't forget to call .downcase on your name after you call .upcase!\"\nend\n\nif
+      prints.length == 0\n  return \"It looks like you didn't print anything to the
+      console.\"\nend\n\nreturn true"
+    updated_at: 2012-10-30 11:40:18.908000000 Z
+    view: console_and_editor
+  feedback_total: 73
+  index: 1
+  language_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TyFOXyFuzxlcRMGV
+  name: String Methods
+  num_forum_answers: 14
+  num_forum_questions: 8
+  published: true
+  read_feedback_total: 0
+  updated_at: 2012-11-13 20:05:53.347000000 Z
+  user_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TwTxhHBXEgADAGwS
+  viewable: false
+- !ruby/hash:Moped::BSON::Document
+  created_at: 2012-09-19 14:53:07.000000000 Z
+  default_view: console_and_editor
+  entry: Now that you know how to write a little bit of Ruby, let's cover some of
+    the standards and conventions that will help you write clear code that others
+    will find a pleasure to read.
+  exercises:
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFncVLc8swACAEXP
+    created_at: 2012-09-19 14:53:08.000000000 Z
+    default_code: ''
+    entry: ! "You probably saw us use the `#` sign a few times in earlier exercises.
+      The `#` sign is for **comments** in Ruby. A comment is a bit of text that Ruby
+      won't try to run as code: it's just for humans to read. Writing good comments
+      not only clarifies your code for other people who may read it, but helps remind
+      you of what you were doing when you wrote the code days, months, or even years
+      earlier.\n\nThe `#` sign should come before your comment and affects anything
+      you write after it, so long as you're on a single line. (We'll show you how
+      to do multi-line comments in a second.) Check out these examples:\n\n    # I'm
+      a full line comment!\n    \"Eric\".length # I'm a comment, too!\n\nThe second
+      example will return `4`, since the comment comes after the code that Ruby will
+      execute."
+    expect_error: false
+    feedback_stats:
+      other: 6
+      total: 11
+      instructional_text_issue: 1
+      correctness_test_issue: 3
+      positive_feedback: 1
+    from_console: false
+    hint: ''
+    instruction: Write a comment in the editor. It can be anything you like!
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Single-Line Comments
+    solution_code: ''
+    solution_entry: ''
+    tabs: []
+    test_functions: ! "if code == nil\n  return \"You gotta type something!\"\nend\n\nunless
+      code.include? \"#\"\n  return \"Make sure to write a comment using the # symbol.\"\nend\n\nreturn
+      true"
+    updated_at: 2012-10-17 09:34:40.935000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFncayQEDAACAFpV
+    created_at: 2012-09-19 14:53:31.000000000 Z
+    default_code: ''
+    entry: ! "You can write a comment that spans multiple lines by starting each line
+      with a `#`, but there's an easier way. If you start with `=begin` and end with
+      `=end`, *everything* between those two expressions will be a comment. Take a
+      look at this example:\n\n    =begin\n    I'm a comment!\n    I don't need any
+      # symbols.\n    =end\n\nDon't put any space between the `=` sign and the words
+      `begin` or `end`. You can do that with math (`2 + 5` is the same as `2+5`),
+      but in this case, Ruby will get confused. `=begin` and `=end` also need to be
+      on lines all by themselves, just as shown above."
+    expect_error: false
+    feedback_stats:
+      correctness_test_issue: 12
+      total: 26
+      instructional_text_issue: 5
+      positive_feedback: 5
+      other: 4
+    from_console: false
+    hint: ''
+    instruction: Create a multi-line comment in the editor to the right. Make sure
+      `=begin` and `=end` are on their own lines!
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Multi-Line Comments
+    solution_code: ''
+    solution_entry: ''
+    tabs: []
+    test_functions: ! "if code == nil\n  return \"You gotta type something!\"\nend\n\nif
+      code.split(\"\\n\").grep(/^=begin$/).size == 0\n  return \"It looks like you
+      didn't include =begin. Make sure there's no space between the equals sign and
+      the word begin!\"\nend\n\nif code.split(\"\\n\").grep(/=end/).size == 0\n  return
+      \"It looks like you didn't end your comment with =end. Make sure there's no
+      space between the equals sign and the word end!\"\nend\n\nreturn true"
+    updated_at: 2012-11-14 04:47:37.366000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFncbiQEDAACAFp4
+    created_at: 2012-09-19 14:53:34.000000000 Z
+    default_code: ''
+    entry: There are many different kinds of variables you'll encounter as you progress
+      through these courses, but right now we're just concerned with regular old **local
+      variables**. By convention, these variables should start with a lowercase letter
+      and words should be separated by underscores, like `counter` and `masterful_method`.
+      Ruby won't stop you from starting your local variables with other symbols, such
+      as capital letters, `$`s, or `@`s, but by convention these mean different things,
+      so it's best to avoid confusion by doing what the Ruby community does.
+    expect_error: false
+    feedback_stats:
+      correctness_test_issue: 5
+      total: 18
+      positive_feedback: 7
+      other: 3
+      instructional_text_issue: 3
+    from_console: false
+    hint: ! "Remember how to set a variable to a string? You do it like this:\n\n
+      \   some_variable = \"Your string here!\""
+    instruction: ! 'Create a variable `name` in the editor and set it equal to your
+      name as a string (between quotes, like this: `"Eric"`). Your string can be capitalized,
+      but `name` should be all lower case!'
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Naming Conventions
+    solution_code: ''
+    solution_entry: ''
+    tabs: []
+    test_functions: ! "if code == nil\n  return \"You gotta type something!\"\nend\n\nbegin\n
+      \ name\nrescue NameError\n  return \"Did you declare a variable called name?\"\nend\n\nunless
+      name.is_a? String\n  return \"It looks like you didn't set your name variable
+      equal to a string.\"\nend\n\nreturn true"
+    updated_at: 2012-10-24 23:02:54.195000000 Z
+    view: console_and_editor
+  feedback_total: 55
+  index: 2
+  language_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TyFOXyFuzxlcRMGV
+  name: Writing Good Code
+  num_forum_answers: 14
+  num_forum_questions: 6
+  published: true
+  read_feedback_total: 8
+  updated_at: 2012-11-14 04:47:37.395000000 Z
+  user_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TwTxhHBXEgADAGwS
+  viewable: false
+- !ruby/hash:Moped::BSON::Document
+  created_at: 2012-09-19 14:56:01.000000000 Z
+  default_view: console_and_editor
+  entry: Great work so far! Let's go over some of the Ruby syntax you've learned.
+  exercises:
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFndAlCxegACAFwh
+    created_at: 2012-09-19 14:56:02.000000000 Z
+    default_code: ''
+    entry: Let's quickly review how to declare and set variables. Remember, you declare
+      a variable just by saying its name, and you set it using `=`. You can always
+      check the **Hint** below if you need more help.
+    expect_error: false
+    feedback_stats:
+      typo: 3
+      total: 7
+      other: 4
+    from_console: false
+    hint: ! "Remember, variable declaration looks like this:\n\n    variable_name\n\nSetting
+      a variable looks like this:\n\n    name = \"Eric\"\n    age = 26\n    hungry
+      = true"
+    instruction: Create a variable called `my_name` and set it equal to your name
+      as a string. Create a second variable called `my_age` and set it equal to your
+      age as a number (don't use any quotes around the number).
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Variables & Data Types
+    tabs: []
+    test_functions: ! "if code == nil\n  return \"You gotta type something!\"\nend\n\nbegin\n
+      \ my_name\nrescue NameError\n  return \"Did you declare a variable called my_name?\"\nend\n\nbegin\n
+      \ my_age\nrescue NameError\n  return \"Did you declare a variable called my_age?\"\nend\n\nunless
+      my_name.is_a? String\n  return \"It looks like the variable my_name isn't a
+      string.\"\nend\n\nunless my_age.is_a? Integer\n  return \"It looks like the
+      variable my_age isn't an integer.\"\nend\n\nreturn true"
+    updated_at: 2012-11-06 22:46:40.105000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFndGZS4YAACAFvW
+    created_at: 2012-09-19 14:56:25.000000000 Z
+    default_code: ''
+    entry: Good! Now let's do a little math.
+    expect_error: false
+    feedback_stats:
+      positive_feedback: 1
+      total: 13
+      instructional_text_issue: 5
+      typo: 1
+      correctness_test_issue: 4
+      other: 2
+    from_console: false
+    hint: ''
+    instruction: ! 'In the editor, set the variables:
+
+
+      * `sum` equal to `13 + 379`
+
+      * `product` equal to `923 * 15`
+
+      * `quotient` equal to `13209 / 17`'
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Math
+    tabs: []
+    test_functions: ! "if code == nil\n  return \"You gotta type something!\"\nend\n\nbegin\n
+      \ sum\nrescue NameError\n  return \"Did you declare a variable called sum?\"\nend\n\nbegin\n
+      \ product\nrescue NameError\n  return \"Did you declare a variable called product?\"\nend\n\nbegin\n
+      \ quotient\nrescue NameError\n  return \"Did you declare a variable called quotient?\"\nend\n\nif
+      sum != 13 + 379 || code.scan(\"+\").length == 0\n  return \"It looks like the
+      variable sum isn't quite right. Did you set it equal to 13 + 379, and did you
+      use the + sign to do it?\"\nend\n\nif product != 923 * 15 || code.scan(\"*\").length
+      == 0\n  return \"It looks like the variable product isn't quite right. Did you
+      set it equal to 923 * 15, and did you use the * sign to do it?\"\nend\n\nif
+      quotient != 13209 / 17 || code.scan(\"/\").length == 0\n  return \"It looks
+      like the variable quotient isn't quite right. Did you set it equal to 13209
+      / 17, and did you use the / sign to do it?\"\nend\n\nreturn true"
+    updated_at: 2012-10-24 23:06:03.475000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFndHybViwACAFfc
+    created_at: 2012-09-19 14:56:31.000000000 Z
+    default_code: ''
+    entry: ! 'Well done! Let''s do a little review of string methods. Remember, you
+      call a method by using the `.` operator, like this: `"string".method`.'
+    expect_error: false
+    feedback_stats:
+      positive_feedback: 4
+      total: 26
+      instructional_text_issue: 8
+      correctness_test_issue: 7
+      other: 7
+    from_console: false
+    hint: ! "For instance, if your name is \"Steve,\" you might type\n\n    name =
+      \"Steve\".downcase\n\nto convert your name to `\"steve\"`."
+    instruction: ! "Declare a variable `name` and set it equal to a string containing
+      your name. Call `.downcase` on your name to make it all lower case, call `.reverse`
+      on your lowercase name to make it backwards, then call `.upcase` on your backwards
+      name to make it ALL CAPS.\n\nIn Ruby, you can do this two ways: each method
+      call on a separate line, or you can *chain them together*, like this:\n\n    name.method1.method2.method3"
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Strings and String Methods
+    tabs: []
+    test_functions: ! "if code == nil\n  return \"You gotta type something!\"\nend\n\nbegin\n
+      \ name\nrescue NameError\n  return \"Did you declare a variable called name?\"\nend\n\nif
+      exception.kind_of? SyntaxError\n  return \"It looks like your syntax isn't quite
+      right. Check the Hint if you need help!\"\nend\n\nif code.scan(\".downcase\").length
+      == 0\n  return \"It looks like you didn't call the .downcase method on your
+      name.\"\nend\n\nif code.scan(\".reverse\").length == 0\n  return \"It looks
+      like you didn't call the .reverse method on your name.\"\nend\n\nif code.scan(\".upcase\").length
+      == 0\n  return \"It looks like you didn't call the .upcase method on your name.\"\nend\n\nreturn
+      true"
+    updated_at: 2012-10-16 01:20:14.732000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFndIJS4YAACAFxS
+    created_at: 2012-09-19 14:56:32.000000000 Z
+    default_code: ''
+    entry: Great work! For our last review exercise for this lesson, let's go over
+      single- and multi-line comments.
+    expect_error: false
+    feedback_stats:
+      correctness_test_issue: 6
+      total: 22
+      positive_feedback: 9
+      other: 4
+      typo: 1
+      instructional_text_issue: 2
+    from_console: false
+    hint: Remember, a single-line comment is created using `#`, and a multi-line comment
+      starts with `=begin` (no space between `=` and `begin`!) and ends with `=end`.
+      `=begin` and `=end` need to be on their own lines.
+    instruction: Create a single-line comment and a multi-line comment in the editor
+      to the right. (Check the Hint if you need a reminder on the syntax.) Hit Run
+      to see your glorious comments and complete the Introduction to Ruby!
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Comments
+    tabs: []
+    test_functions: ! "if code == nil\n  return \"You gotta type something!\"\nend\n\nif
+      exception.kind_of? SyntaxError\n  return \"Your syntax doesn't look quite right.
+      Check the Hint if you need help!\"\nend\n\nunless code.include? \"#\"\n  return
+      \"It looks like you didn't create a single-line comment using #.\"\nend\n\nif
+      code.split(\"\\n\").grep(/^=begin$/).size == 0\n  return \"It looks like you
+      didn't include =begin. Make sure there's no space between the equals sign and
+      the word begin!\"\nend\n\nif code.split(\"\\n\").grep(/=end/).size == 0\n  return
+      \"It looks like you didn't end your comment with =end. Make sure there's no
+      space between the equals sign and the word end!\"\nend\n\nreturn true"
+    updated_at: 2012-10-15 14:17:39.748000000 Z
+    view: console_and_editor
+  feedback_total: 68
+  index: 3
+  language_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TyFOXyFuzxlcRMGV
+  name: Review
+  num_forum_answers: 12
+  num_forum_questions: 10
+  published: true
+  read_feedback_total: 11
+  updated_at: 2012-11-06 22:46:40.137000000 Z
+  user_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TwTxhHBXEgADAGwS
+  viewable: false

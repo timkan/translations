@@ -1,0 +1,282 @@
+--- !ruby/hash:Moped::BSON::Document
+avg_user_rating: 4.378378378378378
+classification: :lesson
+created_at: 2012-09-28 16:51:57.000000000 Z
+domain: :freestyle
+down_votes: 44
+entry: In this project, we'll design a single Ruby method to sort large quantities
+  of data in either ascending or descending order.
+feedback_total: 25
+is_project: false
+language_id: !ruby/object:Moped::BSON::ObjectId
+  raw_data: !binary |-
+    TyFOXyFuzxlcRMGV
+level: :beginner
+locale: en
+name: Ordering Your Library
+num_exercises: 6
+num_published_exercises: 6
+num_published_sections: 1
+num_readiness_feedbacks: 2
+num_sections: 1
+num_user_ratings: 1332
+published: true
+published_at: 2012-09-28 19:14:10.000000000 Z
+rating: 66.13390748519527
+read_feedback_total: 5
+readiness: 86.81818181818183
+recommended: false
+review_status: :approved
+roles:
+  manager: []
+  editor: []
+submitted_at: 2012-09-28 18:53:11.000000000 Z
+total_user_rating: 5832.0
+up_votes: 124
+updated_at: 2012-11-26 15:48:54.073000000 Z
+user_id: !ruby/object:Moped::BSON::ObjectId
+  raw_data: !binary |-
+    TwTxhHBXEgADAGwS
+sections:
+- !ruby/hash:Moped::BSON::Document
+  created_at: 2012-09-28 16:51:57.000000000 Z
+  default_view: console_and_editor
+  entry: With the ability to write our own methods, we can extend Ruby's ability to
+    help solve any problem we need to tackle.
+  exercises:
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UGXVrdApDQACDGOP
+    created_at: 2012-09-28 16:51:57.000000000 Z
+    default_code: ! "def alphabetize(arr, rev=false)\n  if rev\n    arr.sort { |item1,
+      item2| item2 <=> item1 }\n  else\n    arr.sort { |item1, item2| item1 <=> item2
+      }\n  end\nend\n\nbooks = [\"Heart of Darkness\", \"Code Complete\", \"The Lorax\",
+      \"The Prophet\", \"Absalom, Absalom!\"]\n\nputs \"A-Z: #{alphabetize(books)}\"\nputs
+      \"Z-A: #{alphabetize(books, true)}\"\n"
+    entry: We noticed in the last lesson that `.sort!` didn't have a built-in way
+      of handling sorting in reverse alphabetical order. Now that we know how to write
+      our own Ruby methods, we can fix that!
+    expect_error: false
+    feedback_stats:
+      positive_feedback: 1
+      total: 1
+    from_console: false
+    hint: ''
+    instruction: The code in the editor should look familiar—there's only one new
+      idea (on line 1). When you're ready, click Run to execute the code and start
+      building your own method.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: What You'll Be Building
+    tabs: []
+    test_functions: ! 'undef alphabetize
+
+      return true'
+    updated_at: 2012-10-04 10:50:44.000000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UGXZZRaqegACDKju
+    created_at: 2012-09-28 17:07:49.000000000 Z
+    default_code: ''
+    entry: First, we'll need to define our `alphabetize` method.
+    expect_error: false
+    feedback_stats: {}
+    from_console: false
+    hint: ! "Don't forget:\n\n    method_name(optional parameters)\n      # Do something\n
+      \   end"
+    instruction: Define `alphabetize` in the editor to the right. It shouldn't take
+      any arguments yet, and there doesn't need to be anything in the body of the
+      method.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Defining Our Method
+    tabs: []
+    test_functions: ! "begin\n  alphabetize\nrescue NameError\n  return \"Did you
+      define a method called alphabetize?\"\nend\n\nif exception.kind_of? SyntaxError\n
+      \ return \"It looks like your syntax isn't quite right. Check the first exercise
+      if you need help!\"\nend\n\nreturn true"
+    updated_at: 2012-09-28 20:13:10.000000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UGXZZjT1DgACDKkk
+    created_at: 2012-09-28 17:07:50.000000000 Z
+    default_code: ''
+    entry: ! "Let's start with the new bit of code you saw in exercise 1:\n\n    def
+      alphabetize(arr, rev=false)\n\nThe first part makes sense—we're defining a method,
+      `alphabetize`. We can guess that the first parameter is an `arr`ay, but what's
+      this `rev=false` business?\n\nWhat this does is tell Ruby that `alphabetize`
+      has a second parameter, `rev` (for \"reverse\") that will **default** to `false`
+      if the user doesn't type in two arguments. You might have noticed that our first
+      call to `alphabetize` in exercise 1 was just\n\n    alphabetize(books)\n\nRuby
+      didn't see a `rev`, so it gave it the default value of `false`."
+    expect_error: false
+    feedback_stats:
+      instructional_text_issue: 1
+      total: 1
+    from_console: false
+    hint: ! '`arr`, we be pirates.'
+    instruction: ! 'Update your `alphabetize` method with two parameters: `arr`, representing
+      the array to be passed in, and `rev`, a boolean that defaults to `false`.'
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: true
+    name: Default Parameters
+    tabs: []
+    test_functions: ! "begin\n  alphabetize([1,2,3], true)\nrescue ArgumentError\n
+      \ return \"Make sure your method now takes two arguments: an array and a boolean,
+      with the boolean defaulting to false.\"\nend\n\nif method(:alphabetize).parameters[1]
+      == nil || code.scan(\"false\").length == 0\n  return \"Did you make a second
+      argument, rev, that defaults to false?\"\nend\n\nif exception.kind_of? SyntaxError\n
+      \ return \"It looks like your syntax isn't quite right. Check the first exercise
+      if you need help!\"\nend\n\nreturn true"
+    updated_at: 2012-10-04 10:56:40.000000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UGXZZ/TJvAACDJ9Z
+    created_at: 2012-09-28 17:07:51.000000000 Z
+    default_code: ''
+    entry: ! "Great! Now we need to add the right logic to our method.\n\nIf our method
+      sees that `rev` is `true`, it should go ahead and reverse the sort. That is,
+      it should use the combined comparison operator (also called the **spaceship
+      operator** because... well, it looks like a spaceship) to order the array it
+      receives in descending order. Remember, we can do that like this:\n\n    array.sort!
+      { |item1, item2| item2 <=> item1}\n\nIn the context of alphabetizing, this says:
+      \"Hey Ruby! Sort the array in-place. Whenever you see two items, compare them
+      and put the one further along in the alphabet first.\""
+    expect_error: false
+    feedback_stats:
+      correctness_test_issue: 5
+      total: 11
+      typo: 2
+      instructional_text_issue: 3
+      positive_feedback: 1
+    from_console: false
+    hint: ! "For sorting in alphabetical order, you can do\n\n    arr.sort! { |item1,
+      item2| item1 <=> item2}\n\nbut this is unnecessary, since `.sort!`'s default
+      behavior is to sort alphabetically."
+    instruction: ! '1. Add an `if`/`else` statement inside your method. If `rev` is
+      true, it should sort the array reverse-alphabetically; if `rev` is false (which
+      happens if the user passes `false` or doesn''t pass an argument for `rev` at
+      all), it should sort the array in alphabetical order.
+
+      2. Outside your method, `puts` the sorted array. (This is so you can see all
+      the fine work your method did.)
+
+      3. Call your method on an array of your choice to see it in action!'
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: true
+    name: Sorting With Control Flow
+    tabs: []
+    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"It looks like
+      your syntax isn't quite right. Check the first exercise if you need help!\"\nend\n\nunless
+      code.include? \"<=>\"\n  return \"It looks like you didn't use the spaceship
+      operator in your code.\"\nend\n\ntest_array = [\"cockroaches\", \"ants\", \"bees\"]\n\nunless
+      alphabetize(test_array) == [\"ants\", \"bees\", \"cockroaches\"]\n  return \"It
+      looks like your method doesn't default to alphabetizing an array when it doesn't
+      receive a second parameter.\"\nend\n\nunless alphabetize(test_array, false)
+      == [\"ants\", \"bees\", \"cockroaches\"]\n  return \"It looks like your method
+      doesn't alphabetize an array when it receives 'false' as a second parameter.\"\nend\n\nunless
+      alphabetize(test_array, true) == [\"cockroaches\", \"bees\", \"ants\"]\n  return
+      \"It looks like your method doensn't reverse-alphabetize an array when it receives
+      'true' as a parameter.\"\nend\n\nif prints.length == 0\n  return \"It looks
+      like you didn't print anything to the console. Does your method use 'puts' to
+      print the sorted array, and did you remember to call your method?\"\nend\n\nreturn
+      true"
+    updated_at: 2012-10-29 01:00:13.183000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UGXZZzT1DgACDKkp
+    created_at: 2012-09-28 17:07:51.000000000 Z
+    default_code: ''
+    entry: ! 'You did it! Great work.
+
+
+      However, there''s a simpler way to go about this. Instead of using `<=>`, couldn''t
+      we use a normal `.sort` if `rev` is false, and then just call `.reverse` on
+      our `.sort` if it turns out `rev` is true? (Ruby makes things almost *too* easy
+      for us.)'
+    expect_error: false
+    feedback_stats:
+      correctness_test_issue: 4
+      total: 6
+      instructional_text_issue: 1
+      other: 1
+    from_console: false
+    hint: ''
+    instruction: Rewrite your method to use `.reverse` on the `.sort`ed array if `rev`
+      is `true`.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: true
+    name: Victory! (Almost)
+    tabs: []
+    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"It looks like
+      your syntax isn't quite right. Check the first exercise if you need help!\"\nend\n\nunless
+      code.include? \".reverse\"\n  return \"It looks like you didn't use the .reverse
+      method in your code.\"\nend\n\ntest_array = [\"cockroaches\", \"ants\", \"bees\"]\n\nunless
+      alphabetize(test_array) == [\"ants\", \"bees\", \"cockroaches\"]\n  return \"It
+      looks like your method doesn't default to alphabetizing an array when it doesn't
+      receive a second parameter.\"\nend\n\nunless alphabetize(test_array, false)
+      == [\"ants\", \"bees\", \"cockroaches\"]\n  return \"It looks like your method
+      doesn't alphabetize an array when it receives 'false' as a second parameter.\"\nend\n\nunless
+      alphabetize(test_array, true) == [\"cockroaches\", \"bees\", \"ants\"]\n  return
+      \"It looks like your method doensn't reverse-alphabetize an array when it receives
+      'true' as a parameter.\"\nend\n\nif prints.length == 0\n  return \"It looks
+      like you didn't print anything to the console. Does your method use 'puts' to
+      print the sorted array, and did you remember to call your method?\"\nend\n\nreturn
+      true"
+    updated_at: 2012-10-05 09:41:24.000000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UGXZaXyuVgACDMUf
+    created_at: 2012-09-28 17:07:53.000000000 Z
+    default_code: ''
+    entry: ! 'Well done! You now have your very own method that adds functionality
+      that Ruby didn''t have before.
+
+
+      Building your own methods is great for using code over and over without having
+      to retype things, but it''s also great for **abstracting** or **simplifying**
+      your program. Once you write `alphabetize`, you don''t ever have to think about
+      how it works—you just call it whenever you need it.'
+    expect_error: false
+    feedback_stats:
+      instructional_text_issue: 1
+      total: 6
+      positive_feedback: 4
+      correctness_test_issue: 1
+    from_console: false
+    hint: ''
+    instruction: Click Run to finish this project and continue your journey toward
+      Ruby Method Mastery.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: true
+    name: You Did It! (For Real This Time)
+    tabs: []
+    test_functions: return true
+    updated_at: 2012-10-25 22:30:28.976000000 Z
+    view: console_and_editor
+  feedback_total: 25
+  index: 0
+  language_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TyFOXyFuzxlcRMGV
+  name: Methodical Sorting
+  num_forum_answers: 20
+  num_forum_questions: 6
+  published: true
+  read_feedback_total: 0
+  updated_at: 2012-10-29 01:00:13.202000000 Z
+  user_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TwTxhHBXEgADAGwS
+  viewable: false

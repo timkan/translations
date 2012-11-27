@@ -1,0 +1,341 @@
+--- !ruby/hash:Moped::BSON::Document
+avg_user_rating: 4.39453125
+classification: :game
+created_at: 2012-09-19 15:37:00.000000000 Z
+domain: :freestyle
+down_votes: 213
+entry: Now that you know a little bit of Ruby, let's put together your first project!
+  In this one, we'll write a small program that will format a user's input.
+feedback_total: 149
+is_project: false
+language_id: !ruby/object:Moped::BSON::ObjectId
+  raw_data: !binary |-
+    TyFOXyFuzxlcRMGV
+level: :beginner
+locale: en
+name: Putting the Form in Formatter
+num_exercises: 7
+num_published_exercises: 7
+num_published_sections: 1
+num_readiness_feedbacks: 96
+num_sections: 1
+num_user_ratings: 6016
+published: true
+published_at: 2012-09-20 03:25:29.000000000 Z
+rating: 851.6800701947286
+read_feedback_total: 85
+readiness: 91.47058823529412
+recommended: false
+review_status: :approved
+roles:
+  manager: []
+  editor: []
+submitted_at: 2012-09-20 01:47:05.000000000 Z
+topic_id: !ruby/object:Moped::BSON::ObjectId
+  raw_data: !binary |-
+    T5Ws8pVtgwADABwX
+total_user_rating: 26437.5
+up_votes: 1095
+updated_at: 2012-11-26 16:45:19.308000000 Z
+user_id: !ruby/object:Moped::BSON::ObjectId
+  raw_data: !binary |-
+    TwTxhHBXEgADAGwS
+sections:
+- !ruby/hash:Moped::BSON::Document
+  created_at: 2012-09-19 15:37:00.000000000 Z
+  default_view: console_and_editor
+  entry: We'll take advantage of Ruby's powerful string formatting methods to whip
+    a user's input into shape. No incorrect capitalization for us!
+  exercises:
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFnmnQYJ4QACAPRz
+    created_at: 2012-09-19 15:37:01.000000000 Z
+    default_code: ! 'print "What''s your first name?"
+
+      first_name = gets.chomp
+
+      first_name.capitalize!
+
+
+      print "What''s your last name?"
+
+      last_name = gets.chomp
+
+      last_name.capitalize!
+
+
+      print "What city are you from?"
+
+      city = gets.chomp
+
+      city.capitalize!
+
+
+      print "What state or province are you from?"
+
+      state = gets.chomp
+
+      state.upcase!
+
+
+      puts "Your name is #{first_name} #{last_name} and you''re from #{city}, #{state}!"'
+    entry: This project will help you create a small program that will read a user's
+      input and correct his or her capitalization. Users can provide an almost infinite
+      range of input, so it makes our lives easier as programmers to make their input
+      standard before doing anything with it.
+    expect_error: false
+    feedback_stats:
+      positive_feedback: 6
+      total: 16
+      correctness_test_issue: 3
+      other: 7
+    from_console: false
+    hint: ''
+    instruction: Check out the code in the editor—we've added some new things that
+      we'll be teaching you. Can you guess what it does? Click Run to find out!
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: What You'll Be Building
+    solution_code: ''
+    solution_entry: ''
+    tabs: []
+    test_functions: return true
+    updated_at: 2012-11-02 08:44:31.637000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFnm3KnplwACAQTq
+    created_at: 2012-09-19 15:38:04.000000000 Z
+    default_code: ''
+    entry: First, let's write the code we're already familiar with. In order to get
+      input from the user, we'll first need to `print` a prompt on the screen.
+    expect_error: false
+    feedback_stats:
+      positive_feedback: 2
+      total: 3
+      correctness_test_issue: 1
+    from_console: false
+    hint: ''
+    instruction: ! '`print` the question `"What''s your first name?"` to the screen.
+      Feel free to peek back at the first exercise if you need a syntax reminder.'
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Prompting the User
+    solution_code: ''
+    solution_entry: ''
+    tabs: []
+    test_functions: ! "if code == nil\n  return \"You gotta type something!\"\nend\n\nunless
+      code.include? \"print\"\n  return \"Make sure to use the 'print' keyword.\"\nend\n\nif
+      prints.length == 0\n  return \"It looks like you didn't print anything to the
+      console.\"\nend\n\nreturn true"
+    updated_at: 2012-10-12 11:02:17.423000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFnm3ZS4YAACAPO1
+    created_at: 2012-09-19 15:38:05.000000000 Z
+    default_code: ''
+    entry: ! "Good! Now let's try something new. You may have noticed this weird little
+      line of code repeated in our example:\n\n    variable_name = gets.chomp\n\n`gets`
+      is the Ruby method that *gets* input from the user. When getting input, Ruby
+      automatically adds a blank line (or **newline**) after each bit of input; `chomp`
+      removes that extra line. (Your program will work fine without `chomp`, but you'll
+      get extra blank lines everywhere.)"
+    expect_error: false
+    feedback_stats:
+      other: 6
+      total: 15
+      instructional_text_issue: 3
+      correctness_test_issue: 4
+      positive_feedback: 2
+    from_console: false
+    hint: ''
+    instruction: Declare a variable `first_name` and set it equal to `gets.chomp`.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: true
+    name: Getting Input
+    solution_code: ''
+    solution_entry: ''
+    tabs: []
+    test_functions: ! "begin\n  first_name\nrescue NameError\n  return \"Did you declare
+      a variable called first_name?\"\nend\n\nif code.scan(\"gets.chomp\").length
+      == 0\n  return \"It looks like you didn't use gets.chomp in your code.\"\nend\n\nreturn
+      true"
+    updated_at: 2012-11-02 08:50:51.929000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFnm4oqTxQACAPNc
+    created_at: 2012-09-19 15:38:10.000000000 Z
+    default_code: ''
+    entry: All right! Now we need to repeat what we've done for `last_name`, `city`,
+      and `state`.
+    expect_error: false
+    feedback_stats:
+      other: 11
+      total: 36
+      correctness_test_issue: 17
+      instructional_text_issue: 5
+      typo: 2
+      positive_feedback: 1
+    from_console: false
+    hint: ''
+    instruction: ! 'Add `print` prompts, variables, and `gets.chomp`s for the user''s
+      last name, city, and state/province. Use `last_name` as the variable for the
+      user''s last name, `city` for their city, and `state` for their state or province.
+      (Hint: prompt the user to provide an abbreviation for their state or province,
+      such as "NY" for New York. This will naturally lead us to use `.upcase` later!)'
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: true
+    name: Repeat for More Input
+    solution_code: ''
+    solution_entry: ''
+    tabs: []
+    test_functions: ! "begin\n  last_name\nrescue NameError\n  return \"Did you declare
+      a variable called last_name?\"\nend\n\nbegin\n  city\nrescue NameError\n  return
+      \"Did you declare a variable called city?\"\nend\n\nbegin\n  state\nrescue NameError\n
+      \ return \"Did you declare a variable called state?\"\nend\n\nif code.scan(\"print\").length
+      < 4\n  return \"Did you include a print statement for each of your four variables?\"\nend\n\nif
+      code.scan(\"gets.chomp\").length < 4\n  return \"Did you include a gets.chomp
+      for each of your four variables?\"\nend\n\nreturn true"
+    updated_at: 2012-11-02 08:54:22.270000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFnm5CbViwACAO6S
+    created_at: 2012-09-19 15:38:12.000000000 Z
+    default_code: ''
+    entry: ! "As you might have noticed, Ruby's not really returning any feedback
+      to us. We want to be able to see our string formatting in action! For this,
+      we'll need one more new piece of syntax.\n\nIf you define a variable `monkey`
+      that's equal to the string `\"Curious George\"`, and then you have a string
+      that says `\"I took #{monkey} to the zoo\"`, Ruby will do something called **string
+      interpolation** and replace the `#{monkey}` bit with the value of `monkey`—that
+      is, it will print `\"I took Curious George to the zoo\"`. We can do the same
+      thing here! For example:\n\n    first_name = \"Kevin\"\n    puts \"Your name
+      is #{first_name}!\"\n\nwill print \"Your name is Kevin!\""
+    expect_error: false
+    feedback_stats:
+      instructional_text_issue: 5
+      total: 29
+      other: 7
+      correctness_test_issue: 11
+      typo: 4
+      positive_feedback: 2
+    from_console: false
+    hint: ! "Remember, your string interpolation always has to be inside quotation
+      marks, like so:\n\n    n = \"bacon\"\n    puts \"#{n}\"\n    puts \"I love #{n}!\""
+    instruction: Let's use this syntax to print out the values of `first_name`, `last_name`,
+      `city`, and `state` using `#{}` syntax.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: true
+    name: Printing the Output
+    solution_code: ''
+    solution_entry: ''
+    tabs: []
+    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"It looks like
+      your syntax isn't quite right. Check the Hint if you need help!\"\nend\n\nif
+      code.scan('#{').length == 0 || code.scan('}').length == 0\n  return 'Make sure
+      to use #{} for string interpolation!'\nend\n\nif prints.length == 0\n  return
+      \"It looks like you didn't print anything to the console.\"\nend\n\nreturn true"
+    updated_at: 2012-11-02 09:05:21.897000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFnm5UeBkwACAPfz
+    created_at: 2012-09-19 15:38:13.000000000 Z
+    default_code: ''
+    entry: ! 'Great! Now we''ve got our output, but as you can see, we haven''t used
+      string methods to properly capitalize everything yet.
+
+
+      We taught you about `.upcase` and `.downcase`, but there''s another really useful
+      string method: `.capitalize`. It capitalizes the first letter of a string and
+      makes the rest of the letters lower case. Convenient, right?
+
+
+      Here''s another handy trick. When you call something like `.capitalize` on a
+      string, you''re not capitalizing that *exact* string; Ruby makes a *copy* of
+      the string, capitalizes *that*, and that''s what it returns. If you want to
+      capitalize the string you''ve already got, though, you can make one small change:
+      add a `!` to the end of the method name. `.capitalize!` capitalizes the string
+      **in-place** instead of making a copy. The original non-capitalized string is
+      gone forever, but now you have your shiny new capitalized one in its place.'
+    expect_error: false
+    feedback_stats:
+      correctness_test_issue: 14
+      total: 29
+      other: 9
+      positive_feedback: 3
+      instructional_text_issue: 2
+      typo: 1
+    from_console: false
+    hint: ''
+    instruction: After each `print` prompt and `gets.chomp`, add the appropriate string
+      method. You'll want `.capitalize!` for `first_name`, `last_name`, and `city`,
+      but since we want the user to provide an abbreviation for their state or province,
+      it's best to use `.upcase!` for that one.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: true
+    name: Formatting with String Methods
+    solution_code: ''
+    solution_entry: ''
+    tabs: []
+    test_functions: ! "if code.scan(\".capitalize!\").length < 3\n  return \"Make
+      sure to call capitalize! on first_name, last_name, and city.\"\nend\n\nif code.scan(\".upcase!\").length
+      == 0\n  return \"Make sure to call upcase! on state.\"\nend\n\nif prints.length
+      == 0\n  return \"It looks like you didn't print anything to the console.\"\nend\n\nreturn
+      true"
+    updated_at: 2012-11-13 09:34:58.857000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFnm5pGJpQACAQIB
+    created_at: 2012-09-19 15:38:14.000000000 Z
+    default_code: ''
+    entry: Perfect! In just a few short steps, you've created your own Ruby program
+      with real-world applications. Feel free to add to your program or change it
+      as much as you like.
+    expect_error: false
+    feedback_stats:
+      positive_feedback: 11
+      total: 21
+      typo: 1
+      correctness_test_issue: 3
+      other: 4
+      instructional_text_issue: 2
+    from_console: false
+    hint: ''
+    instruction: When you're ready, click Run to complete this project.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: true
+    name: Great Work!
+    solution_code: ''
+    solution_entry: ''
+    tabs: []
+    test_functions: return true
+    updated_at: 2012-11-04 12:59:08.016000000 Z
+    view: console_and_editor
+  feedback_total: 149
+  index: 0
+  language_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TyFOXyFuzxlcRMGV
+  name: Methods, Methods Everywhere
+  num_forum_answers: 68
+  num_forum_questions: 36
+  published: true
+  read_feedback_total: 13
+  updated_at: 2012-11-13 09:34:58.899000000 Z
+  user_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TwTxhHBXEgADAGwS
+  viewable: false

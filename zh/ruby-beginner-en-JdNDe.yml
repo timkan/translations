@@ -1,0 +1,337 @@
+--- !ruby/hash:Moped::BSON::Document
+avg_user_rating: 4.312008210742388
+classification: :game
+created_at: 2012-09-19 19:17:37.000000000 Z
+domain: :freestyle
+down_votes: 58
+entry: Using control flow, we can modify a user's input and return it to them. In
+  this project, we'll make them sound like Daffy Duck!
+feedback_total: 55
+is_project: false
+language_id: !ruby/object:Moped::BSON::ObjectId
+  raw_data: !binary |-
+    TyFOXyFuzxlcRMGV
+level: :beginner
+locale: en
+name: Thith Meanth War!
+num_exercises: 8
+num_published_exercises: 8
+num_published_sections: 1
+num_readiness_feedbacks: 52
+num_sections: 1
+num_user_ratings: 2923
+published: true
+published_at: 2012-09-20 03:25:38.000000000 Z
+rating: 351.18693174869895
+read_feedback_total: 23
+readiness: 88.45945945945945
+recommended: false
+review_status: :approved
+roles:
+  manager: []
+  editor: []
+submitted_at: 2012-09-20 01:47:06.000000000 Z
+topic_id: !ruby/object:Moped::BSON::ObjectId
+  raw_data: !binary |-
+    T5Ws8pVtgwADABwX
+total_user_rating: 12604.0
+up_votes: 441
+updated_at: 2012-11-26 16:22:24.982000000 Z
+user_id: !ruby/object:Moped::BSON::ObjectId
+  raw_data: !binary |-
+    TwTxhHBXEgADAGwS
+sections:
+- !ruby/hash:Moped::BSON::Document
+  created_at: 2012-09-19 19:17:37.000000000 Z
+  default_view: console_and_editor
+  entry: Combining our knowledge of control flow with Ruby's rich method library can
+    let us accomplish a lot with just a few lines of code.
+  exercises:
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFoaUpro+AACA+Ev
+    created_at: 2012-09-19 19:17:38.000000000 Z
+    default_code: ! "print \"Thtring, pleathe!: \"\nuser_input = gets.chomp\nuser_input.downcase!\n\nif
+      user_input.include? \"s\"\n  user_input.gsub!(/s/, \"th\")\nelse\n  puts \"Nothing
+      to do here!\"\nend\n  \nputs \"Your string is: #{user_input}\""
+    entry: ! 'Now that we can direct our program using `if` / `else` statements, we
+      can produce different results based on different user input.
+
+
+      In this project, we''ll combine control flow with a few new Ruby string methods
+      to Daffy Duckify a user''s string, replacing each `"s"` with `"th"`.'
+    expect_error: false
+    feedback_stats:
+      positive_feedback: 2
+      total: 4
+      correctness_test_issue: 1
+      typo: 1
+    from_console: false
+    hint: ''
+    instruction: Click Run to see the Daffy Duckifier in action and to start building
+      your own!
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: What You'll Be Building
+    solution_code: ''
+    solution_entry: ''
+    tabs: []
+    test_functions: return true
+    updated_at: 2012-11-08 16:48:44.467000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFobaa34sgACA+1B
+    created_at: 2012-09-19 19:22:17.000000000 Z
+    default_code: ''
+    entry: First, we should `print` a statement to prompt the user for input, then
+      set that input to a variable using `gets.chomp`.
+    expect_error: false
+    feedback_stats:
+      correctness_test_issue: 2
+      total: 3
+      other: 1
+    from_console: false
+    hint: ''
+    instruction: ! '1. Use `print` to ask the user for input.
+
+      2. Declare a variable called `user_input` and set it equal to the user''s input
+      using `gets.chomp`.'
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Getting User Input
+    solution_code: ''
+    solution_entry: ''
+    tabs: []
+    test_functions: ! "begin\n  user_input\nrescue NameError\n  return \"Did you declare
+      a variable called user_input?\"\nend\n\nif code.scan(\"print\").length == 0
+      || prints.length == 0\n  return \"Make sure to use the print keyword to print
+      a prompt for the user.\"\nend\n\nif code.scan(\"gets.chomp\").length == 0\n
+      \ return \"Make sure to use gets.chomp to capture the user's input.\"\nend\n\nif
+      exception.kind_of? SyntaxError\n  return \"It looks like your syntax isn't quite
+      right. Check the first exercise if you need help!\"\nend\n\nreturn true"
+    updated_at: 2012-10-11 15:00:22.284000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFobaa34sgACA+1D
+    created_at: 2012-09-19 19:22:17.000000000 Z
+    default_code: ''
+    entry: We want to make sure we capture both `"S"` and `"s"` in the user's input.
+      We could write separate `if` / `else` statements to handle this, but we can
+      also use `.downcase!` to convert the user's input to all lower case. That way,
+      we only have to search for `"s"`.
+    expect_error: false
+    feedback_stats:
+      correctness_test_issue: 2
+      total: 4
+      instructional_text_issue: 2
+    from_console: false
+    hint: ''
+    instruction: Call the `.downcase!` method on `user_input`. Make sure to include
+      the `!` so that the user's string is modified in-place; otherwise, Ruby will
+      create a copy of `user_input` and modify that instead.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: true
+    name: Downcase!
+    solution_code: ''
+    solution_entry: ''
+    tabs: []
+    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"It looks like
+      your syntax isn't quite right. Check the first exercise if you need help!\"\nend\n\nif
+      code.scan(\".downcase!\").length == 0\n  return \"Make sure you call the .downcase!
+      method on user_input.\"\nend\n\nreturn true"
+    updated_at: 2012-10-02 18:55:26.000000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFobaqnplwACBBib
+    created_at: 2012-09-19 19:22:18.000000000 Z
+    default_code: ''
+    entry: ! "All right! Time to add in a little control flow.\n\nFor the `if` half
+      of our branch, we want to check whether the user's input contains an `\"s\"`.
+      We can do that using Ruby's `.include?` method, which evaluates to `true` if
+      it finds what it's looking for and `false` otherwise. (As a general rule, Ruby
+      methods that end with `?` evaluate to the boolean values `true` or `false`.)\n\nThe
+      syntax looks like this:\n\n    if string_to_check.include? \"substring\"\n\nWe
+      want to check `user_input` for the substring `\"s\"`."
+    expect_error: false
+    feedback_stats:
+      other: 2
+      total: 9
+      instructional_text_issue: 2
+      correctness_test_issue: 5
+    from_console: false
+    hint: Feel free to peek back at the first exercise if you need help.
+    instruction: Write an `if` statement in the editor. It should check to see if
+      `user_input` includes `"s"`. For now, have it print a string of your choice
+      to the console if it finds `"s"`.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: true
+    name: Setting Up the 'If' Branch, Part 1
+    solution_code: ''
+    solution_entry: ''
+    tabs: []
+    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"It looks like
+      your 'if' statement syntax isn't quite right. Don't forget to end it with an
+      'end'!\"\nend\n\nif code.scan(\"if\").length == 0\n  return \"Make sure to include
+      an 'if' statement.\"\nend\n\nunless code =~ /user_input\\.include\\?\\(?\\s*[\"']s[\"']\\s*\\)?/\n
+      \ return \"Don't forget to call .include? on user_input.\"\nend\n\nreturn true"
+    updated_at: 2012-11-10 17:08:30.203000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFofIpro+AACBC6k
+    created_at: 2012-09-19 19:38:10.000000000 Z
+    default_code: ''
+    entry: ! "Good! Now let's complete our `if` statement.\n\nWhen we find `\"s\"`,
+      we want Ruby to replace every instance of `\"s\"` it finds with `\"th\"`. We
+      can do this with the `.gsub!` method, which stands for **g**lobal **sub**stitution.\n\nThe
+      syntax looks like this:\n\n    string_to_change.gsub!(/s/, \"th\")\n\nWhen we
+      get to later lessons, we'll explain why the `/s/` has to be between slashes
+      instead of between quotes. Note: you *cannot* put a space between `gsub!` and
+      the bit in parentheses.\n\nRemember, you want the `!` at the end of the method
+      name so that Ruby will change the string in-place."
+    expect_error: false
+    feedback_stats:
+      instructional_text_issue: 3
+      total: 3
+    from_console: false
+    hint: ''
+    instruction: Remove the print statement you added to your `if` statement and replace
+      it with a call to `.gsub!` on `user_input`. Have it replace `/s/` with `"th"`.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: true
+    name: Setting Up the 'If' Branch, Part 2
+    solution_code: ''
+    solution_entry: ''
+    tabs: []
+    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"It looks like
+      your syntax isn't quite right. Feel free to look back at the syntax in the first
+      exercise if you need help!\"\nend\n\nunless code =~ /user_input\\.gsub!\\(?\\s*\\/s\\/\\s*,\\s*['\"]th['\"]\\s*\\)?/\n
+      \ return \"Make sure you're using .gsub! to replace every 's' with 'th'.\"\nend\n\nreturn
+      true"
+    updated_at: 2012-10-15 17:51:34.501000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFoba0GIOQACA+hf
+    created_at: 2012-09-19 19:22:19.000000000 Z
+    default_code: ''
+    entry: The hard part's over! Now we just need to let the user know if we don't
+      find any instances of the letter "s".
+    expect_error: false
+    feedback_stats:
+      correctness_test_issue: 1
+      total: 2
+      other: 1
+    from_console: false
+    hint: ''
+    instruction: Add an `else` statement that displays a string to the user to let
+      them know if there are no "s"s in their string.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: true
+    name: Setting Up the 'Else' Branch
+    solution_code: ''
+    solution_entry: ''
+    tabs: []
+    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"It looks like
+      your syntax isn't quite right. Check the first exercise if you need help!\"\nend\n\nif
+      code.scan(\"else\").length == 0\n  return \"Make sure to add an else statement!\"\nend\n\nif
+      prints.length == 0\n  return \"It doesn't look like you printed anything to
+      the console.\"\nend\n\nreturn true"
+    updated_at: 2012-11-10 17:18:12.080000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFoba634sgACA+2A
+    created_at: 2012-09-19 19:22:19.000000000 Z
+    default_code: ''
+    entry: ! "Home stretch—now we want to display the Daffy Duckified string to the
+      user. You can do that using the string interpolation we learned earlier:\n\n
+      \   my_string = \"muchachos\"\n    print \"Adios, #{my_string}!\"\n    # ==>
+      \"Adios, muchachos!\"\n"
+    expect_error: false
+    feedback_stats:
+      instructional_text_issue: 7
+      total: 16
+      correctness_test_issue: 7
+      other: 2
+    from_console: false
+    hint: ''
+    instruction: Add a `puts` statement that uses string interpolation to show the
+      user their transformed string.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: true
+    name: Returning the Final String—Er, "Thtring"
+    solution_code: ''
+    solution_entry: ''
+    tabs: []
+    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"It looks like
+      your syntax isn't quite right. Check the first exercise if you need help!\"\nend\n\nif
+      code.scan(\"puts\").length == 0\n  return \"Make sure to show the user their
+      transformed string using 'puts'.\"\nend\n\nunless prints.grep(user_input)\n
+      \ return \"It looks like you didn't print out the user_input string.\"\nend\n\nreturn
+      true"
+    updated_at: 2012-11-10 17:21:28.603000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFobbYqTxQACBAOl
+    created_at: 2012-09-19 19:22:21.000000000 Z
+    default_code: ''
+    entry: ! 'Great work!
+
+
+      How might you improve this project? You could:
+
+
+      * Add an additional `if` statement to re-prompt the user for input if they don''t
+      enter anything
+
+      * Think about how you might account for words in which the letter "c" sounds
+      like an "s"
+
+      * Think about how you might preserve the user''s original capitalization'
+    expect_error: false
+    feedback_stats:
+      other: 4
+      total: 14
+      correctness_test_issue: 5
+      positive_feedback: 5
+    from_console: false
+    hint: ''
+    instruction: Enough pondering for now. When you're ready, click Run to complete
+      this project.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: true
+    name: Congratulationth!
+    solution_code: ''
+    solution_entry: ''
+    tabs: []
+    test_functions: return true
+    updated_at: 2012-10-21 23:58:57.458000000 Z
+    view: console_and_editor
+  feedback_total: 55
+  index: 0
+  language_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TyFOXyFuzxlcRMGV
+  name: Thtrings & Things
+  num_forum_answers: 30
+  num_forum_questions: 21
+  published: true
+  read_feedback_total: 3
+  updated_at: 2012-11-10 17:21:28.625000000 Z
+  user_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TwTxhHBXEgADAGwS
+  viewable: false

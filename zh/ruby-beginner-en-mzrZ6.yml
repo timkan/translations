@@ -1,0 +1,275 @@
+--- !ruby/hash:Moped::BSON::Document
+avg_user_rating: 4.297932816537467
+classification: :game
+created_at: 2012-09-20 00:19:22.000000000 Z
+domain: :freestyle
+down_votes: 84
+entry: In this project we'll make a program that searches a string of text for your
+  name and, if it finds it, replaces it with the word "redacted." Just like that,
+  you're a spy!
+feedback_total: 21
+is_project: false
+language_id: !ruby/object:Moped::BSON::ObjectId
+  raw_data: !binary |-
+    TyFOXyFuzxlcRMGV
+level: :beginner
+locale: en
+name: Redacted!
+num_exercises: 6
+num_published_exercises: 6
+num_published_sections: 1
+num_readiness_feedbacks: 28
+num_sections: 1
+num_user_ratings: 1935
+published: true
+published_at: 2012-09-20 03:26:02.000000000 Z
+rating: 103.62170831835473
+read_feedback_total: 9
+readiness: 95.03703703703702
+recommended: false
+review_status: :approved
+roles:
+  manager: []
+  editor: []
+topic_id: !ruby/object:Moped::BSON::ObjectId
+  raw_data: !binary |-
+    T5Ws8pVtgwADABwX
+total_user_rating: 8316.5
+up_votes: 202
+updated_at: 2012-11-26 16:43:06.258000000 Z
+user_id: !ruby/object:Moped::BSON::ObjectId
+  raw_data: !binary |-
+    TwTxhHBXEgADAGwS
+sections:
+- !ruby/hash:Moped::BSON::Document
+  created_at: 2012-09-20 00:19:22.000000000 Z
+  default_view: console_and_editor
+  entry: By splitting a block of text into an array of words and iterating over it,
+    we can find a word of interest and overwrite it as we print it to the console.
+  exercises:
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFphC7GlKQACAHKh
+    created_at: 2012-09-20 00:19:23.000000000 Z
+    default_code: ! "puts \"Text to search through: \"\ntext = gets.chomp\nputs \"Word
+      to redact: \"\nredact = gets.chomp\n\nwords = text.split(\" \")\n\nwords.each
+      do |word|\n  if word != redact\n    print word + \" \"\n  else\n    print \"REDACTED
+      \"\n  end\nend"
+    entry: ! 'Hiding information is a major part of programming: protecting passwords,
+      establishing secure connections, and securing programs against tampering all
+      rely on controlling access to information.
+
+
+      While we won''t be able to really dig into information hiding until after we
+      cover **hashes** in a later course, we *can* write a simple program to change
+      a user''s input with the tools we have now: arrays and iterators.'
+    expect_error: false
+    feedback_stats:
+      other: 2
+      total: 2
+    from_console: false
+    hint: ''
+    instruction: Hit Run to test out our redactor program and to learn how to build
+      your own.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: What You'll Be Building
+    solution_code: ''
+    solution_entry: ''
+    tabs: []
+    test_functions: return true
+    updated_at: 2012-10-21 14:32:27.649000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFphJUssoAACAHo4
+    created_at: 2012-09-20 00:19:49.000000000 Z
+    default_code: ''
+    entry: ! 'First things first: we''ll need to get the user''s input.'
+    expect_error: false
+    feedback_stats:
+      other: 2
+      total: 2
+    from_console: false
+    hint: ''
+    instruction: Use `puts` to prompt the user for input two times. For the first
+      `puts`, declare a variable called `text` and set it equal to the user's input
+      via `gets.chomp`. For the second `puts`, declare a variable called `redact`
+      and set it equal to the user's input using `gets.chomp`.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Getting the User's Input
+    solution_code: ''
+    solution_entry: ''
+    tabs: []
+    test_functions: ! "if code == nil\n  return \"You gotta type something!\"\nend\n\nbegin\n
+      \ text\nrescue NameError\n  return \"Did you declare a variable called text?\"\nend\n\nbegin\n
+      \ redact\nrescue NameErrorf\n  return \"Did you declare a variable called redact?\"\nend\n\nif
+      code.scan(\"puts\").length < 2 || prints.length == 0\n  return \"It looks like
+      you didn't print two prompts for the user to the console using 'puts'.\"\nend\n\nif
+      code.scan(\"gets.chomp\").length < 2\n  return \"Make sure to use gets.chomp
+      twice to get the user's input: the first time for the text to search, and the
+      second time for the word or phrase to redact.\"\nend\n\nreturn true"
+    updated_at: 2012-10-26 14:24:13.771000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFphJgRSlwACAHO4
+    created_at: 2012-09-20 00:19:50.000000000 Z
+    default_code: ''
+    entry: ! "Next, we'll want to divide the user's input into individual words.\n\nRuby
+      has a built-in method for this called `.split`; it takes in a string and returns
+      an array. If we pass it a bit of text in parentheses, `.split` will divide the
+      string wherever it sees that bit of text, called a **delimiter**. For example,\n\n
+      \   text.split(\",\")\n\ntells Ruby to split up the string `text` whenever it
+      sees a comma."
+    expect_error: false
+    feedback_stats:
+      typo: 1
+      total: 3
+      other: 1
+      correctness_test_issue: 1
+    from_console: false
+    hint: ''
+    instruction: Declare a variable called `words` and set it equal to the result
+      of calling the `.split` method on `text`. Pass `.split` a space (`" "`) to use
+      as a delimiter so that we get an array made up of the words from `text`.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: true
+    name: The .split Method
+    solution_code: ''
+    solution_entry: ''
+    tabs: []
+    test_functions: ! "begin\n  words\nrescue NameError\n  return \"Did you declare
+      a variable called words?\"\nend\n\nif code.scan(\".split\").length == 0\n  return
+      \"Make sure to use the .split method in your code.\"\nend\n\nunless words.is_a?
+      Array\n  return \"It looks like you didn't use the .split method to make words
+      an array.\"\nend\n\nreturn true"
+    updated_at: 2012-10-03 16:02:22.000000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFphJ4/5yQACAG0C
+    created_at: 2012-09-20 00:19:51.000000000 Z
+    default_code: ''
+    entry: All right! Time to break out our iterators to go through the user's text.
+    expect_error: false
+    feedback_stats:
+      correctness_test_issue: 2
+      total: 7
+      instructional_text_issue: 3
+      other: 2
+    from_console: false
+    hint: ! "Remember, the syntax for `.each` is\n\n    array.each { |placeholder|
+      action }\n\nor\n\n    array.each do |placeholder|\n      action\n      another
+      action\n      yet another action!\n    end"
+    instruction: ! 'Let''s start simple: write an `.each` loop that goes through `words`
+      and just `print`s out each word it finds.'
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: true
+    name: Redacted!
+    solution_code: ''
+    solution_entry: ''
+    tabs: []
+    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"Your syntax doesn't
+      look quite right--check the Hint if you need help.\"\nend\n\nif code.scan(\".each\").length
+      == 0\n  return \"Make sure to use .each in your code!\"\nend\n\nif prints.length
+      == 0\n  return \"It looks like you didn't print anything to the console.\"\nend\n\noutput
+      = \"\"\nwords.each { |word| output += word }\n\nunless prints.include? output\n
+      \ return \"It looks like you didn't print each word from the user's text to
+      the console.\"\nend\n\nreturn true"
+    updated_at: 2012-10-21 15:37:49.303000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFphKLVyRwACAIAi
+    created_at: 2012-09-20 00:19:52.000000000 Z
+    default_code: ''
+    entry: ! 'Good! There were two problems with our output, though: we didn''t have
+      spaces between our words, and our program didn''t actually replace the word
+      we wanted to redact with the word `"REDACTED"`.
+
+
+      We can fix that with some `if`/`else` magic!'
+    expect_error: false
+    feedback_stats:
+      correctness_test_issue: 2
+      total: 3
+      other: 1
+    from_console: false
+    hint: ! "Remember, `if`/`else` looks like this:\n\n    if condition\n      take
+      this action\n    else\n      take this other action\n    end"
+    instruction: Add an `if`/`else` statement inside your `.each`. Write it so that
+      if the word it encounters isn't the word to be redacted, your program just prints
+      that word + `" "`; otherwise, your program should print `"REDACTED "` (the extra
+      space ensures that "REDACTED" doesn't crash into the word that follows it).
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: true
+    name: Control Flow Know-How
+    solution_code: ''
+    solution_entry: ''
+    tabs: []
+    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"Your syntax doesn't
+      look quite right--check the Hint if you need help.\"\nend\n\noutput = \"\"\nwords.each
+      do |word|\n  if word != redact\n    output += word + \" \"\n  else\n    output
+      += \"REDACTED \"\n  end\nend\n\nunless prints.include? output\n  return \"Make
+      sure to print each word from the user's text to the console unless that word
+      is the word to be redacted; if it is, print REDACTED (all caps!).\"\nend\n\nreturn
+      true"
+    updated_at: 2012-11-19 16:54:59.609000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFphKk1HYwACAHen
+    created_at: 2012-09-20 00:19:54.000000000 Z
+    default_code: ''
+    entry: ! 'Perfect! Feel free to mess around with your redactor to see what sorts
+      of results you get. Think about the following:
+
+
+      * What could you do to make sure your redactor redacts a word regardless of
+      whether it''s upper case or lower case?
+
+      * How could you make your program take multiple, separate words to REDACT?
+
+      * How might you make a new redacted string and save it as a variable, rather
+      than just printing it to the console?'
+    expect_error: false
+    feedback_stats:
+      typo: 3
+      total: 4
+      instructional_text_issue: 1
+    from_console: false
+    hint: ''
+    instruction: These are the questions. In the meantime, click Run to finish this
+      REDACTED.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: true
+    name: Great Work!
+    solution_code: ''
+    solution_entry: ''
+    tabs: []
+    test_functions: return true
+    updated_at: 2012-10-28 10:56:50.622000000 Z
+    view: console_and_editor
+  feedback_total: 21
+  index: 0
+  language_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TyFOXyFuzxlcRMGV
+  name: Iteration Obfuscation
+  num_forum_answers: 38
+  num_forum_questions: 22
+  published: true
+  read_feedback_total: 3
+  updated_at: 2012-11-19 16:54:59.655000000 Z
+  user_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TwTxhHBXEgADAGwS
+  viewable: false

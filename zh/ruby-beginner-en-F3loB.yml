@@ -1,0 +1,673 @@
+--- !ruby/hash:Moped::BSON::Document
+avg_user_rating: 4.476427448926139
+classification: :lesson
+created_at: 2012-09-20 00:16:09.000000000 Z
+domain: :freestyle
+down_votes: 182
+entry: You already know a little bit about arrays. This lesson will teach you more
+  about arrays, about a new data structure called a hash, and how Ruby can iterate
+  over both to help you build better programs.
+feedback_total: 108
+is_project: false
+language_id: !ruby/object:Moped::BSON::ObjectId
+  raw_data: !binary |-
+    TyFOXyFuzxlcRMGV
+level: :beginner
+locale: en
+name: Data Structures
+num_exercises: 16
+num_published_exercises: 16
+num_published_sections: 4
+num_readiness_feedbacks: 26
+num_sections: 4
+num_user_ratings: 1909
+published: true
+published_at: 2012-09-20 18:24:10.000000000 Z
+rating: 327.29182623220356
+read_feedback_total: 31
+readiness: 95.2
+recommended: false
+review_status: :approved
+roles:
+  manager: []
+  editor: []
+topic_id: !ruby/object:Moped::BSON::ObjectId
+  raw_data: !binary |-
+    T5Ws8pVtgwADABwX
+total_user_rating: 8545.5
+up_votes: 530
+updated_at: 2012-11-26 15:02:21.742000000 Z
+user_id: !ruby/object:Moped::BSON::ObjectId
+  raw_data: !binary |-
+    TwTxhHBXEgADAGwS
+sections:
+- !ruby/hash:Moped::BSON::Document
+  created_at: 2012-09-20 00:16:09.000000000 Z
+  default_view: console_and_editor
+  entry: Let's take a closer look at arrays.
+  exercises:
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFpgSoXuTAACAGoA
+    created_at: 2012-09-20 00:16:10.000000000 Z
+    default_code: ''
+    entry: Earlier we saw that an array can be used to store a list of values in a
+      single variable. You can stuff any number of numbers in there, you can repeat
+      numbers, and they don't have to be in numeric order!
+    expect_error: false
+    feedback_stats: {}
+    from_console: false
+    hint: ! "You can declare an array like this:\n\n    var_name = [num1, num2, num3]"
+    instruction: Declare a variable, `my_array`, in the editor, and set it equal to
+      an array of your choice. Check the Hint if you need a syntax refresher.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Creating Arrays
+    tabs: []
+    test_functions: ! "begin\n  my_array\nrescue NameError\n  return \"Did you declare
+      a variable called my_array?\"\nend\n\nunless my_array.is_a? Array\n  return
+      \"It looks like my_array isn't an array.\"\nend\n\nif my_array.empty?\n  return
+      \"Okay, that's TECHNICALLY an array, but it's empty. Put something in there!\"\nend\n\nreturn
+      true"
+    updated_at: 2012-09-20 23:14:34.000000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFsoP1+T5gACAFTy
+    created_at: 2012-09-20 14:29:19.000000000 Z
+    default_code: ! 'demo_array = [100, 200, 300, 400, 500]
+
+
+      print  # Add your code here!'
+    entry: ! "Here's something interesting about arrays: each element in the array
+      has what's called an **index**. The first element gets index 0, the next gets
+      index 1, the one after that gets index 2, and so on. We can access elements
+      of the array directly through these numbers, like so:\n\n    array = [5, 7,
+      9, 2, 0]\n    array[2]\n    # returns \"9\", since \"9\"\n    # is at index
+      2\n\nThe diagram below shows how these indices work for our sample array, `[5,
+      7, 9, 2, 0]`. The first element gets index 0, the next gets 1, the next gets
+      2, and so on.\n\n    +---+---+---+---+---+\n    | 5 | 7 | 9 | 2 | 0 |\n    +---+---+---+---+---+\n
+      \     0   1   2   3   4\n\n(This is a bit of an oversimplification, but it gets
+      the idea across for now.)\n\nWe can access the `i`th element of an array called
+      `array` by putting the index in square brackets, like so: `array[i]`. `array[0]`
+      gets the first element, `array[1]` gets the second element, and so on. This
+      is called **access by index** or **index by offset**."
+    expect_error: false
+    feedback_stats:
+      instructional_text_issue: 2
+      total: 2
+    from_console: false
+    hint: ! "Remember, you can access the `i`th value of an array with\n\n    array_name[i]"
+    instruction: Use square bracket notation to `print` the third value of `demo_array`
+      to the console.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Access by Index
+    tabs: []
+    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"It looks like
+      your syntax isn't quite right. Check the Hint if you need help!\"\nend\n\nif
+      code.scan(\"demo_array[\").length == 0\n  return \"Make sure to use square bracket
+      notation to print out the third element of demo_array.\"\nend\n\nif prints.length
+      == 0\n  return \"It looks like you didn't print anything to the console.\"\nend\n\nif
+      prints.include? \"400\"\n  return \"Remember, array indices start with 0, not
+      1!\"\nend\n\nunless prints.include? \"300\"\n  return \"It doesn't look like
+      you printed out the third value of demo_array to the console.\"\nend\n\nreturn
+      true"
+    updated_at: 2012-10-31 02:59:28.995000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFqRkIFUkAACAAg+
+    created_at: 2012-09-20 03:46:24.000000000 Z
+    default_code: ''
+    entry: ! 'Here''s something you might not have known: you can make an array of
+      *any* collection of Ruby objects. You can make an array of booleans! An array
+      of strings! The list is (almost) endless.'
+    expect_error: false
+    feedback_stats:
+      correctness_test_issue: 1
+      total: 4
+      other: 2
+      instructional_text_issue: 1
+    from_console: false
+    hint: ''
+    instruction: Create a new array called `string_array`. Make it an array of...
+      strings!
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Arrays of Non-Numbers
+    tabs: []
+    test_functions: ! "if code == nil\n  return \"You gotta type something!\"\nend\n\nbegin\n
+      \ string_array\nrescue NameError\n  return \"Did you declare an array called
+      string_array?\"\nend\n\nunless string_array.is_a? Array\n  return \"It looks
+      like string_array isn't an array.\"\nend\n\nif string_array.empty?\n  return
+      \"Your array is emptier than a Nickelback concert!\"\nend\n\nunless string_array.all?
+      {|word| word.is_a? String}\n  return \"It looks like not every element of string_array
+      is a string.\"\nend\n\nreturn true"
+    updated_at: 2012-10-31 08:30:10.281000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFqRkYrnLgACAAlR
+    created_at: 2012-09-20 03:46:25.000000000 Z
+    default_code: ! 'multi_d_array = [[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0]]
+
+
+      multi_d_array.each { |x| puts "#{x}\n" }'
+    entry: ! 'You might be asking yourself: "If I can put *anything* in an array,
+      can I make an array of arrays?" The answer is: yes!
+
+
+      Check out the array of arrays we have in the editor. Arrays of arrays are called
+      **multidimensional** arrays, since the act of adding more arrays expands the
+      array out of its string-like shape. For instance, the array in the editor is
+      a two-dimensional array.'
+    expect_error: false
+    feedback_stats:
+      correctness_test_issue: 24
+      total: 46
+      other: 15
+      instructional_text_issue: 5
+      typo: 1
+      positive_feedback: 1
+    from_console: false
+    hint: ''
+    instruction: Can you guess what this two-dimensional array will look like if we
+      print it out? Click Run to see.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Arrays of Arrays
+    tabs: []
+    test_functions: return true
+    updated_at: 2012-10-31 08:33:16.186000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFqRkggK+AACAAZX
+    created_at: 2012-09-20 03:46:26.000000000 Z
+    default_code: ''
+    entry: See how a two-dimensional array with the same number of elements per row
+      and overall rows is a square? An array (like a line) is one-dimensional; an
+      array of arrays (like a square) is two-dimensional.
+    expect_error: false
+    feedback_stats:
+      typo: 1
+      total: 1
+    from_console: false
+    hint: ! "Remember, a simple 2-D array looks like this:\n\n    array = [[thing,
+      thing], [thing, thing]]"
+    instruction: ! 'Create your own two-dimensional array called `my_2d_array` in
+      the editor. The elements of the inner array can be anything you like: numbers,
+      strings, booleans, and so on. Check the Hint if you need help.'
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Create Your Own
+    tabs: []
+    test_functions: ! "if code == nil\n  return \"You gotta type something!\"\nend\n\nbegin\n
+      \ my_2d_array\nrescue NameError\n  return \"Did you declare an array called
+      my_2d_array?\"\nend\n\nunless my_2d_array.is_a? Array\n  return \"It looks like
+      my_2d_array isn't an array.\"\nend\n\nunless my_2d_array.all? {|item| item.is_a?
+      Array}\n  return \"It looks like not every element of my_2d_array is an array.\"\nend\n\nreturn
+      true"
+    updated_at: 2012-10-01 02:35:02.000000000 Z
+    view: console_and_editor
+  feedback_total: 53
+  index: 0
+  language_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TyFOXyFuzxlcRMGV
+  name: More With Arrays
+  num_forum_answers: 18
+  num_forum_questions: 10
+  published: true
+  read_feedback_total: 0
+  updated_at: 2012-10-31 08:33:16.220000000 Z
+  user_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TwTxhHBXEgADAGwS
+  viewable: false
+- !ruby/hash:Moped::BSON::Document
+  created_at: 2012-09-20 00:16:56.000000000 Z
+  default_view: console_and_editor
+  entry: ! 'Hashes are combinations of key-value pairs. Like arrays, they have indices,
+    but their indices don''t have to be numbers: they can be any Ruby object, such
+    as strings.'
+  exercises:
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFpgeUssoAACAHFR
+    created_at: 2012-09-20 00:16:57.000000000 Z
+    default_code: ! "my_hash = { \"name\" => \"Eric\",\n  \"age\" => 26,\n  \"hungry?\"
+      => true\n}\n\nputs my_hash[\"name\"]\nputs my_hash[\"age\"]\nputs my_hash[\"hungry?\"]"
+    entry: ! "We know that arrays are indexed with numbers that start with 0 and go
+      up to the array's length minus one. (Think about it: an array with four elements
+      has the indices 0, 1, 2, and 3.)\n\nBut what if we want to use numeric indices
+      that don't go in order from 0 to the end of the array? What if we don't want
+      to use numbers as indices at all? We'll need a new array structure called a
+      **hash**.\n\nHashes are sort of like JavaScript objects or Python dictionaries.
+      If you haven't studied those languages, all you need to know that a hash is
+      a collection of **key-value pairs**. Hash syntax looks like this:\n\n    hash
+      = { key1 => value1,\n      key2 => value2,\n      key3 => value3\n    }\n\nValues
+      are assigned to keys using `=>`. You can use any Ruby object for a key or value."
+    expect_error: false
+    feedback_stats:
+      positive_feedback: 2
+      total: 3
+      other: 1
+    from_console: false
+    hint: ''
+    instruction: ! 'We''ve created a hash in the editor to the right. See how it''s
+      made up of keys and values? Check out the code below it: it should look vaguely
+      familiar. Click Run to see what it''ll do!'
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Introduction to Hashes
+    tabs: []
+    test_functions: return true
+    updated_at: 2012-10-27 07:33:35.464000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFqRmkORIAACAAdB
+    created_at: 2012-09-20 03:46:34.000000000 Z
+    default_code: ''
+    entry: ! "What we just showed you was hash **literal notation**. We call it that
+      because you *literally* describe what you want in the hash: you give it a name
+      and you set it equal to a bunch of key => value pairs inside curly braces.\n\nYou
+      can also create a hash using `Hash.new`, like so:\n\n    my_hash = Hash.new\n\nSetting
+      a variable equal to `Hash.new` creates a new, empty hash; it's the same as setting
+      the variable equal to empty curly braces (`{}`)."
+    expect_error: false
+    feedback_stats:
+      instructional_text_issue: 4
+      total: 5
+      other: 1
+    from_console: false
+    hint: ''
+    instruction: Use `Hash.new` to create a new hash called `pets`. `Hash` *must*
+      be capitalized, or Ruby won't know what you're talking about!
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Using Hash.new
+    tabs: []
+    test_functions: ! "if code == nil\n  return \"You gotta type something!\"\nend\n\nbegin\n
+      \ pets\nrescue NameError\n  return \"Did you declare a variable called pets?\"\nend\n\nunless
+      pets.is_a? Hash\n  return \"It looks like pets isn't a hash.\"\nend\n\nif code.scan(\"Hash.new\").length
+      == 0\n  return \"Make sure to use Hash.new to create your new hash!\"\nend\n\nreturn
+      true"
+    updated_at: 2012-10-01 02:36:23.000000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFqRnDV3mwACAAl7
+    created_at: 2012-09-20 03:46:36.000000000 Z
+    default_code: ''
+    entry: ! "We can add to a hash two ways: if we created it using literal notation,
+      we can simply add a new key-value pair directly between the curly braces. If
+      we used `Hash.new`, we can add to the hash using bracket notation:\n\n    pets
+      = Hash.new\n    pets[\"Stevie\"] = \"cat\"\n    # Adds the key \"Stevie\" with
+      the\n    # value \"cat\" to the hash\n"
+    expect_error: false
+    feedback_stats:
+      instructional_text_issue: 1
+      total: 1
+    from_console: false
+    hint: ''
+    instruction: Add a pet to your `pets` hash. It can be any key-value pair you like!
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: true
+    name: Adding to a Hash
+    tabs: []
+    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"It looks like
+      your syntax isn't quite right--check the example in the instructions if you
+      need help.\"\nend\n\nif pets.empty?\n  return \"It looks like you didn't add
+      any key-value pairs to your pets hash.\"\nend\n\nreturn true"
+    updated_at: 2012-09-29 19:35:32.000000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFqRm1ueswACAAZk
+    created_at: 2012-09-20 03:46:35.000000000 Z
+    default_code: ''
+    entry: ! "Just like with arrays, you can access values in a hash by offset (that
+      is, using indices). Each index in a hash is a key that you assign; simply by
+      putting the key name between square brackets, we can access the value associated
+      with that key.\n\nFor instance, if we have the hash\n\n    pets = { \"Stevie\"
+      => \"cat\",\n      \"Bowser\" => \"hamster\",\n      \"Kevin Sorbo\" => \"fish\"\n
+      \   }\n\nWe can get the value of `\"Stevie\"` by typing\n\n    pets[\"Stevie\"]\n
+      \   # will return \"cat\"\n"
+    expect_error: false
+    feedback_stats:
+      correctness_test_issue: 10
+      total: 13
+      other: 2
+      instructional_text_issue: 1
+    from_console: false
+    hint: ! "To print a value associated with a key `my_key` in a hash called `my_hash`,
+      you'd write\n\n    puts my_hash[\"my_key\"]"
+    instruction: Use bracket notation to access the key-value pair you added to `pets`,
+      then use `puts` to print that value to the console. Check the Hint if you need
+      help.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: true
+    name: Accessing Hash Values
+    tabs: []
+    test_functions: ! "if prints.length == 0\n  return \"It looks like you didn't
+      print anything to the console.\"\nend\n\nfor x, y in pets\n  unless prints.include?
+      y\n    return \"It looks like you didn't print out the value of the key stored
+      in your hash.\"\n  end\nend\n\nreturn true"
+    updated_at: 2012-10-27 21:53:58.528000000 Z
+    view: console_and_editor
+  feedback_total: 22
+  index: 1
+  language_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TyFOXyFuzxlcRMGV
+  name: Hashes
+  num_forum_answers: 7
+  num_forum_questions: 4
+  published: true
+  read_feedback_total: 3
+  updated_at: 2012-10-27 21:53:58.555000000 Z
+  user_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TwTxhHBXEgADAGwS
+  viewable: false
+- !ruby/hash:Moped::BSON::Document
+  created_at: 2012-09-20 00:17:07.000000000 Z
+  default_view: console_and_editor
+  entry: We've done a little iteration over arrays. In this section, we'll get in
+    some more practice and learn how to iterate over hashes.
+  exercises:
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFpgiXymwwACAG3/
+    created_at: 2012-09-20 00:17:13.000000000 Z
+    default_code: ! "friends = [\"Milhouse\", \"Ralph\", \"Nelson\", \"Otto\"]\n\nfamily
+      = { \"Homer\" => \"dad\",\n  \"Marge\" => \"mom\",\n  \"Lisa\" => \"sister\",\n
+      \ \"Maggie\" => \"sister\",\n  \"Abe\" => \"grandpa\",\n  \"Santa's Little Helper\"
+      => \"dog\"\n}\n\nfriends.each { |x| puts \"#{x}\" }\nfamily.each { |x, y| puts
+      \"#{x}: #{y}\" }"
+    entry: ! 'Remember when we covered [loops and iterators](http://www.codecademy.com/courses/ruby-beginner-en-XYcN1)?
+      We could use a whole bunch of different methods for looping in a program. When
+      we loop over an array or a hash, we say that we **iterate** over it.
+
+
+      We''ll be using the `.each` iterator to iterate over arrays and hashes in this
+      section. Take a look at the code in the editor to see one example of how we
+      might go about this.'
+    expect_error: false
+    feedback_stats: {}
+    from_console: false
+    hint: ''
+    instruction: When you think you understand the code in the editor, click Run to
+      see it in action.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: (Re)Introduction to Iteration
+    tabs: []
+    test_functions: return true
+    updated_at: 2012-09-20 16:16:57.000000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFs99/LPjQACAYue
+    created_at: 2012-09-20 16:01:59.000000000 Z
+    default_code: ! 'languages = ["HTML", "CSS", "JavaScript", "Python", "Ruby"]
+
+
+'
+    entry: ! "Iterating over arrays is easier than it looks. Array elements are indexed
+      starting at 0 and always go up by one, and loops are particularly good at starting
+      at a certain number and going up by one with each iteration. When we type\n\n
+      \   array.each { |element| action }\n\nWe're telling Ruby: \"Take this array
+      and for each element, do this action.\" As usual, we can use any placeholder
+      name for the bit between `| |`s."
+    expect_error: false
+    feedback_stats:
+      other: 3
+      total: 4
+      instructional_text_issue: 1
+    from_console: false
+    hint: ''
+    instruction: Use the `.each` iterator to print out each element of the `languages`
+      array. Make sure to use `puts` instead of `print`, so each element is on its
+      own line.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Iterating Over Arrays
+    tabs: []
+    test_functions: ! "if prints.length == 0\n  return \"It looks like you didn't
+      print anything to the console.\"\nend\n\nif code.scan(\"puts\").length == 0\n
+      \ return \"Make sure to use puts insead of print! We want each element printed
+      on its own line.\"\nend\n\nfor i in languages\n  unless prints.include? i\n
+      \   return \"It looks like you didn't print out each element of the languages
+      array.\"\n  end\nend\n\nreturn true"
+    updated_at: 2012-10-04 22:55:51.000000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFqSHUYCQQACAA2D
+    created_at: 2012-09-20 03:48:45.000000000 Z
+    default_code: ! 's = [["ham", "swiss"], ["turkey", "cheddar"], ["roast beef",
+      "gruyere"]]
+
+
+'
+    entry: ! "Iterating over a multidimensional array is slightly trickier.\n\nWe've
+      created a 2-D array, `s` (for \"sandwiches\"). We want to iterate over `s` in
+      such a way that we don't print out each element, like `[\"ham\", \"swiss\"]`,
+      but each element *within* each element, so we get a list of all the meats and
+      cheeses within `s`.\n\nIf we just wanted to access `\"swiss\"`, we could type\n\n
+      \   s[0][1]\n\nMeaning, \"bring me the second element of the first element,\"
+      which is \"swiss.\" If we iterate over a regular array using\n\n    array.each
+      { |element| action }\n\nthen how might we iterate over an array of arrays?"
+    expect_error: false
+    feedback_stats:
+      typo: 2
+      total: 9
+      correctness_test_issue: 3
+      instructional_text_issue: 3
+      other: 1
+    from_console: false
+    hint: ! "Your nested `.each`es should look something like this:\n\n    s.each
+      do | x |\n      x.each do | y |\n        puts y\n      end\n    end"
+    instruction: ! 'We''ll give you a hint: use two `.each` iterators, one inside
+      the other, to print out each element of each element of the `s` array. Make
+      sure to use `puts` instead of `print`, so each element is on its own line. Check
+      the Hint if you need more help!'
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Iterating Over Multidimensional Arrays
+    tabs: []
+    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"Your syntax doesn't
+      look quite right. Check the Hint if you need help!\"\nend\n\nif prints.length
+      == 0\n  return \"It looks like you didn't print anything to the console.\"\nend\n\nif
+      code.scan(\"puts\").length == 0\n  return \"Make sure to use puts insead of
+      print! We want each element printed on its own line.\"\nend\n\nfor i in s\n
+      \ for j in i\n    unless prints.include? j\n      return \"It looks like you
+      didn't print out each element of the s array.\"\n    end\n  end\nend\n\nreturn
+      true"
+    updated_at: 2012-10-22 20:17:40.101000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFqSHlueswACAAoq
+    created_at: 2012-09-20 03:48:46.000000000 Z
+    default_code: ! "secret_identities = { \"The Batman\" => \"Bruce Wayne\",\n  \"Superman\"
+      => \"Clark Kent\",\n  \"Wonder Woman\" => \"Diana Prince\",\n  \"Freakazoid\"
+      => \"Dexter Douglas\"\n}\n  \n"
+    entry: ! "When iterating over hashes, we also need to search for more than one
+      placeholder variable. Whereas with multidimensional arrays, we nested our `.each`
+      calls so we could loop through each index of each nested array, for hashes we
+      do this so we can get both parts of each hash element: the key and the value.\n\nIf
+      we wanted to print the keys and values of a hash, we might type\n\n    hash.each
+      { |key, value| puts \"#{key}:  #{value}\" }\n\nWhere `key` and `value` are just
+      placeholder names, as usual: they could be `x` and `y`, `hamburgers` and `hotdogs`,
+      you name it."
+    expect_error: false
+    feedback_stats:
+      correctness_test_issue: 8
+      total: 13
+      instructional_text_issue: 3
+      positive_feedback: 1
+      typo: 1
+    from_console: false
+    hint: ! "For example, you should print out\n\n    The Batman: Bruce Wayne\n    Superman:
+      Clark Kent\n\nand so on."
+    instruction: ! 'Use `.each` to iterate over the `secret_identities` hash. Use
+      `puts` to print each key-value pair, separated by a colon and a space (`: `),
+      to the console.'
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Iterating Over Hashes
+    tabs: []
+    test_functions: ! "if prints.length == 0\n  return \"It looks like you didn't
+      print anything to the console.\"\nend\n\nif code.scan(\"puts\").length == 0\n
+      \ return \"Make sure to use puts insead of print! We want each key-value pair
+      printed on its own line.\"\nend\n\nfor i, j in secret_identities\n  unless prints.include?
+      \"#{i}: #{j}\"\n    return \"It looks like you aren't printing each colon-separated
+      key-value pair on its own line. Check the hint if you need help!\"\n  end\nend\n\nreturn
+      true"
+    updated_at: 2012-10-29 14:10:56.892000000 Z
+    view: console_and_editor
+  feedback_total: 26
+  index: 2
+  language_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TyFOXyFuzxlcRMGV
+  name: Iterating Over Arrays and Hashes
+  num_forum_answers: 18
+  num_forum_questions: 11
+  published: true
+  read_feedback_total: 0
+  updated_at: 2012-10-29 14:10:56.914000000 Z
+  user_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TwTxhHBXEgADAGwS
+  viewable: false
+- !ruby/hash:Moped::BSON::Document
+  created_at: 2012-09-20 00:17:17.000000000 Z
+  default_view: console_and_editor
+  entry: Let's take some time to go over what we've learned in this lesson.
+  exercises:
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFpgjtac7AACAHvM
+    created_at: 2012-09-20 00:17:18.000000000 Z
+    default_code: ''
+    entry: Great work! You've learned a lot in this lesson. Let's do a little review
+      to be sure you really know your stuff.
+    expect_error: false
+    feedback_stats: {}
+    from_console: false
+    hint: ! "Remember, a simple multidimensional array looks like this:\n\n    array
+      = [[thing, thing], [thing, thing]]"
+    instruction: ! 'Create your own multidimensional array called `my_array` in the
+      editor. The elements of the innermost array can be anything you like: numbers,
+      strings, booleans, and so on. Check the Hint if you need help.'
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Multidimensional Arrays
+    tabs: []
+    test_functions: ! "if code == nil\n  return \"You gotta type something!\"\nend\n\nbegin\n
+      \ my_array\nrescue NameError\n  return \"Did you declare an array called my_array?\"\nend\n\nunless
+      my_array.is_a? Array\n  return \"It looks like my_array isn't an array.\"\nend\n\nif
+      my_array.empty?\n  return \"Okay, that's TECHNICALLY an array, but it's empty.
+      Put something in it!\"\nend\n\nunless my_array.all? {|item| item.is_a? Array}\n
+      \ return \"It looks like not every element of my_array is an array.\"\nend\n\nreturn
+      true"
+    updated_at: 2012-09-20 19:45:55.000000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFqSOAgK+AACAAp5
+    created_at: 2012-09-20 03:49:12.000000000 Z
+    default_code: ''
+    entry: Good! Now let's create a hash. Feel free to use either hash literal notation
+      or `Hash.new`.
+    expect_error: false
+    feedback_stats: {}
+    from_console: false
+    hint: ! "Hash literal notation looks like this:\n\n    hash_name = { key1 => value1,\n
+      \     key2 => value2,\n      key3 => value3\n    }\n\nYou use `Hash.new` like
+      this:\n\n    hash_name = Hash.new"
+    instruction: Create a hash called `my_hash` in the editor. Give it at least one
+      key-value pair.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Hashes
+    tabs: []
+    test_functions: ! "if code == nil\n  return \"You gotta type something!\"\nend\n\nbegin\n
+      \ my_hash\nrescue NameError\n  return \"Did you declare a variable called my_hash?\"\nend\n\nunless
+      my_hash.is_a? Hash\n  return \"It looks like my_hash isn't a hash.\"\nend\n\nif
+      my_hash.empty?\n  return \"It looks like you didn't add any key-value pairs
+      to my_hash.\"\nend\n\nreturn true"
+    updated_at: 2012-09-20 19:46:45.000000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFqSOeVX7AACABF8
+    created_at: 2012-09-20 03:49:13.000000000 Z
+    default_code: ! "lunch_order = { \"Ryan\" => \"wonton soup\",\n  \"Eric\" => \"hamburger\",\n
+      \ \"Jimmy\" => \"sandwich\",\n  \"Sasha\" => \"salad\",\n  \"Cole\" => \"taco\"\n}\n\n"
+    entry: We've done a fair amount of iteration over arrays, so to finish up, let's
+      review how to iterate over a hash.
+    expect_error: false
+    feedback_stats:
+      correctness_test_issue: 3
+      total: 7
+      positive_feedback: 3
+      typo: 1
+    from_console: false
+    hint: ! "For example, you should print out\n\n    wanton soup\n    hamburger\n\nand
+      so on."
+    instruction: Write the code necessary to print JUST the values of each key-value
+      pair in `lunch_order`. (Use `puts` instead of `print` so each value is printed
+      on its own line.) Click Run to iterate your way to completing this lesson.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Iterating Over a Hash
+    tabs: []
+    test_functions: ! "if prints.length == 0\n  return \"It looks like you didn't
+      print anything to the console.\"\nend\n\nif code.scan(\"puts\").length == 0\n
+      \ return \"Make sure to use puts insead of print! We want each key-value pair
+      printed on its own line.\"\nend\n\nfor i, j in lunch_order\n  unless prints.include?
+      \"#{j}\"\n    return \"It looks like you aren't printing the value part of each
+      key-value pair on its own line. Check the hint if you need help!\"\n  end\nend\n\nfor
+      i, j in lunch_order\n  if prints.include? \"#{i}\"\n    return \"It looks like
+      you're printing your hash's keys to the console. Only print the values!\"\n
+      \ end\nend\n\nreturn true"
+    updated_at: 2012-10-09 10:53:53.574000000 Z
+    view: console_and_editor
+  feedback_total: 7
+  index: 3
+  language_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TyFOXyFuzxlcRMGV
+  name: Review
+  num_forum_answers: 6
+  num_forum_questions: 6
+  published: true
+  read_feedback_total: 0
+  updated_at: 2012-10-09 10:53:53.631000000 Z
+  user_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TwTxhHBXEgADAGwS
+  viewable: false

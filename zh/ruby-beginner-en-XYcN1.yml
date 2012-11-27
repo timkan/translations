@@ -1,0 +1,753 @@
+--- !ruby/hash:Moped::BSON::Document
+avg_user_rating: 4.46354961832061
+classification: :lesson
+created_at: 2012-09-19 20:38:44.000000000 Z
+domain: :freestyle
+down_votes: 160
+entry: Using loops and iterators, Ruby can automate repetitive tasks for you quickly
+  and easily.
+feedback_total: 191
+is_project: false
+language_id: !ruby/object:Moped::BSON::ObjectId
+  raw_data: !binary |-
+    TyFOXyFuzxlcRMGV
+level: :beginner
+locale: en
+name: Loops & Iterators
+num_exercises: 18
+num_published_exercises: 18
+num_published_sections: 4
+num_readiness_feedbacks: 30
+num_sections: 4
+num_user_ratings: 2620
+published: true
+published_at: 2012-09-20 03:25:54.000000000 Z
+rating: 696.1796455799896
+read_feedback_total: 141
+readiness: 92.2528735632184
+recommended: false
+review_status: :approved
+roles:
+  manager: []
+  editor: []
+submitted_at: 2012-09-20 01:47:08.000000000 Z
+topic_id: !ruby/object:Moped::BSON::ObjectId
+  raw_data: !binary |-
+    T5Ws8pVtgwADABwX
+total_user_rating: 11694.5
+up_votes: 887
+updated_at: 2012-11-26 15:38:08.199000000 Z
+user_id: !ruby/object:Moped::BSON::ObjectId
+  raw_data: !binary |-
+    TwTxhHBXEgADAGwS
+sections:
+- !ruby/hash:Moped::BSON::Document
+  created_at: 2012-09-19 20:38:44.000000000 Z
+  default_view: console_and_editor
+  entry: The 'while' and 'until' loops let you repeat an action in Ruby while a condition
+    is true or until a condition is true.
+  exercises:
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFotVvx4EQACAAkX
+    created_at: 2012-09-19 20:38:46.000000000 Z
+    default_code: ! "counter = 1\nwhile counter < 11\n  puts counter\n  counter =
+      counter + 1\nend"
+    entry: ! 'Sometimes you want to repeat an action in Ruby while a certain condition
+      is true, but you don''t know how many times you''ll have to repeat that action.
+      A good example would be prompting a user for a certain type of input: if they
+      insist on giving you the wrong thing, you may have to re-ask them several times
+      before you get the kind of input you''re looking for.
+
+
+      To accomplish this, we use something called a `while` loop. It checks to see
+      if a certain condition is true, and `while` it is, the loop keeps running. As
+      soon as the condition stops being true, the loop stops!'
+    expect_error: false
+    feedback_stats: {}
+    from_console: false
+    hint: ''
+    instruction: Check out the code in the editor. Can you guess what it'll do? When
+      you think you know, hit Run to see the results.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: The 'While' Loop
+    tabs: []
+    test_functions: return true
+    updated_at: 2012-09-19 21:42:15.000000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFouE1Rp9QACABWm
+    created_at: 2012-09-19 20:41:55.000000000 Z
+    default_code: ! "i = 0\nwhile i < 5\n  puts i\n  # Add your code here!\n  \nend"
+    entry: ! 'Did you see that? The loop printed out the numbers 1 to 10, then stopped.
+      This was because the loop''s condition said to continue while `counter` was
+      less than 11; since `counter` went up by 1 each time through the loop, the loop
+      stopped when `counter` hit 11.
+
+
+      What if we''d forgotten to increment `counter`? It would have stayed at 1, the
+      loop would have kept checking to see if it was less than 11 (and 1 is always
+      less than 11), and the loop would never have ended. This is called an **infinite
+      loop** and it will cause your programs to crash. Avoid them at all costs!'
+    expect_error: false
+    feedback_stats:
+      instructional_text_issue: 3
+      total: 4
+      correctness_test_issue: 1
+    from_console: false
+    hint: ! "Your while loop should include something like this:\n\n    i = i + 1"
+    instruction: The `while` loop in the editor is currently an infinite loop. Correct
+      it so it will end! (Be careful—if you click Run right away, you'll start the
+      infinite loop and you'll have to refresh the page.)
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: ! 'Danger: Infinite Loops!'
+    tabs: []
+    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"It looks like
+      your 'while' loop syntax isn't quite right. Check the Hint if you need help!\"\nend\n\nif
+      i == 0\n  return \"It looks like you didn't modify the value of i.\"\nend\n\nreturn
+      true"
+    updated_at: 2012-10-11 03:31:58.333000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFouE7BzSgACABNU
+    created_at: 2012-09-19 20:41:55.000000000 Z
+    default_code: ! "counter = 1\nuntil counter __ 10\n  puts counter\n  # Add code
+      to update 'counter' here!\n  \nend"
+    entry: ! 'The complement to the `while` loop is the `until` loop. It''s sort of
+      like a backwards `while`: It will execute its code while the condition it checks
+      is `false`. As soon as that condition becomes true, the loop will end.'
+    expect_error: false
+    feedback_stats:
+      correctness_test_issue: 5
+      total: 7
+      instructional_text_issue: 2
+    from_console: false
+    hint: ! "Your `until` loop should look something like this:\n\n    until # Counter
+      is greater than 10\n      puts counter\n      # Increment counter\n    end"
+    instruction: Complete the `until` loop in the editor so that it prints out the
+      numbers 1 to 10. Beware of infinite loops!
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: The 'Until' Loop
+    tabs: []
+    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"It looks like
+      your 'until' loop syntax isn't quite right. Check the Hint if you need help!\"\nend\n\nif
+      counter == 1\n  return \"It looks like you didn't modify the value of counter.\"\nend\n\nfor
+      num in (1..10).to_a\n  unless prints.include? num.to_s\n    return \"It looks
+      like your code doesn't print the numbers 1 to 10 to the console.\"\n  end\nend\n\nreturn
+      true"
+    updated_at: 2012-10-18 04:13:31.106000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFovH6gnngACACgx
+    created_at: 2012-09-19 20:46:23.000000000 Z
+    default_code: ! "counter = 1\nwhile counter < 11\n  puts counter\n  counter =
+      counter + 1\nend"
+    entry: ! "We've been using syntax like `counter = counter + 1`, which works, but
+      as you'll increasingly find with Ruby, there's always another way.\n\nA shortcut
+      is to use an **assignment operator**. You already know one assignment operator:
+      `=`, which sets a variable. You can update a variable with additional assignment
+      operators, however, which include `+=`, `-=`, `*=`, and `/=`. For instance,
+      when you type \n\n    counter += 1\n\nYou're telling Ruby: \"Add 1 to `counter`,
+      then assign that new value back to `counter`.\" This provides a succinct way
+      of updating variable values in our programs.\n\nSome languages have the increment
+      operators `++` and `--` (which also add or subtract 1 from a value), but Ruby
+      does not. You'll have to make do with `+=` and `-=`!"
+    expect_error: false
+    feedback_stats:
+      positive_feedback: 2
+      total: 5
+      instructional_text_issue: 1
+      correctness_test_issue: 1
+      other: 1
+    from_console: false
+    hint: ''
+    instruction: The loop from the first exercise is in the editor. Rewrite it using
+      the appropriate assignment operator.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: More Assignment Operators
+    tabs: []
+    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"Your syntax doesn't
+      look quite right. Does your += operator look like the one in the instructional
+      text?\"\nend\n\nif code.scan(\"+=\").length == 0\n  return \"Make sure to use
+      the += operator in your code.\"\nend\n\nreturn true"
+    updated_at: 2012-10-26 15:01:12.446000000 Z
+    view: console_and_editor
+  feedback_total: 16
+  index: 0
+  language_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TyFOXyFuzxlcRMGV
+  name: ! '''While'' & ''Until'' Loops'
+  num_forum_answers: 10
+  num_forum_questions: 8
+  published: true
+  read_feedback_total: 1
+  updated_at: 2012-10-26 15:01:12.510000000 Z
+  user_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TwTxhHBXEgADAGwS
+  viewable: false
+- !ruby/hash:Moped::BSON::Document
+  created_at: 2012-09-19 20:39:54.000000000 Z
+  default_view: console_and_editor
+  entry: With a 'for' loop, you can repeat an action a predetermined number of times
+    or loop through a range of values.
+  exercises:
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFotnZnaTAACAA7h
+    created_at: 2012-09-19 20:39:57.000000000 Z
+    default_code: ! "for num in 1...10\n  puts num\nend"
+    entry: Sometimes you *do* know how many times you'll be looping, however, and
+      when that's the case, you'll want to use a `for` loop.
+    expect_error: false
+    feedback_stats:
+      correctness_test_issue: 1
+      total: 2
+      other: 1
+    from_console: false
+    hint: ''
+    instruction: Take a look at the example `for` loop in the editor. Can you guess
+      what it does? Click Run to see it in action.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: The 'For' Loop
+    tabs: []
+    test_functions: return true
+    updated_at: 2012-10-04 19:41:11.000000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFoxLFRp9QACAEuc
+    created_at: 2012-09-19 20:55:08.000000000 Z
+    default_code: ! "for num in 1...10\n  puts num\nend"
+    entry: ! 'You saw a bit of new syntax in the previous exercise: `for num in 1...10`.
+      What this says to Ruby is: "For the variable `num` in the range 1 to 10, do
+      the following." The following was to `print "#{num}"`, so as `num` took on the
+      values of 1 to 9, one at a time, those values were printed to the console.
+
+
+      The reason Ruby counted to 9 and not 10 was because we used three dots in the
+      range; this tells Ruby to *exclude* the final number in the count: `for num
+      in 1...10` means "go up to *but don''t include* 10." If we use two dots, this
+      tells Ruby to *include* the highest number in the range.'
+    expect_error: false
+    feedback_stats:
+      correctness_test_issue: 12
+      total: 20
+      instructional_text_issue: 5
+      typo: 2
+      other: 1
+    from_console: false
+    hint: ''
+    instruction: ! 'Update the `for` loop in the editor in two ways:
+
+
+      1. Make it print the numbers 1 to 15, including 15.
+
+      2. Change it to use `..` instead of `...`.'
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Inclusive and Exclusive Ranges
+    tabs: []
+    test_functions: ! "if code.scan(\"...\").length > 0\n  return \"Make sure to only
+      use two dots in the range, not three!\"\nend\n\nfor num in (1..15).to_a\n  unless
+      prints.include? num.to_s\n    return \"It looks like your code doesn't print
+      the numbers from 1 up to (and including) 15.\"\n  end\nend\n\nif prints.include?
+      \"16\"\n  return \"It looks like you printed 16. Make sure to stop at 15!\"\nend\n\nreturn
+      true"
+    updated_at: 2012-10-07 17:42:40.000000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFoxMbBzSgACAEAb
+    created_at: 2012-09-19 20:55:13.000000000 Z
+    default_code: ''
+    entry: Good work! You're ready to build your very own `for` loop.
+    expect_error: false
+    feedback_stats:
+      correctness_test_issue: 19
+      total: 24
+      instructional_text_issue: 2
+      other: 1
+      typo: 1
+      positive_feedback: 1
+    from_console: false
+    hint: ! "Your `for` loop should look something like this:\n\n    for variable
+      in range #.. or ...\n      puts variable\n    end"
+    instruction: Write a `for` loop that `puts` the numbers 1 to 20, *including 20*,
+      using either `..` or `...`. Check Hint if you need a syntax refresher.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Building Your Own
+    tabs: []
+    test_functions: ! "if code == nil\n  return \"You gotta type something!\"\nend\n\nif
+      exception.kind_of? SyntaxError\n  return \"It looks like your 'for' loop syntax
+      isn't quite right. Check the Hint if you need help!\"\nend\n\nif code.scan(\"print\").length
+      > 0 || code.scan(\"puts\").length == 0\n  return \"Make sure to use 'puts' instead
+      of 'print'.\"\nend\n\nfor num in (1..20).to_a\n  unless prints.include? num.to_s\n
+      \   return \"It looks like you didn't print out all the numbers from 1 to 20,
+      inclusive.\"\n  end\nend\n\nif prints.include? \"21\"\n  return \"Your output
+      includes the number 21—you've gone too far, young Padawan!\"\nend\n\nreturn
+      true"
+    updated_at: 2012-10-13 12:36:18.492000000 Z
+    view: console_and_editor
+  feedback_total: 45
+  index: 1
+  language_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TyFOXyFuzxlcRMGV
+  name: ! '''For'' Loops'
+  num_forum_answers: 5
+  num_forum_questions: 1
+  published: true
+  read_feedback_total: 6
+  updated_at: 2012-10-13 12:36:18.611000000 Z
+  user_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TwTxhHBXEgADAGwS
+  viewable: false
+- !ruby/hash:Moped::BSON::Document
+  created_at: 2012-09-19 20:40:35.000000000 Z
+  default_view: console_and_editor
+  entry: Iterators allow you to specify a repetitive action to take using a structure
+    called a block.
+  exercises:
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFotxZnaTAACABDj
+    created_at: 2012-09-19 20:40:37.000000000 Z
+    default_code: ! "i = 20\n___ ___\n  i -= 1\n  print \"#{i}\"\n  ___ if i <= 0\nend"
+    entry: ! "So far we've learned one way to repeat an action in Ruby: using loops.
+      As is often the case in Ruby, however, there's more than one way to accomplish
+      a given task. In this case, it's also possible to repeat an action using an
+      **iterator**.\n\nAn iterator is just a Ruby method that repeatedly invokes a
+      block of code. The code block is just the bit that contains the instructions
+      to be repeated, and those instructions can be just about anything you like!\n\nThe
+      simplest iterator is the `loop` method. You can create a basic (but infinite!)
+      loop by simply typing\n\n    loop { print \"Hello, world!\" }\n\nIn Ruby, curly
+      braces (`{}`) are generally interchangeable with the keywords `do` (to open
+      the block) and `end` (to close it). Knowing this, we can write a smarter loop
+      than the one above:\n\n    i = 0\n    loop do\n      i += 1\n      print \"#{i}\"\n
+      \     break if i > 5\n    end\n\nThe `break` keyword is our Get Out of Jail
+      Free card: it breaks a loop as soon as its condition is met."
+    expect_error: false
+    feedback_stats:
+      other: 1
+      total: 2
+      correctness_test_issue: 1
+    from_console: false
+    hint: The missing keywords are `loop`, `do`, and `break`. Take a look at the example
+      to be sure you've got them in the right order!
+    instruction: Replace the `___`s in the editor with the appropriate keywords. Check
+      the Hint if you need help!
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: The Loop Method
+    solution_code: ''
+    solution_entry: ''
+    tabs: []
+    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"Make sure to
+      replace the ___s with the appropriate keywords!\"\nend\n\nif exception.kind_of?
+      NameError\n  return \"Make sure to replace the ___s with the appropriate keywords!\"\nend\n\nunless
+      prints.include? \"191817161514131211109876543210\"\n  return \"It looks like
+      your loop doesn't print out the numbers 19 to 0.\"\nend\n\nreturn true"
+    updated_at: 2012-10-09 20:05:10.716000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFpFoE4dGgACAAdw
+    created_at: 2012-09-19 22:22:24.000000000 Z
+    default_code: ''
+    entry: ! "The `next` keyword can be used to skip over certain steps in the loop.
+      For instance, if we don't want to print out the even numbers, we can write\n\n
+      \   i = 20\n    loop do\n      i -= 1\n      next if i % 2 == 0\n      print
+      \"#{i}\"\n      break if i <= 0\n    end\n\nRemember that modulo (`%`) returns
+      the remainder of dividing one number by another; if a number has no remainder
+      when divided by 2, it must be even."
+    expect_error: false
+    feedback_stats:
+      instructional_text_issue: 10
+      total: 27
+      correctness_test_issue: 11
+      typo: 3
+      other: 2
+      positive_feedback: 1
+    from_console: false
+    hint: ''
+    instruction: Change your loop using the `next` keyword so that it skips printing
+      *odd* numbers.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: true
+    name: Next!
+    solution_code: ''
+    solution_entry: ''
+    tabs: []
+    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"Make sure to
+      replace the ___s with the appropriate keywords!\"\nend\n\nif code.scan(\"next\").length
+      == 0\n  return \"Make sure to use the 'next' keyword to skip over the odd numbers
+      in your loop!\"\nend\n\nunless prints.include? \"181614121086420\"\n  return
+      \"It looks like your loop doesn't print out the numbers 18 to 0.\"\nend\n\nreturn
+      true"
+    updated_at: 2012-10-10 15:35:09.599000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFpJ+8u5IAACADCZ
+    created_at: 2012-09-19 22:40:59.000000000 Z
+    default_code: ''
+    entry: ! 'Let''s say we want to save a range of numbers in a variable. How would
+      we do this? A variable can only hold a single value, right?
+
+
+      In Ruby, we can pack multiple values into a single variable using an **array**.
+      An array is just a list of items between square brackets, like so: `[1, 2, 3,
+      4]`. The items don''t have to be in order—you can just as easily have `[10,
+      31, 19, 400]`.'
+    expect_error: false
+    feedback_stats:
+      other: 2
+      total: 2
+    from_console: false
+    hint: ''
+    instruction: Create a variable called `my_array` and set it equal to the numbers
+      1 through 5, inclusive, in order.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Saving Multiple Values
+    solution_code: ''
+    solution_entry: ''
+    tabs: []
+    test_functions: ! "begin\n  my_array\nrescue NameError\n  return \"Did you declare
+      a variable called my_array?\"\nend\n\nunless my_array == [1,2,3,4,5]\n  return
+      \"It looks like my_array isn't equal to [1,2,3,4,5].\"\nend\n\nreturn true"
+    updated_at: 2012-10-22 14:26:33.163000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFoulVqbHAACACBP
+    created_at: 2012-09-19 20:44:05.000000000 Z
+    default_code: ! "array = [1,2,3,4,5]\n\narray.each do |x|\n  x += 10\n  print
+      \"#{x}\"\nend"
+    entry: ! "Great work! You're really getting the hang of this.\n\nThe `loop` iterator
+      is the simplest, but also one of the least powerful. A more useful iterator
+      is the `.each` method, which can apply an expression to each element of an object,
+      one at a time. The syntax looks like this:\n\n    object.each { |item| # Do
+      something }\n\nYou can also use the `do` keyword instead of `{}`:\n\n    object.each
+      do |item| # Do something end\n\nThe variable name between `| |` can be anything
+      you like: it's just a placeholder for each element of the object you're using
+      `.each` on."
+    expect_error: false
+    feedback_stats:
+      instructional_text_issue: 5
+      total: 8
+      other: 2
+      typo: 1
+    from_console: false
+    hint: ''
+    instruction: Take a look at the code in the editor. When you're pretty sure you
+      know what it'll do, click Run to test your theory.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: The .each Iterator
+    solution_code: ''
+    solution_entry: ''
+    tabs: []
+    test_functions: return true
+    updated_at: 2012-11-24 16:13:38.399000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFpJ/DyATAACADSv
+    created_at: 2012-09-19 22:41:00.000000000 Z
+    default_code: ! 'odds = [1,3,5,7,9]
+
+
+      # Add your code below!
+
+
+'
+    entry: Cool, no? Now it's your turn to take the `.each` method for a test drive.
+    expect_error: false
+    feedback_stats:
+      correctness_test_issue: 12
+      total: 21
+      instructional_text_issue: 3
+      other: 3
+      typo: 2
+      positive_feedback: 1
+    from_console: false
+    hint: ! "Your iterator should look something like this:\n\n    odds.each do |placeholder|\n
+      \     # Double the value of placeholder\n      # Print out placeholder\n    end"
+    instruction: Use the `.each` method on the array we've provided to `print` out
+      double the value of each member of the array. Make sure to use `print` rather
+      than `puts`, so your output appears on one line. Check the Hint if you get stuck!
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Try It Out!
+    solution_code: ''
+    solution_entry: ''
+    tabs: []
+    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"It looks like
+      your iterator syntax isn't quite correct--check the Hint if you need help.\"\nend\n\nunless
+      prints.include? \"26101418\"\n  return \"It looks like your iterator didn't
+      print out double the value of each element of the odds array.\"\nend\n\nreturn
+      true"
+    updated_at: 2012-11-07 11:19:36.050000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFoumJNohwACABci
+    created_at: 2012-09-19 20:44:08.000000000 Z
+    default_code: ''
+    entry: ! "The `.times` method is like a super compact `for` loop: it can perform
+      a task on each item in an object a specified number of times.\n\nFor example,
+      if we wanted to print out `\"Chunky bacon!\"` ten times, we might type\n\n    10.times
+      { print \"Chunky bacon!\" }\n\nWe don't know *why* we would type that, but we
+      *could*."
+    expect_error: false
+    feedback_stats:
+      instructional_text_issue: 1
+      total: 5
+      positive_feedback: 2
+      correctness_test_issue: 2
+    from_console: false
+    hint: ''
+    instruction: Use the `.times` operator to `print` out a string of your choice
+      any number of times you like. Use the code in the text above as a guide if you
+      need help.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: The .times Iterator
+    solution_code: ''
+    solution_entry: ''
+    tabs: []
+    test_functions: ! "if code == nil\n  return \"Hey! You gotta type something!\"\nend\n\nif
+      exception.kind_of? SyntaxError\n  return \"Your syntax doesn't look quite right--use
+      the example to the left as a guide.\"\nend\n\nif code.scan(\".times\").length
+      == 0\n  return \"Make sure to use the .times method in your code.\"\nend\n\nif
+      prints.length == 0\n  return \"It looks like you didn't print anything to the
+      console.\"\nend\n\nreturn true"
+    updated_at: 2012-10-06 15:05:03.000000000 Z
+    view: console_and_editor
+  feedback_total: 65
+  index: 2
+  language_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TyFOXyFuzxlcRMGV
+  name: Iterators & Blocks
+  num_forum_answers: 30
+  num_forum_questions: 19
+  published: true
+  read_feedback_total: 7
+  updated_at: 2012-11-24 16:13:38.432000000 Z
+  user_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TwTxhHBXEgADAGwS
+  viewable: false
+- !ruby/hash:Moped::BSON::Document
+  created_at: 2012-09-19 20:41:06.000000000 Z
+  default_view: console_and_editor
+  entry: We've covered a lot of ground! Let's review the new syntax we've learned.
+  exercises:
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFot48mNZgACAA/V
+    created_at: 2012-09-19 20:41:07.000000000 Z
+    default_code: ''
+    entry: Okay, training wheels off. Let's see your stuff!
+    expect_error: false
+    feedback_stats:
+      correctness_test_issue: 4
+      total: 13
+      instructional_text_issue: 3
+      other: 6
+    from_console: false
+    hint: ''
+    instruction: Use a `while` loop to `print` out the numbers 1 through 50, inclusive.
+      Use `print` rather than `puts`, and don't cause an infinite loop!
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Looping with 'While'
+    solution_code: ''
+    solution_entry: ''
+    tabs: []
+    test_functions: ! "if code == nil\n  return \"You gotta type something!\"\nend\n\nif
+      exception.kind_of? SyntaxError\n  return \"Your syntax doesn't look quite correct.
+      Feel free to peek back at earlier exercises if you need to!\"\nend\n\nif code.scan(\"while\").length
+      == 0\n  return \"Make sure you use a 'while' loop in your code.\"\nend\n\noxnard
+      = 1\nmontalvo = \"\"\nwhile oxnard < 51\n  montalvo += oxnard.to_s\n  oxnard
+      += 1\nend\n\nunless prints.include? montalvo\n  return \"It looks like you didn't
+      print out the numbers 1 to 50, inclusive.\"\nend\n\nreturn true"
+    updated_at: 2012-10-13 13:02:47.295000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFoxlqPyfAACAErF
+    created_at: 2012-09-19 20:56:54.000000000 Z
+    default_code: ''
+    entry: Good work!
+    expect_error: false
+    feedback_stats:
+      correctness_test_issue: 11
+      total: 15
+      other: 3
+      instructional_text_issue: 1
+    from_console: false
+    hint: ''
+    instruction: Now rewrite your `while` loop using `until`.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: true
+    name: Looping with 'Until'
+    solution_code: ''
+    solution_entry: ''
+    tabs: []
+    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"Your syntax doesn't
+      look quite correct. Feel free to peek back at earlier exercises if you need
+      to!\"\nend\n\nif code.scan(\"until\").length == 0\n  return \"Make sure you
+      use a 'until' loop in your code.\"\nend\n\noxnard = 1\nmontalvo = \"\"\nwhile
+      oxnard < 51\n  montalvo += oxnard.to_s\n  oxnard += 1\nend\n\nunless prints.include?
+      montalvo\n  return \"It looks like you didn't print out the numbers 1 to 50,
+      inclusive.\"\nend\n\nreturn true"
+    updated_at: 2012-10-30 11:07:13.082000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFoxmLBzSgACAEbk
+    created_at: 2012-09-19 20:56:56.000000000 Z
+    default_code: ''
+    entry: ! 'In case you''re not picking up on the theme of Ruby having a gajillion
+      ways to do any given task: let''s convert our loop yet again.'
+    expect_error: false
+    feedback_stats:
+      correctness_test_issue: 9
+      total: 10
+      instructional_text_issue: 1
+    from_console: false
+    hint: ! "Remember, a `for` loop looks like this:\n\n    for variable in (range)\n
+      \     # Do something\n    end"
+    instruction: Go ahead and `print` out the numbers from 1 to 50 inclusive, using
+      a `for` loop instead of an `until` loop.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: true
+    name: Looping with 'For'
+    solution_code: ''
+    solution_entry: ''
+    tabs: []
+    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"Your syntax doesn't
+      look quite correct. Feel free to peek back at earlier exercises if you need
+      to!\"\nend\n\nif code.scan(\"for\").length == 0 || code.scan(\"..\").length
+      == 0\n  return \"Make sure you use a 'for' loop in your code.\"\nend\n\noxnard
+      = 1\nmontalvo = \"\"\nwhile oxnard < 51\n  montalvo += oxnard.to_s\n  oxnard
+      += 1\nend\n\nunless prints.include? montalvo\n  return \"It looks like you didn't
+      print out the numbers 1 to 50, inclusive.\"\nend\n\nreturn true"
+    updated_at: 2012-10-09 21:35:51.606000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFoxw87lHAACAEyJ
+    created_at: 2012-09-19 20:57:39.000000000 Z
+    default_code: ''
+    entry: Great work! We'll give you a bit of a break from the numbers game.
+    expect_error: false
+    feedback_stats:
+      correctness_test_issue: 9
+      total: 18
+      instructional_text_issue: 6
+      other: 2
+      typo: 1
+    from_console: false
+    hint: ! "Your `loop` should look something like this:\n\n    counter = 0\n    loop
+      do\n      counter += 1\n      print \"Ruby\"\n      break if i > # The value
+      to stop at\n    end"
+    instruction: Use the `loop` iterator to `print` out the string `"Ruby!"` 30 times.
+      Make sure to type the string exactly as shown!
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Loop the Loop with Loop
+    solution_code: ''
+    solution_entry: ''
+    tabs: []
+    test_functions: ! "if code == nil\n  return \"You gotta type something!\"\nend\n\nif
+      exception.kind_of? SyntaxError\n  return \"Your syntax doesn't look quite correct.
+      Feel free to peek back at earlier exercises if you need to!\"\nend\n\nif code.scan(\"loop\").length
+      == 0\n  return \"Make sure you use a 'loop' iterator in your code.\"\nend\n\nif
+      code.scan(\"break\").length == 0\n  return \"Make sure to use a 'break' statement
+      to get out of your loop when you've printed 'Ruby!' 30 times!\"\nend\n\ndagget
+      = \"\"\n30.times do\n  dagget += \"Ruby!\"\nend\n\nunless prints.include? dagget\n
+      \ return \"It looks like you didn't print out the string 'Ruby!' 30 times.\"\nend\n\nreturn
+      true"
+    updated_at: 2012-11-18 04:12:41.817000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFoxuPx4EQACAEl4
+    created_at: 2012-09-19 20:57:28.000000000 Z
+    default_code: ''
+    entry: Finally, let's replace our `loop` with the `.times` iterator.
+    expect_error: false
+    feedback_stats:
+      correctness_test_issue: 4
+      total: 8
+      other: 1
+      positive_feedback: 2
+      instructional_text_issue: 1
+    from_console: false
+    hint: ''
+    instruction: Use the `.times` iterator to `print` `"Ruby!"` to the console 30
+      times. Hit Run to see the majesty of your code and complete this lesson!
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Iterating with .times
+    solution_code: ''
+    solution_entry: ''
+    tabs: []
+    test_functions: ! "if code == nil\n  return \"You gotta type something!\"\nend\n\nif
+      exception.kind_of? SyntaxError\n  return \"Your syntax doesn't look quite correct.
+      Feel free to peek back at earlier exercises if you need to!\"\nend\n\nif code.scan(\".times\").length
+      == 0\n  return \"Make sure you use a '.times' iterator in your code.\"\nend\n\ndagget
+      = \"\"\n30.times do\n  dagget += \"Ruby!\"\nend\n\nunless prints.include? dagget\n
+      \ return \"It looks like you didn't print out the string 'Ruby!' 30 times.\"\nend\n\nreturn
+      true"
+    updated_at: 2012-10-08 05:46:39.000000000 Z
+    view: console_and_editor
+  feedback_total: 64
+  index: 3
+  language_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TyFOXyFuzxlcRMGV
+  name: Review
+  num_forum_answers: 34
+  num_forum_questions: 22
+  published: true
+  read_feedback_total: 20
+  updated_at: 2012-11-18 04:12:41.871000000 Z
+  user_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TwTxhHBXEgADAGwS
+  viewable: false

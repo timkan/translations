@@ -1,0 +1,332 @@
+--- !ruby/hash:Moped::BSON::Document
+avg_user_rating: 4.400878293601004
+classification: :game
+created_at: 2012-09-19 23:48:02.000000000 Z
+domain: :freestyle
+down_votes: 45
+entry: In this project, we'll write a program that reads a block of text and tells
+  us how many times each word appears.
+feedback_total: 27
+is_project: false
+language_id: !ruby/object:Moped::BSON::ObjectId
+  raw_data: !binary |-
+    TyFOXyFuzxlcRMGV
+level: :beginner
+locale: en
+name: Create a Histogram
+num_exercises: 8
+num_published_exercises: 8
+num_published_sections: 1
+num_readiness_feedbacks: 24
+num_sections: 1
+num_user_ratings: 1594
+published: true
+published_at: 2012-09-20 19:38:01.000000000 Z
+rating: 139.92685399977077
+read_feedback_total: 5
+readiness: 96.34210526315789
+recommended: false
+review_status: :approved
+roles:
+  manager: []
+  editor: []
+topic_id: !ruby/object:Moped::BSON::ObjectId
+  raw_data: !binary |-
+    T5Ws8pVtgwADABwX
+total_user_rating: 7015.0
+up_votes: 208
+updated_at: 2012-11-26 15:41:48.679000000 Z
+user_id: !ruby/object:Moped::BSON::ObjectId
+  raw_data: !binary |-
+    TwTxhHBXEgADAGwS
+sections:
+- !ruby/hash:Moped::BSON::Document
+  created_at: 2012-09-19 23:48:02.000000000 Z
+  default_view: console_and_editor
+  entry: Now that you know how to use iterators and more complex data structures in
+    Ruby, you can combine them to automate difficult tasks in a snap.
+  exercises:
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFpZs7VyRwACADhL
+    created_at: 2012-09-19 23:48:03.000000000 Z
+    default_code: ! 'puts "Text please: "
+
+      text = gets.chomp
+
+
+      words = text.split(" ")
+
+      frequencies = Hash.new(0)
+
+      words.each { |word| frequencies[word] += 1 }
+
+      frequencies = frequencies.sort_by {|a, b| b }
+
+      frequencies.reverse!
+
+      frequencies.each { |word, frequency| puts word + " " + frequency.to_s }'
+    entry: ! "In this project, we'll build a program that takes a user's input, then
+      builds a hash from that input. Each key in the hash will be a word from the
+      user; each value will be the number of times that word occurs. For example,
+      if our program gets the string \"the rain in Spain falls mainly on the plain,\"
+      it will return\n\n    the 2\n    falls 1\n    on 1\n    mainly 1\n    in 1\n
+      \   rain 1\n    plain 1\n    Spain 1\n\nA visual representation of data like
+      this is called a **histogram**."
+    expect_error: false
+    feedback_stats:
+      typo: 2
+      total: 4
+      instructional_text_issue: 1
+      correctness_test_issue: 1
+    from_console: false
+    hint: ''
+    instruction: Hit Run to start building your own histogram!
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: What You'll Be Building
+    tabs: []
+    test_functions: return true
+    updated_at: 2012-11-03 04:46:19.318000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFpZ6rVyRwACADoa
+    created_at: 2012-09-19 23:48:58.000000000 Z
+    default_code: ''
+    entry: ! 'You know by now how we''ve gotta start: we need to get input from the
+      user.'
+    expect_error: false
+    feedback_stats:
+      correctness_test_issue: 1
+      total: 1
+    from_console: false
+    hint: ''
+    instruction: Use a `puts` statement to prompt the user for input. Use `gets.chomp`
+      to save this input to a variable called `text`.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: You Know the Drill
+    tabs: []
+    test_functions: ! "if code == nil\n  return \"You gotta type something!\"\nend\n\nbegin\n
+      \ text\nrescue NameError\n  return \"Did you declare a variable called text?\"\nend\n\nif
+      code.scan(\"puts\").length == 0\n  return \"Prompt the user for input using
+      a puts statement.\"\nend\n\nif code.scan(\"gets.chomp\").length == 0\n  return
+      \"Make sure to use gets.chomp to get input from the user.\"\nend\n\nreturn true"
+    updated_at: 2012-10-09 10:57:30.717000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFpZ64ydyAACADe8
+    created_at: 2012-09-19 23:48:59.000000000 Z
+    default_code: ''
+    entry: ! 'Next, we''ll want to turn the user''s string into something we can iterate
+      over. A data structure made up of elements all in a line, you say? That sounds
+      like an array!
+
+
+      By calling the `.split` method on `text`, we can transform it into an array.'
+    expect_error: false
+    feedback_stats:
+      instructional_text_issue: 1
+      total: 2
+      positive_feedback: 1
+    from_console: false
+    hint: ''
+    instruction: Declare a variable called `words` and set it equal to the result
+      of calling `.split` on `text`.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: true
+    name: Building the Words Array
+    tabs: []
+    test_functions: ! "begin\n  words\nrescue NameError\n  return \"Did you declare
+      a variable called words?\"\nend\n\nunless words == text.split\n  return \"It
+      looks like you didn't set words equal to text.split.\"\nend\n\nreturn true"
+    updated_at: 2012-10-14 13:03:46.666000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFpZ7F6cewACADEV
+    created_at: 2012-09-19 23:49:00.000000000 Z
+    default_code: ''
+    entry: ! "Good! What we want to do next is iterate over our array, one word at
+      a time. If we find a word, we want to add it to the hash and give it a value
+      of 1; if we find the same word more than once, we want to update that word's
+      value in the hash by increasing it by 1.\n\nIn order to make sure we won't encounter
+      any issues when updating our hash, we'll want to create it with a **default
+      value**. For instance,\n\n    Hash.new(\"nothing here\")\n\nwould make a hash
+      that returns the default value \"nothing here\" if you try a key that isn't
+      in the hash."
+    expect_error: false
+    feedback_stats:
+      instructional_text_issue: 1
+      total: 1
+    from_console: false
+    hint: ! "Here's a freebie. You should create `frequencies` using\n\n    Hash.new(0)"
+    instruction: Create a hash called `frequencies` in the editor. Give it a default
+      value of `0`.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: true
+    name: Creating the Frequencies Hash
+    tabs: []
+    test_functions: ! "begin\n  frequencies\nrescue NameError\n  return \"Did you
+      create a variable called frequencies?\"\nend\n\nunless frequencies.is_a? Hash\n
+      \ return \"It looks like frequencies isn't a hash.\"\nend\n\nunless frequencies[\"parsnips\"]
+      == 0\n  return \"Did you create your hash with a default value of 0?\"\nend\n\nreturn
+      true"
+    updated_at: 2012-10-07 17:38:10.000000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFpZ7YXuTAACADTo
+    created_at: 2012-09-19 23:49:01.000000000 Z
+    default_code: ''
+    entry: ! 'Perfect! Next up: we want to iterate over `words` to add each word to
+      our `frequencies` hash, one at a time.'
+    expect_error: false
+    feedback_stats:
+      positive_feedback: 1
+      total: 2
+      other: 1
+    from_console: false
+    hint: ! "We'll want to iterate over `words`, so we should start with the template\n\n
+      \   words.each { |word| action }\n\nThe placeholder `word` is for each word
+      in the array—we can call it `word`, `item`, `x`, anything.\n\nThe action we
+      want is to update the hash with a key equal to the word, then increment its
+      value by 1. Each key will be `frequencies[word]`, and we can increment using
+      `+= 1`."
+    instruction: ! 'Use `.each` to iterate over the `words` array. For each word we
+      find, we''ll want to make the word a key in the hash and increment its value
+      by 1. (This is why our default is 0: when we first find the word, it will have
+      a default value of 0 that we can increment up to 1.)
+
+
+      Take a look at the Hint if you need help.'
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: true
+    name: Iterating Over the Array
+    tabs: []
+    test_functions: ! "if frequencies.empty?\n  return \"It looks like you haven't
+      added any key-value pairs to the frequencies hash.\"\nend\n\ntest_hash = Hash.new(0)\nwords.each
+      { |word| test_hash[word] += 1 }\n\nunless test_hash == frequencies\n  return
+      \"It looks like you haven't set the frequencies hash correctly. Check the Hint
+      if you need help!\"\nend\n\nreturn true"
+    updated_at: 2012-10-16 21:28:37.131000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFpZ7dsdgQACACye
+    created_at: 2012-09-19 23:49:01.000000000 Z
+    default_code: ''
+    entry: ! "Great! We have a hash full of word / frequency key-value pairs. Now
+      we need to figure out a way to get our information in the order we want it.\n\nThe
+      bad news is that this will take two steps. The good news is that thanks to Ruby's
+      built-in methods, they're two really easy steps!\n\nWe can use the `.sort_by`
+      method on `frequencies` to sort by a certain parameter. For instance, if we
+      type\n\n    h = h.sort_by {|a, b| b }\n\nthe hash `h` will be sorted by increasing
+      order of `b`, or the value of each key-value pair.\n\nSadly, this means our
+      words will get sorted from smallest frequency to largest—we want to see our
+      most frequent words up top! We can fix this by reversing the hash in-place using
+      the `.reverse!` method."
+    expect_error: false
+    feedback_stats:
+      typo: 1
+      total: 13
+      instructional_text_issue: 6
+      correctness_test_issue: 4
+      other: 2
+    from_console: false
+    hint: ''
+    instruction: Use `.sort_by` and `.reverse!` to sort our hash's words from most
+      frequent to least frequent.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: true
+    name: Sorting the Hash
+    tabs: []
+    test_functions: ! "test_hash = Hash.new(0)\nwords.each { |word| test_hash[word]
+      += 1 }\n\ntest_hash = test_hash.sort_by { |a, b| b }\ntest_hash.reverse!\n\nunless
+      test_hash == frequencies\n  return \"It looks like you haven't set the frequencies
+      hash correctly. Check the first exercise if you need help!\"\nend\n\nreturn
+      true"
+    updated_at: 2012-11-06 13:15:20.383000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFqWUFueswACACtY
+    created_at: 2012-09-20 04:06:40.000000000 Z
+    default_code: ''
+    entry: ! "Almost there! Finally, we'll need to iterate over the array to print
+      out each key-value pair to the console.\n\nThere's just one small trick here:
+      the keys are strings, but the values are numbers, and Ruby won't like it if
+      we try to concatenate a string to a number. We can solve this by calling the
+      `.to_s` method (short for \"to string\") on each value, like so:\n\n    puts
+      word + \" \" + value.to_s"
+    expect_error: false
+    feedback_stats:
+      positive_feedback: 1
+      total: 1
+    from_console: false
+    hint: ''
+    instruction: Use `.each` to iterate over `frequencies` and print each word and
+      its frequency to the console. As shown above, put a single space between the
+      word and its frequency for readability.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: true
+    name: Iterating Over the Hash
+    tabs: []
+    test_functions: ! "test_hash = Hash.new(0)\nwords.each { |word| test_hash[word]
+      += 1 }\n\ntest_hash = test_hash.sort_by { |a, b| b }\ntest_hash.reverse!\ntest_array
+      = []\ntest_hash.each { |word, frequency| test_array.push(word + ' ' + frequency.to_s)}\n\nis_there
+      = false\ntest_array.each do |item|\n  if prints.include? item\n    is_there
+      = true\n  else\n    is_there = false\n  end\nend\n\nunless is_there\n  return
+      \"It looks like you aren't printing each key-value pair to the console correctly.
+      Make sure to put a space between each key and value!\"\nend\n\nreturn true"
+    updated_at: 2012-10-01 21:58:09.000000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFpZ8VCpPgACADJj
+    created_at: 2012-09-19 23:49:05.000000000 Z
+    default_code: ''
+    entry: Nice work! Your program is complete—run it a few times to see how it counts
+      up the number of occurrences of each word in your string.
+    expect_error: false
+    feedback_stats:
+      positive_feedback: 1
+      total: 3
+      instructional_text_issue: 1
+      other: 1
+    from_console: false
+    hint: ''
+    instruction: Once you click Run, you're done! Take a moment to bask in the glow
+      of your victory before moving on to your next programming adventure.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: true
+    name: You Did It!
+    tabs: []
+    test_functions: return true
+    updated_at: 2012-10-11 15:37:57.450000000 Z
+    view: console_and_editor
+  feedback_total: 27
+  index: 0
+  language_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TyFOXyFuzxlcRMGV
+  name: Data Structures, Meet Iteration
+  num_forum_answers: 21
+  num_forum_questions: 11
+  published: true
+  read_feedback_total: 4
+  updated_at: 2012-11-06 13:15:20.421000000 Z
+  user_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TwTxhHBXEgADAGwS
+  viewable: false

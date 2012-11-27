@@ -1,0 +1,885 @@
+--- !ruby/hash:Moped::BSON::Document
+avg_user_rating: 4.454330175913396
+classification: :lesson
+created_at: 2012-09-24 23:26:17.000000000 Z
+domain: :freestyle
+down_votes: 94
+entry: In this lesson, we'll cover how to define our own methods in Ruby, as well
+  as how to use blocks to develop powerful sorting algorithms.
+feedback_total: 47
+is_project: false
+language_id: !ruby/object:Moped::BSON::ObjectId
+  raw_data: !binary |-
+    TyFOXyFuzxlcRMGV
+level: :beginner
+locale: en
+name: Methods, Blocks, & Sorting
+num_exercises: 19
+num_published_exercises: 19
+num_published_sections: 5
+num_readiness_feedbacks: 3
+num_sections: 5
+num_user_ratings: 1478
+published: true
+published_at: 2012-09-28 19:11:34.000000000 Z
+rating: 361.6754350868411
+read_feedback_total: 5
+readiness: 89.67857142857143
+recommended: false
+review_status: :approved
+roles:
+  manager: []
+  editor: []
+submitted_at: 2012-09-28 18:53:12.000000000 Z
+total_user_rating: 6583.5
+up_votes: 484
+updated_at: 2012-11-26 15:44:42.686000000 Z
+user_id: !ruby/object:Moped::BSON::ObjectId
+  raw_data: !binary |-
+    TwTxhHBXEgADAGwS
+sections:
+- !ruby/hash:Moped::BSON::Document
+  created_at: 2012-09-24 23:26:17.000000000 Z
+  default_view: console_and_editor
+  entry: A method is a reusable bit of code written to perform a specific task in
+    a program. We've shown you a bunch of built-in Ruby methods; now you'll write
+    your own!
+  exercises:
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UGD2a7z3ZwACAB4A
+    created_at: 2012-09-25 00:10:19.000000000 Z
+    default_code: ! "def prime(n)\n  puts \"That's not an integer.\" unless n.is_a?
+      Integer\n  is_prime = true\n  for i in 2..n-1\n    if n % i == 0\n      is_prime
+      = false\n    end\n  end\n  if is_prime\n    puts \"#{n} is prime!\"\n  else\n
+      \   puts \"#{n} is not prime.\"\n  end\nend\n\nprime(2)\nprime(9)\nprime(11)\nprime(51)\nprime(97)"
+    entry: ! 'A **method** is a reusable section of code written to perform a specific
+      task in a program. You might be wondering why you need to separate your code
+      into methods, rather than just writing everything out in one big chunk. It turns
+      out there are a few good reasons to divide your programs into methods:
+
+
+      1. If something goes wrong in your code, it''s much easier to find and fix bugs
+      if you''ve organized your program well. Assigning specific tasks to separate
+      methods helps with this organization.
+
+
+      2. By assigning specific tasks to separate methods (an idea computer scientists
+      call **separation of concerns**), you make your program less redundant and your
+      code more reusable—not only can you repeatedly use the same method in a single
+      program without rewriting it each time, but you can even use that method in
+      *another* program.
+
+
+      3. When we learn more about **objects**, you''ll find out there are a lot of
+      interesting things we can do with methods in Ruby.'
+    expect_error: false
+    feedback_stats: {}
+    from_console: false
+    hint: ''
+    instruction: Check out the method we've written in the editor. Can you guess what
+      it will do? Click Run when you think you know!
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Why Methods?
+    solution_code: ''
+    solution_entry: ''
+    tabs: []
+    test_functions: return true
+    updated_at: 2012-09-28 18:46:51.000000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UGD2bMm9uQACABx/
+    created_at: 2012-09-25 00:10:20.000000000 Z
+    default_code: ! "___ puts_1_to_10\n  (1..10).each { |i| puts i }\n___\n\nputs_1_to_10
+      # Ignore this for now. We'll explain it soon!"
+    entry: ! "Methods are defined using the keyword `def` (short for \"`def`ine\").
+      Methods have three parts:\n\n1. The **header**, which includes the `def` keyword,
+      the name of the method, and any **arguments** the method takes. (We'll get to
+      arguments in the next section)\n2. The **body**, which is the code block that
+      describes the procedures the method carries out. The body is indented two spaces
+      by convention (as with `for`, `if`, `elsif`, and `else` statements)\n3. The
+      method ends with the `end` keyword.\n\nHere's an example of what the syntax
+      would look like for a simple function, `welcome`, that just prints \"Welcome
+      to Ruby!\" to the console:\n\n    def welcome\n      puts \"Welcome to Ruby!\"\n
+      \   end"
+    expect_error: false
+    feedback_stats:
+      instructional_text_issue: 1
+      total: 1
+    from_console: false
+    hint: ''
+    instruction: We've started a method in the editor to the right, but it's incomplete.
+      Replace the `___`s with the correct keywords so the method will work!
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Method Syntax
+    solution_code: ''
+    solution_entry: ''
+    tabs: []
+    test_functions: ! "if exception.kind_of? NameError\n  return \"It looks like your
+      syntax isn't quite right. Make sure to replace the ___s with the right keywords!\"\nend\n\nif
+      exception.kind_of? SyntaxError\n  return \"It looks like your syntax isn't quite
+      right. Make sure to replace the ___s with the right keywords!\"\nend\n\nfor
+      num in (1..10).to_a\n  unless prints.include? num.to_s\n    return \"Don't change
+      the body of the function! It should use 'puts' to print out the numbers 1 to
+      10.\"\n  end\nend\n\nreturn true"
+    updated_at: 2012-10-16 09:56:32.354000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UGD2bqV/6AACACSY
+    created_at: 2012-09-25 00:10:22.000000000 Z
+    default_code: ! "# Define your method below!\n\n\n\n\n\n# Define your method above
+      this line.\n\ngreeting # Ignore this for now. We'll explain\n         # it in
+      the next exercise!"
+    entry: ! "Now it's time for you to build your own method. Remember, the syntax
+      looks like this:\n\n    def method_name\n      # Do something!\n    end"
+    expect_error: false
+    feedback_stats:
+      other: 1
+      total: 2
+      positive_feedback: 1
+    from_console: false
+    hint: ''
+    instruction: Create a method, `greeting`, in the editor. It should use `puts`
+      to print a greeting to the console.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Create Your Own
+    solution_code: ''
+    solution_entry: ''
+    tabs: []
+    test_functions: ! "begin\n  greeting\nrescue NameError\n  return \"Did you create
+      a method called greeting?\"\nend\n\nif prints.length == 0\n  return \"It looks
+      like you didn't print anything to the console.\"\nend\n\nreturn true"
+    updated_at: 2012-10-06 22:11:01.000000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UGD3HX4ozgACACNX
+    created_at: 2012-09-25 00:13:17.000000000 Z
+    default_code: ! "def array_of_10\n  puts (1..10).to_a\nend\n\n"
+    entry: ! 'Defining a method is great, but it''s not much use to you unless you
+      **call** it. For example, if you call a method called `cartoon_fox`, Ruby will
+      start looking for the method with that name and try to execute the code inside
+      it. (If Ruby doesn''t find a method called `cartoon_fox`, it will return a `NameError`.
+      We''ll cover errors in another lesson.)
+
+
+      You call a method just by typing its name. Remember when you saw us type `puts_1_to_10`
+      or `greeting` after our method definition in the last two exercises? That was
+      us calling our methods!'
+    expect_error: false
+    feedback_stats:
+      instructional_text_issue: 3
+      total: 3
+    from_console: false
+    hint: ''
+    instruction: We've set up a function, `array_of_10`, in the editor to the right.
+      Call it on line 5!
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Call It!
+    solution_code: ''
+    solution_entry: ''
+    tabs: []
+    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"It looks like
+      your syntax isn't quite right. All you need to do is type the method's name
+      on line 6; that calls the method.\"\nend\n\nfor num in (1..10).to_a\n  unless
+      prints.include? num.to_s\n    return \"Make sure to call array_of_10 on line
+      5.\"\n  end\nend\n\nreturn true"
+    updated_at: 2012-11-26 01:27:57.323000000 Z
+    view: console_and_editor
+  feedback_total: 6
+  index: 0
+  language_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TyFOXyFuzxlcRMGV
+  name: A Method to the Madness
+  num_forum_answers: 6
+  num_forum_questions: 3
+  published: true
+  read_feedback_total: 0
+  updated_at: 2012-11-26 01:27:57.376000000 Z
+  user_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TwTxhHBXEgADAGwS
+  viewable: false
+- !ruby/hash:Moped::BSON::Document
+  created_at: 2012-09-25 00:13:33.000000000 Z
+  default_view: console_and_editor
+  entry: Let's learn how to specify input and output for our methods.
+  exercises:
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UGD3Lj3Y+QACACkz
+    created_at: 2012-09-25 00:13:34.000000000 Z
+    default_code: ! "def cubertino(n)\n  puts n ** 3\nend\n\n"
+    entry: ! "If a method takes **arguments**, we say it **accepts** or **expects**
+      those arguments. We might define a function, `square`, like so:\n\n    def square(n)\n
+      \     puts n ** 2\n    end\n\nand call it like this:\n\n    square(12)\n    #
+      ==> prints \"144\"\n\nThe **argument** is the piece of code you actually put
+      between the method's parentheses when you **call** it, and the **parameter**
+      is the name you put between the method's parentheses when you **define** it.
+      For instance, when we defined `square` above, we gave it the parameter `n` (for
+      \"number\"), but passed it the argument `12` when we called it.\n\nYou can think
+      of parameters as nicknames the method definition gives to arguments, since it
+      doesn't know ahead of time exactly what argument it's going to get.\n\nParentheses
+      are usually optional in Ruby, but it's a good idea to put your parameters and
+      arguments in parentheses for readability."
+    expect_error: false
+    feedback_stats: {}
+    from_console: false
+    hint: ''
+    instruction: Call the `cubertino` method in the editor, passing it an argument
+      of `8`.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Parameters and Arguments
+    solution_code: ''
+    solution_entry: ''
+    tabs: []
+    test_functions: ! "if code.scan(\"cubertino\").length < 2\n  return \"Make sure
+      to call cubertino and pass it the number 8 as an argument.\"\nend\n\nunless
+      prints.include? \"512\"\n  return \"It looks like you didn't print the value
+      of 8 ** 3 to the console.\"\nend\n\nreturn true"
+    updated_at: 2012-09-27 22:23:39.000000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UGD3OxCV7AACACa8
+    created_at: 2012-09-25 00:13:47.000000000 Z
+    default_code: ! "def what_up(greeting, *bros)\n  bros.each { |bro| puts \"#{greeting},
+      #{bro}!\" }\nend\n \nwhat_up(\"What up\", \"Justin\", \"Ben\", \"Kevin Sorbo\")"
+    entry: ! "Speaking of not knowing what to expect: your methods not only don't
+      know what arguments they're going to get ahead of time, but occasionally, they
+      don't even know *how many* arguments there will be.\n\nLet's say you have a
+      method, `friend`, that `puts` the argument it receives from the user. It might
+      look something like this:\n\n    def friend(name):\n      puts \"My friend is
+      \" + name + \".\"\n    end\n\nThis is great for just one friend, but what if
+      you want to print out the user's friend**s**, without knowing how many friend
+      names the user will put in ahead of time?\n\nThe solution: **splat arguments**.
+      Splat arguments are arguments preceded by a `*`, which signals to Ruby: \"Hey
+      Ruby, I don't know *how* many arguments there are about to be, but it could
+      be more than one.\""
+    expect_error: false
+    feedback_stats:
+      instructional_text_issue: 3
+      total: 7
+      positive_feedback: 1
+      typo: 2
+      correctness_test_issue: 1
+    from_console: false
+    hint: ''
+    instruction: Click Run to test out the example in the editor. Feel free to play
+      around and call `what_up` on as many `bros` as you like!
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Splat!
+    solution_code: ''
+    solution_entry: ''
+    tabs: []
+    test_functions: return true
+    updated_at: 2012-10-21 14:41:26.299000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UGEG6KV/6AACANEX
+    created_at: 2012-09-25 01:20:40.000000000 Z
+    default_code: ''
+    entry: ! "Sometimes we don't just want a method to print something to the console,
+      but we actually want that method to hand us (or another method!) back a value.
+      For that, we use `return`.\n\nThe `return` keyword handles the method's **output**.
+      If we write the method `cube`, like so:\n\n    def cube(n)\n      return n **
+      3\n    end\n\nthe method won't print anything out, but it will hand us back
+      the result of our computation. Calling `cube(4)` will result in the value `64`.\n\nWe
+      can use values returned by methods just like any other values: we can assign
+      them to variables, perform computations with them, and more. Using the `cube`
+      method above, we could tell Ruby:\n\n    output = cube(3)\n    output += 11\n
+      \   puts output\n\nand it would print `38`, which is the result of `3 ** 3 +
+      11`."
+    expect_error: false
+    feedback_stats:
+      instructional_text_issue: 1
+      total: 1
+    from_console: false
+    hint: ! "Remember, you define a method like this:\n\n    def method_name(optional
+      parameters)\n      # Do something!\n      # Maybe return a value\n    end"
+    instruction: Write a method, `add`, that takes two numbers and `return`s the sum
+      of those numbers.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Let's Learn Return
+    solution_code: ''
+    solution_entry: ''
+    tabs: []
+    test_functions: ! "begin\n  add(1,1)\nrescue NameError\n  return \"Did you define
+      a method called add?\"\nrescue ArgumentError\n  return \"Make sure your add
+      method expects two arguments.\"\nend\n\nif exception.kind_of? SyntaxError\n
+      \ return \"It looks like your syntax isn't quite right. Check the Hint if you
+      need help.\"\nend\n\noxnard = (1..100).to_a\nmontalvo = (101..200).to_a\n\nfor
+      a in oxnard\n  for b in montalvo\n    if add(a,b) != a + b\n      return \"It
+      looks like your add method doesn't return the result of adding two numbers together.\"\n
+      \   end\n  end\nend\n\nreturn true"
+    updated_at: 2012-10-03 20:26:14.000000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UGD3PetxiwACACx/
+    created_at: 2012-09-25 00:13:49.000000000 Z
+    default_code: ''
+    entry: You won't become a Master Method Maker 'til you make a mess of methods.
+      (Say *that* three times fast.)
+    expect_error: false
+    feedback_stats:
+      correctness_test_issue: 5
+      total: 9
+      positive_feedback: 2
+      other: 1
+      instructional_text_issue: 1
+    from_console: false
+    hint: ! "Method syntax looks like this:\n\n    def method_name(optional arguments)\n
+      \     # Do something!\n    end"
+    instruction: ! 'Define two methods in the editor:
+
+
+      1. A `greeter` method that takes a single string parameter, `name`, and returns
+      a string greeting that person. (Make sure to use `return` and don''t use `print`
+      or `puts`.)
+
+      2. A `by_three?` method that takes a single integer parameter, `number`, and
+      returns `true` if that number is evenly divisible by three and `false` if not.
+      Remember, it''s a Ruby best practice to end method names that produce boolean
+      values with a question mark.'
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Practice Makes Perfect
+    solution_code: ''
+    solution_entry: ''
+    tabs: []
+    test_functions: ! "begin\n  greeter(\"Eric\")\nrescue NameError\n  return \"Did
+      you define your greeter method?\"\nend\n\nbegin\n  by_three?(12)\nrescue NameError\n
+      \ return \"Did you define your by_three? method?\"\nend\n\neric = greeter(\"Eric\")\nunless
+      eric.include? \"Eric\"\n  return \"It looks like your greeter method doesn't
+      include the person's name in its output.\"\nend\n\nif code.scan(\"print\").length
+      > 0 || code.scan(\"puts\").length > 0\n  return \"It looks like your greeter
+      method prints to the console instead of using return.\"\nend\n\noxnard = Array.new(20)
+      { |i| i * 3 }\nmontalvo = Array.new(20) { |i| i * 3 + 1 }\n\nfor num in oxnard\n
+      \ unless by_three?(num)\n    return \"It looks like your by_three? method doesn't
+      return true for all numbers evenly divisible by three.\"\n  end\nend\n\nfor
+      num in montalvo\n  if by_three?(num)\n    return \"It looks like your by_three?
+      method doesn't return false for all numbers not evenly divisible by three.\"\n
+      \ end\nend\n\nreturn true"
+    updated_at: 2012-11-14 08:21:43.919000000 Z
+    view: console_and_editor
+  feedback_total: 17
+  index: 1
+  language_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TyFOXyFuzxlcRMGV
+  name: More Complex Methods
+  num_forum_answers: 21
+  num_forum_questions: 10
+  published: true
+  read_feedback_total: 0
+  updated_at: 2012-11-14 08:21:43.942000000 Z
+  user_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TwTxhHBXEgADAGwS
+  viewable: false
+- !ruby/hash:Moped::BSON::Document
+  created_at: 2012-09-25 00:14:39.000000000 Z
+  default_view: console_and_editor
+  entry: We learned a bit about blocks in lesson 3, "Loops & Iterators." Now we'll
+    dive into the details.
+  exercises:
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UGD3byd/ewACADCk
+    created_at: 2012-09-25 00:14:39.000000000 Z
+    default_code: ! "1.times do\n  puts \"I'm a code block!\"\nend\n\n1.times { puts
+      \"As am I!\" }"
+    entry: ! 'Most methods that you''ve worked with have defined names that either
+      you or someone else gave them (*i.e.* [array].sort(), "string".downcase(), and
+      so on). You can think of blocks as a way of creating methods that don''t have
+      a name. (These are similar to anonymous functions in JavaScript or lambdas in
+      Python.)
+
+
+      Blocks can be defined with either the keywords `do` and `end` or with curly
+      braces (`{}`).'
+    expect_error: false
+    feedback_stats:
+      instructional_text_issue: 2
+      total: 3
+      other: 1
+    from_console: false
+    hint: ''
+    instruction: Check out the examples in the editor. Look familiar? Click Run to
+      see the blocks execute their code.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Blocks Are Like Nameless Methods
+    tabs: []
+    test_functions: return true
+    updated_at: 2012-10-14 09:30:41.100000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UGD3t+txiwACAC/X
+    created_at: 2012-09-25 00:15:51.000000000 Z
+    default_code: ! "# method that capitalizes a word\ndef capitalize(string) \n  puts
+      \"#{string[0].upcase}#{string[1..-1]}\"\nend\n\ncapitalize(\"ryan\") # prints
+      \"Ryan\"\ncapitalize(\"jane\") # prints \"Jane\"\n\n# block that capitalizes
+      each string in the array\n[\"ryan\", \"jane\"].each {|string| puts \"#{string[0].upcase}#{string[1..-1]}\"}
+      # prints \"Ryan\", then \"Jane\""
+    entry: ! 'There are some differences between blocks and methods, however.
+
+
+      Check out the code in the editor. The `capitalize` method capitalizes a word
+      (see the Hint for how this is done), and we can continually invoke the `capitalize`
+      method by name. We can `capitalize("matz")`, `capitalize("eduardo")`, or any
+      string we like to our hearts'' content.
+
+
+      However, the block that we define (following `.each`) will only be called *once*,
+      and in the context of the array that we are iterating over. It appears just
+      long enough to do some work for `each`, then vanishes into the night.'
+    expect_error: false
+    feedback_stats:
+      instructional_text_issue: 1
+      total: 1
+    from_console: false
+    hint: ! 'The bracket notation is treating each string like an array of characters;
+      you can find details about this in the [Ruby documentation](http://www.ruby-doc.org/core-1.9.3/String.html#method-i-5B-5D).
+
+
+      `string[0]` refers to the first character in the string; `string[1..-1]` refers
+      to the range of the second through final characters. Therefore, the method prints
+      out the capitalized version of the first character and prints the second through
+      final characters as-is.'
+    instruction: Make sense? Click Run to see the magical marriage of methods and
+      blocks.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: How Blocks Differ from Methods
+    tabs: []
+    test_functions: return true
+    updated_at: 2012-10-01 02:55:35.000000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UGNpjwEyRwACAOFc
+    created_at: 2012-09-26 20:46:07.000000000 Z
+    default_code: ! "# The block, {|i| puts i}, is passed the current\n# array item
+      each time it is evaluated. This block\n# prints the item. \n[1, 2, 3, 4, 5].each
+      { |i| puts i }\n\n# This block prints the number 5 for each item.\n# (It chooses
+      to ignore the passed item, which is allowed.)\n[1, 2, 3, 4, 5].each { |i| puts
+      5 }"
+    entry: ! 'A method can take a block as a parameter. That''s what `.each` has been
+      doing this whole time: taking a block as a parameter and doing stuff with it!
+      You just didn''t notice because we didn''t use the optional parentheses. We
+      are sneaky.
+
+
+      Passing a block to a method is a great way of **abstracting** certain tasks
+      from the method and defining those tasks when we call the method. Abstraction
+      is an important idea in computer science, and you can think of it as meaning
+      "making something simpler." Imagine if when you wanted to house hunt, you had
+      to say, "Honey, let''s go look at configurations of concrete, plywood, and vinyl
+      siding." That''d be crazy! Just like saying "house" simplifies listing its components,
+      using a block to define the task you want the method (like `.each`) to do simplifies
+      the task at hand.'
+    expect_error: false
+    feedback_stats: {}
+    from_console: false
+    hint: ! "Instead of printing\n\n    5 5 5 5 5\n\nwith each `5` on its own line,
+      we want to print\n\n    5 10 15 20 25\n\nwith each number on its own line."
+    instruction: Currently, the second `.each` will print out `5` five times (since
+      it will print `5` for each item in the array, and there are five items). Modify
+      the block so it will print each item in the array *multiplied by* five.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Using Code Blocks
+    tabs: []
+    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"Your syntax doesn't
+      look quite right. Check the Hint if you need help.\"\nend\n\nfor num in [5,
+      10, 15, 20, 25]\n  unless prints.include? num.to_s\n    return \"It looks like
+      your block isn't printing each element in the array multiplied by 5.\"\n  end\nend\n\nreturn
+      true"
+    updated_at: 2012-09-28 18:48:26.000000000 Z
+    view: console_and_editor
+  feedback_total: 4
+  index: 2
+  language_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TyFOXyFuzxlcRMGV
+  name: The Return of Blocks
+  num_forum_answers: 1
+  num_forum_questions: 1
+  published: true
+  read_feedback_total: 0
+  updated_at: 2012-10-14 09:30:41.123000000 Z
+  user_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TwTxhHBXEgADAGwS
+  viewable: false
+- !ruby/hash:Moped::BSON::Document
+  created_at: 2012-09-25 00:16:06.000000000 Z
+  default_view: console_and_editor
+  entry: Now that we know more about blocks, we can use them to quickly and easily
+    sort large amounts if information in our programs.
+  exercises:
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UGD3xwP1pwACADJt
+    created_at: 2012-09-25 00:16:07.000000000 Z
+    default_code: ! 'my_array = [3, 4, 8, 7, 1, 6, 5, 9, 2]
+
+
+      # Call the sort! method on my_array below.
+
+      # my_array should then equal [1, 2, 3, 4, 5, 6, 7, 8, 9].
+
+
+'
+    entry: ! 'Sorting arrays is a very common problem in computer science, and is
+      well studied for that reason. There are many **algorithms**—well-defined sequences
+      of steps—each with its own trade-offs and advantages.
+
+
+      Sorting algorithms can be a great introduction to computer science as a theoretical
+      discipline, but for now we''ll focus on how to use Ruby''s built-in sorting
+      library (which implements a few of these algorithms).'
+    expect_error: false
+    feedback_stats:
+      other: 1
+      total: 1
+    from_console: false
+    hint: ! '`.sort` would sort a copy of `my_array`, while `.sort!` sorts `my_array`
+      in-place (that is, it destroys the original array and replaces it with the sorted
+      version).'
+    instruction: Use the `.sort!` method to sort the values in `my_array`. Magic,
+      isn't it?
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Introduction to Sorting
+    tabs: []
+    test_functions: ! "if code.scan(\".sort!\").length == 0\n  return \"Make sure
+      to call .sort! on my_array.\"\nend\n\nunless my_array == (1..9).to_a\n  return
+      \"It looks like you didn't sort my_array. Did you remember to use .sort! instead
+      of .sort ?\"\nend\n\nreturn true"
+    updated_at: 2012-10-10 08:08:07.633000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UGD38KV/6AACADN1
+    created_at: 2012-09-25 00:16:48.000000000 Z
+    default_code: ! '# library sorting code
+
+      books = ["Charlie and the Chocolate Factory", "War and Peace", "Utopia", "A
+      Brief History of Time", "A Wrinkle in Time"]
+
+
+      # How might we sort! the books in alphabetical order? (Hint, hint)
+
+
+'
+    entry: ! 'If we were to hand you five books and ask you to put them, sorted by
+      title, on a shelf, how would you do it?
+
+
+      Most sorting algorithms assume we are sorting an array of items, which involves
+      comparing any two items in the array and deciding which should come first.
+
+
+      For our books example, if for any pair we always chose the book whose title
+      came first in the alphabet, we could devise a strategy for sorting. These "strategies"
+      are the sorting algorithms mentioned in the previous example. Our job is to
+      decide how to compare two items in the list, and let Ruby decide which strategy
+      to use.'
+    expect_error: false
+    feedback_stats: {}
+    from_console: false
+    hint: ! 'We already gave you a hint! If you didn''t get it, here''s a freebie:
+      use `.sort!`'
+    instruction: What Ruby method could we call on `books` in order to sort the list
+      of books alphabetically? Try it out in the editor.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Foundations
+    tabs: []
+    test_functions: ! "if code.scan(\".sort!\").length == 0\n  return \"Make sure
+      to call .sort! on the books array.\"\nend\n\nunless books == [\"A Brief History
+      of Time\", \"A Wrinkle in Time\", \"Charlie and the Chocolate Factory\", \"Utopia\",
+      \"War and Peace\"]\n  return \"It looks like you didn't sort the books array.
+      Did you remember to use .sort! instead of .sort ?\"\nend\n\nreturn true"
+    updated_at: 2012-10-02 15:10:10.000000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UGD38bz3ZwACACyv
+    created_at: 2012-09-25 00:16:49.000000000 Z
+    default_code: ! 'book_1 = "A Wrinkle in Time"
+
+
+      book_2 = "A Brief History of Time"
+
+
+'
+    entry: ! 'We can also use a new operator called the **combined comparison operator**
+      to compare two Ruby objects. The combined comparison operator looks like this:
+      `<=>`. It returns 0 if the first **operand** (item to be compared) equals the
+      second, 1 if first operand is *greater* than the second, and -1 if the first
+      operand is *less* than the second.
+
+
+      A block that is passed into the `sort` method must return either 1, 0, -1. It
+      should return -1 if the first block parameter should come *before* the second,
+      1 if vice versa, and 0 if they are of equal weight, meaning one does not come
+      before the other (*i.e.* if two values are equal).'
+    expect_error: false
+    feedback_stats:
+      typo: 1
+      total: 1
+    from_console: false
+    hint: ''
+    instruction: Use the combined comparison operator to compare `book_1` to `book_2`
+      (in that order). Before you click Run, what do you think the result will be?
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: The Combined Comparison Operator
+    tabs: []
+    test_functions: ! "if code.scan(\"<=>\").length == 0\n  return \"Don't forget
+      to use the combined comparison operator in your code.\"\nend\n\nunless result
+      == 1\n  return \"It looks like your comparison doesn't return the correct value
+      (1). Did you remember to compare book_1 <=> book_2 (in that order)?\"\nend\n\nreturn
+      true"
+    updated_at: 2012-10-25 01:05:41.351000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UGD38Z5AfwACADnp
+    created_at: 2012-09-25 00:16:49.000000000 Z
+    default_code: ! 'books = ["Charlie and the Chocolate Factory", "War and Peace",
+      "Utopia", "A Brief History of Time", "A Wrinkle in Time"]
+
+
+      # To sort our books in ascending order, in-place
+
+      books.sort! { |firstBook, secondBook| firstBook <=> secondBook }
+
+
+      # Sort your books in descending order, in-place below
+
+
+'
+    entry: ! "What if we wanted to sort the books by title, but from Z – A, or **descending
+      order**? It appears that Ruby's sort method only works for A – Z, or **ascending
+      order**. \n\nThe `sort` method assumes by default that you want to sort in ascending
+      order, but it accepts a block as an optional argument that allows you, the programmer,
+      to specify how two items should be compared."
+    expect_error: false
+    feedback_stats:
+      correctness_test_issue: 2
+      total: 5
+      instructional_text_issue: 2
+      other: 1
+    from_console: false
+    hint: ! "Note that you don't *have* to use the combined comparison operator. This
+      code also works:\n\n    books.sort do |firstBook, secondBook| \n      if firstBook
+      < secondBook  # firstBook before second alphabetically\n        return -1\n
+      \     else if firstBook > secondBook   # firstBook after second\n        return
+      1\n      else   # firstBook and secondBook the same\n        return 0\n      end\n
+      \   end"
+    instruction: Sort your `books` in descending order on line 8. Use the example
+      of sorting in ascending order on line 4 as a guide.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Getting Technical
+    tabs: []
+    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"Your syntax doesn't
+      look quite right. Use the ascending sort example as a guide!\"\nend\n\nunless
+      books == [\"War and Peace\", \"Utopia\", \"Charlie and the Chocolate Factory\",
+      \"A Wrinkle in Time\", \"A Brief History of Time\"]\n  return \"It looks like
+      you didn't sort the books array in descending order. Did you remember to use
+      .sort! instead of .sort ?\"\nend\n\nreturn true"
+    updated_at: 2012-11-05 18:28:44.356000000 Z
+    view: console_and_editor
+  feedback_total: 7
+  index: 3
+  language_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TyFOXyFuzxlcRMGV
+  name: Sorting With Blocks
+  num_forum_answers: 6
+  num_forum_questions: 4
+  published: true
+  read_feedback_total: 0
+  updated_at: 2012-11-05 18:28:44.377000000 Z
+  user_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TwTxhHBXEgADAGwS
+  viewable: false
+- !ruby/hash:Moped::BSON::Document
+  created_at: 2012-09-25 00:17:50.000000000 Z
+  default_view: console_and_editor
+  entry: We covered a lot in this lesson! Let's do a little review.
+  exercises:
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UGD4MFbKXQACADAW
+    created_at: 2012-09-25 00:17:52.000000000 Z
+    default_code: ''
+    entry: Let's quickly review how to create a basic Ruby method.
+    expect_error: false
+    feedback_stats:
+      correctness_test_issue: 1
+      total: 2
+      positive_feedback: 1
+    from_console: false
+    hint: ! "Don't forget your method syntax:\n\n    def method_name(optional arguments)\n
+      \     # Do something\n    end"
+    instruction: Create a method, `welcome`, that `puts` "Welcome to Ruby!" After
+      defining your method, call it.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Basic Methods
+    tabs: []
+    test_functions: ! "begin\n  welcome\nrescue NameError\n  return \"Did you define
+      a method called welcome?\"\nend\n\nif prints.length == 0\n  return \"It looks
+      like you didn't print anything to the console with 'puts'. Did you remember
+      to call your method?\"\nend\n\nreturn true"
+    updated_at: 2012-10-03 20:43:28.000000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UGD4MwP1pwACADY9
+    created_at: 2012-09-25 00:17:55.000000000 Z
+    default_code: ''
+    entry: Good! Now let's make our method a bit more complex by adding arguments
+      and a `return` statement.
+    expect_error: false
+    feedback_stats:
+      correctness_test_issue: 1
+      total: 2
+      positive_feedback: 1
+    from_console: false
+    hint: ! "Your method should return something like\n\n    \"Welcome to Ruby, #{name}!\""
+    instruction: Make your `welcome` method accept a single string parameter, `name`.
+      Remove your `puts` statement and replace it with a `return` statement. Your
+      method should return a string containing the name it was passed as a parameter.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: true
+    name: Methods With Arguments
+    tabs: []
+    test_functions: ! "begin\n  welcome(\"Eric\")\nrescue NameError\n  return \"Did
+      you define a method called welcome?\"\nrescue ArgumentError\n  return \"Make
+      sure your method takes a single parameter.\"\nend\n\nif exception.kind_of? ArgumentError\n
+      \ return \"Make sure you pass your method a single string parameter when you
+      call it.\"\nend\n\neric = welcome(\"Eric\")\n\nif eric == nil\n  return \"Make
+      sure your method has a return statement.\"\nelsif !eric.include? \"Eric\"\n
+      \ return \"It looks like your welcome method doesn't include the person's name
+      in its output.\"\nend\n\nif code.scan(\"print\").length > 0 || code.scan(\"puts\").length
+      > 0\n  return \"It looks like your welcome method prints to the console instead
+      of using return.\"\nend\n\nreturn true"
+    updated_at: 2012-10-03 20:43:19.000000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UGD4M9QJmwACADyd
+    created_at: 2012-09-25 00:17:55.000000000 Z
+    default_code: ! 'my_array = [1, 2, 3, 4, 5]
+
+
+      my_array.each '
+    entry: Let's go over what we learned about blocks.
+    expect_error: false
+    feedback_stats:
+      positive_feedback: 1
+      total: 1
+    from_console: false
+    hint: ! "Remember, block syntax looks like this:\n\n    object.method { |placeholder|
+      action }"
+    instruction: Add a block after the `each` method that squares each element in
+      the array and `puts` it to the console.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Blocks
+    tabs: []
+    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"It looks like
+      your syntax isn't quite right. Check the Hint if you need help!\"\nend\n\nfor
+      num in [1, 4, 9, 16, 25]\n  unless prints.include? num.to_s\n    return \"It
+      looks like your block doesn't print the square of each number in my_array to
+      the console using 'puts'.\"\n  end\nend\n\nreturn true"
+    updated_at: 2012-10-03 20:43:09.000000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UGD4ND3Y+QACADWz
+    created_at: 2012-09-25 00:17:56.000000000 Z
+    default_code: fruits = ["orange", "apple", "banana", "pear", "grapes"]
+    entry: Finally, let's review what we learned about sorting.
+    expect_error: false
+    feedback_stats:
+      instructional_text_issue: 4
+      total: 8
+      correctness_test_issue: 1
+      positive_feedback: 1
+      other: 2
+    from_console: false
+    hint: ! "We prefer the combined comparison operator. Remember, to sort alphabetically,
+      we did this:\n\n    books.sort! { |firstBook, secondBook| firstBook <=> secondBook
+      }"
+    instruction: Use `.sort!` to sort the `fruits` array in *descending* (that is,
+      reverse) alphabetical order. You can use the combined comparison operator or
+      an `if`/`elsif`/`else` statement.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Sorting
+    tabs: []
+    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"Your syntax doesn't
+      look quite right. Check the Hint if you need help!\"\nend\n\nif code.scan(\"<=>\").length
+      == 0 && code.scan(\"else\").length == 0\n  return \"Make sure to use either
+      <=> or else/elsif/else to compare and sort your fruits.\"\nend\n\nunless fruits
+      == [\"pear\", \"orange\", \"grapes\", \"banana\", \"apple\"]\n  return \"It
+      looks like you didn't sort the fruits array in descending order. Did you remember
+      to use .sort! instead of .sort ?\"\nend\n\nreturn true"
+    updated_at: 2012-11-08 02:18:45.197000000 Z
+    view: console_and_editor
+  feedback_total: 13
+  index: 4
+  language_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TyFOXyFuzxlcRMGV
+  name: Review
+  num_forum_answers: 18
+  num_forum_questions: 7
+  published: true
+  read_feedback_total: 0
+  updated_at: 2012-11-08 02:18:45.220000000 Z
+  user_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TwTxhHBXEgADAGwS
+  viewable: false
