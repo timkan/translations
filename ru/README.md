@@ -3,8 +3,8 @@ Translations
 
 # Worklog
 
-* File:
-* Started:
+* File: web-beginner-en-6merh.yml
+* Started: 27.11.12
 * Finished: 
-* Contact
+* Contact: personalkiller@mail.ru
 
