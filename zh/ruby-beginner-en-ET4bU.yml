@@ -110,8 +110,8 @@ sections:
     solution_entry: ''
     tabs: []
     test_functions: ! "if exception.kind_of? NameError\n  return \"你的语法貌似不大正确。
-      务必将___替换成正确的关键字！\"\nend\n\nif
-      exception.kind_of? SyntaxError\n  return \"你的语法貌似不大正确。务必将___替换成正确的关键字！\"\nend\n\nfor
+      确保将___替换成正确的关键字！\"\nend\n\nif
+      exception.kind_of? SyntaxError\n  return \"你的语法貌似不大正确。确保将___替换成正确的关键字！\"\nend\n\nfor
       num in (1..10).to_a\n  unless prints.include? num.to_s\n    return \"不要修改函数的主体！
       它应当使用'puts'打印出从1到10的数。\"\n  end\nend\n\nreturn true"
     updated_at: 2012-10-16 09:56:32.354000000 Z
@@ -150,36 +150,30 @@ sections:
         UGD3HX4ozgACACNX
     created_at: 2012-09-25 00:13:17.000000000 Z
     default_code: ! "def array_of_10\n  puts (1..10).to_a\nend\n\n"
-    entry: ! 'Defining a method is great, but it''s not much use to you unless you
-      **call** it. For example, if you call a method called `cartoon_fox`, Ruby will
-      start looking for the method with that name and try to execute the code inside
-      it. (If Ruby doesn''t find a method called `cartoon_fox`, it will return a `NameError`.
-      We''ll cover errors in another lesson.)
+    entry: ! '定义一个方法是很好的，但是只有你去 **调用** 它，它才能发挥作用。
+      比如，如果你调用一个名叫`cartoon_fox`的方法，Ruby就会寻找使用这个名字的方法，然后尝试执行它里面的代码。
+      （如果Ruby没找到名叫`cartoon_fox`的方法，它会返回`NameError`。在另一个课程中我们会讲到错误处理。）
 
 
-      You call a method just by typing its name. Remember when you saw us type `puts_1_to_10`
-      or `greeting` after our method definition in the last two exercises? That was
-      us calling our methods!'
+      调用一个方法，你只需要打出它的名字。还记得前两个练习中我们在方法定义后面打出的`puts_1_to_10`或者`greeting`吗？
+      那就是我们在调用这些方法！'
     expect_error: false
     feedback_stats:
       instructional_text_issue: 3
       total: 3
     from_console: false
     hint: ''
-    instruction: We've set up a function, `array_of_10`, in the editor to the right.
-      Call it on line 5!
+    instruction: 我们在右边的编辑器里编写了一个函数`array_of_10`。在第5行（line 5）调用它！
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: Call It!
+    name: 调用它！
     solution_code: ''
     solution_entry: ''
     tabs: []
-    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"It looks like
-      your syntax isn't quite right. All you need to do is type the method's name
-      on line 6; that calls the method.\"\nend\n\nfor num in (1..10).to_a\n  unless
-      prints.include? num.to_s\n    return \"Make sure to call array_of_10 on line
-      5.\"\n  end\nend\n\nreturn true"
+    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"你的语法貌似不大正确。
+      你所需要做的就是在第5行打出方法的名字，这样就调用了方法。\"\nend\n\nfor num in (1..10).to_a\n  unless
+      prints.include? num.to_s\n    return \"确保在第5行调用array_of_10。\"\n  end\nend\n\nreturn true"
     updated_at: 2012-11-26 01:27:57.323000000 Z
     view: console_and_editor
   feedback_total: 6
@@ -187,7 +181,7 @@ sections:
   language_id: !ruby/object:Moped::BSON::ObjectId
     raw_data: !binary |-
       TyFOXyFuzxlcRMGV
-  name: A Method to the Madness
+  name: 方法也疯狂
   num_forum_answers: 6
   num_forum_questions: 3
   published: true
