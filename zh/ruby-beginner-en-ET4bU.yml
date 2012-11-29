@@ -86,39 +86,34 @@ sections:
         UGD2bMm9uQACABx/
     created_at: 2012-09-25 00:10:20.000000000 Z
     default_code: ! "___ puts_1_to_10\n  (1..10).each { |i| puts i }\n___\n\nputs_1_to_10
-      # Ignore this for now. We'll explain it soon!"
-    entry: ! "Methods are defined using the keyword `def` (short for \"`def`ine\").
-      Methods have three parts:\n\n1. The **header**, which includes the `def` keyword,
-      the name of the method, and any **arguments** the method takes. (We'll get to
-      arguments in the next section)\n2. The **body**, which is the code block that
-      describes the procedures the method carries out. The body is indented two spaces
-      by convention (as with `for`, `if`, `elsif`, and `else` statements)\n3. The
-      method ends with the `end` keyword.\n\nHere's an example of what the syntax
-      would look like for a simple function, `welcome`, that just prints \"Welcome
-      to Ruby!\" to the console:\n\n    def welcome\n      puts \"Welcome to Ruby!\"\n
-      \   end"
+      # 不用管这一句。我们很快会在后面解释！"
+    entry: ! "我们使用`def`（\"`def`ine\"的缩写）关键字来定义方法。方法包含三个部分：\n
+      \n1. **首部** ，包含`def`关键字、方法名称和方法的 **参数** （我们在下一节将讲到参数）。
+      \n2. **主体** ，描述方法执行内容的代码块。按照惯例，主体缩进两个空格（与`for`、`if`、`elsif`和`else`等语句一样）。
+      \n3. 方法以`end`关键字结束。\n\n
+      下面是一个简单函数`welcome`的语法示例，功能是向控制台打印\"欢迎来到Ruby的世界！\"：\n\n
+      def welcome\n
+        puts \"欢迎来到Ruby的世界！\"\n
+      end"
     expect_error: false
     feedback_stats:
       instructional_text_issue: 1
       total: 1
     from_console: false
     hint: ''
-    instruction: We've started a method in the editor to the right, but it's incomplete.
-      Replace the `___`s with the correct keywords so the method will work!
+    instruction: 在右边的编辑器中我们开始编写了一个方法，但是它不完整。将`___`替换成正确的关键字使方法得以运行！
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: Method Syntax
+    name: 方法的语法
     solution_code: ''
     solution_entry: ''
     tabs: []
-    test_functions: ! "if exception.kind_of? NameError\n  return \"It looks like your
-      syntax isn't quite right. Make sure to replace the ___s with the right keywords!\"\nend\n\nif
-      exception.kind_of? SyntaxError\n  return \"It looks like your syntax isn't quite
-      right. Make sure to replace the ___s with the right keywords!\"\nend\n\nfor
-      num in (1..10).to_a\n  unless prints.include? num.to_s\n    return \"Don't change
-      the body of the function! It should use 'puts' to print out the numbers 1 to
-      10.\"\n  end\nend\n\nreturn true"
+    test_functions: ! "if exception.kind_of? NameError\n  return \"你的语法貌似不大正确。
+      务必将___替换成正确的关键字！\"\nend\n\nif
+      exception.kind_of? SyntaxError\n  return \"你的语法貌似不大正确。务必将___替换成正确的关键字！\"\nend\n\nfor
+      num in (1..10).to_a\n  unless prints.include? num.to_s\n    return \"不要修改函数的主体！
+      它应当使用'puts'打印出从1到10的数。\"\n  end\nend\n\nreturn true"
     updated_at: 2012-10-16 09:56:32.354000000 Z
     view: console_and_editor
   - _id: !ruby/object:Moped::BSON::ObjectId
