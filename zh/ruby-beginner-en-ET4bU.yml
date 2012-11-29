@@ -4,16 +4,15 @@ classification: :lesson
 created_at: 2012-09-24 23:26:17.000000000 Z
 domain: :freestyle
 down_votes: 94
-entry: In this lesson, we'll cover how to define our own methods in Ruby, as well
-  as how to use blocks to develop powerful sorting algorithms.
+entry: 在这一课中，我们将介绍如何定义Ruby的方法，以及如何使用块来开发出功能强大的排序算法。
 feedback_total: 47
 is_project: false
 language_id: !ruby/object:Moped::BSON::ObjectId
   raw_data: !binary |-
     TyFOXyFuzxlcRMGV
 level: :beginner
-locale: en
-name: Methods, Blocks, & Sorting
+locale: zh
+name: 方法、块和排序
 num_exercises: 19
 num_published_exercises: 19
 num_published_sections: 5
@@ -41,48 +40,41 @@ sections:
 - !ruby/hash:Moped::BSON::Document
   created_at: 2012-09-24 23:26:17.000000000 Z
   default_view: console_and_editor
-  entry: A method is a reusable bit of code written to perform a specific task in
-    a program. We've shown you a bunch of built-in Ruby methods; now you'll write
-    your own!
+  entry: 方法是程序中为了执行特定任务而编写的一段可重复使用的代码。
+    我们已为你展示了很多Ruby的内建方法；现在，你将要编写你自己的方法了！
   exercises:
   - _id: !ruby/object:Moped::BSON::ObjectId
       raw_data: !binary |-
         UGD2a7z3ZwACAB4A
     created_at: 2012-09-25 00:10:19.000000000 Z
-    default_code: ! "def prime(n)\n  puts \"That's not an integer.\" unless n.is_a?
+    default_code: ! "def prime(n)\n  puts \"那不是整数。\" unless n.is_a?
       Integer\n  is_prime = true\n  for i in 2..n-1\n    if n % i == 0\n      is_prime
-      = false\n    end\n  end\n  if is_prime\n    puts \"#{n} is prime!\"\n  else\n
-      \   puts \"#{n} is not prime.\"\n  end\nend\n\nprime(2)\nprime(9)\nprime(11)\nprime(51)\nprime(97)"
-    entry: ! 'A **method** is a reusable section of code written to perform a specific
-      task in a program. You might be wondering why you need to separate your code
-      into methods, rather than just writing everything out in one big chunk. It turns
-      out there are a few good reasons to divide your programs into methods:
+      = false\n    end\n  end\n  if is_prime\n    puts \"#{n}是质数！\"\n  else\n
+      \   puts \"#{n}不是质数。\"\n  end\nend\n\nprime(2)\nprime(9)\nprime(11)\nprime(51)\nprime(97)"
+    entry: ! ' **方法** 是程序中为了执行特定任务而编写的一段可重复使用的代码。
+      你可能会奇怪，为什么要把代码分解为许多方法，而不是把代码全部堆在一起？
+      理由如下：
 
 
-      1. If something goes wrong in your code, it''s much easier to find and fix bugs
-      if you''ve organized your program well. Assigning specific tasks to separate
-      methods helps with this organization.
+      1. 如果程序出了问题，条理清晰的代码更容易发现错误并改正。
+      为特定任务编写单独的方法，使代码变得更有条理。
 
 
-      2. By assigning specific tasks to separate methods (an idea computer scientists
-      call **separation of concerns**), you make your program less redundant and your
-      code more reusable—not only can you repeatedly use the same method in a single
-      program without rewriting it each time, but you can even use that method in
-      *another* program.
+      2. 通过为特定任务编写单独的方法（计算机科学家们称之为 **关注点分离** 的一种思维方式），
+      使得程序代码更简洁，可重用性更高——不仅在单个程序内可以重复调用同一个方法，
+      甚至还可以在 **另一个** 程序中调用它。
 
 
-      3. When we learn more about **objects**, you''ll find out there are a lot of
-      interesting things we can do with methods in Ruby.'
+      3. 当我们学到更多关于 **对象** 的内容时，你会发现使用Ruby的方法可以做许多有趣的事情。'
     expect_error: false
     feedback_stats: {}
     from_console: false
     hint: ''
-    instruction: Check out the method we've written in the editor. Can you guess what
-      it will do? Click Run when you think you know!
+    instruction: 看一看我们在编辑器里编写的方法。你能猜出它的作用吗？在你想好之后请单击Run！
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: Why Methods?
+    name: 为什么要用方法？
     solution_code: ''
     solution_entry: ''
     tabs: []
@@ -94,50 +86,46 @@ sections:
         UGD2bMm9uQACABx/
     created_at: 2012-09-25 00:10:20.000000000 Z
     default_code: ! "___ puts_1_to_10\n  (1..10).each { |i| puts i }\n___\n\nputs_1_to_10
-      # Ignore this for now. We'll explain it soon!"
-    entry: ! "Methods are defined using the keyword `def` (short for \"`def`ine\").
-      Methods have three parts:\n\n1. The **header**, which includes the `def` keyword,
-      the name of the method, and any **arguments** the method takes. (We'll get to
-      arguments in the next section)\n2. The **body**, which is the code block that
-      describes the procedures the method carries out. The body is indented two spaces
-      by convention (as with `for`, `if`, `elsif`, and `else` statements)\n3. The
-      method ends with the `end` keyword.\n\nHere's an example of what the syntax
-      would look like for a simple function, `welcome`, that just prints \"Welcome
-      to Ruby!\" to the console:\n\n    def welcome\n      puts \"Welcome to Ruby!\"\n
-      \   end"
+      # 不用管这一句。我们很快会在后面解释！"
+    entry: ! "我们使用`def`（\"`def`ine\"的缩写）关键字来定义方法。方法包含三个部分：\n
+      \n1. **首部** ，包含`def`关键字、方法名称和方法的 **实际参数** （我们在下一节将讲到实际参数）。
+      \n2. **主体** ，描述方法执行内容的代码块。按照惯例，主体缩进两个空格（与`for`、`if`、`elsif`和`else`等语句一样）。
+      \n3. 方法以`end`关键字结束。\n\n
+      下面是一个简单函数`welcome`的语法示例，功能是向控制台打印\"欢迎来到Ruby的世界！\"：\n\n
+      def welcome\n
+        puts \"欢迎来到Ruby的世界！\"\n
+      end"
     expect_error: false
     feedback_stats:
       instructional_text_issue: 1
       total: 1
     from_console: false
     hint: ''
-    instruction: We've started a method in the editor to the right, but it's incomplete.
-      Replace the `___`s with the correct keywords so the method will work!
+    instruction: 在右边的编辑器中我们开始编写了一个方法，但是它不完整。将`___`替换成正确的关键字使方法得以运行！
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: Method Syntax
+    name: 方法的语法
     solution_code: ''
     solution_entry: ''
     tabs: []
-    test_functions: ! "if exception.kind_of? NameError\n  return \"It looks like your
-      syntax isn't quite right. Make sure to replace the ___s with the right keywords!\"\nend\n\nif
-      exception.kind_of? SyntaxError\n  return \"It looks like your syntax isn't quite
-      right. Make sure to replace the ___s with the right keywords!\"\nend\n\nfor
-      num in (1..10).to_a\n  unless prints.include? num.to_s\n    return \"Don't change
-      the body of the function! It should use 'puts' to print out the numbers 1 to
-      10.\"\n  end\nend\n\nreturn true"
+    test_functions: ! "if exception.kind_of? NameError\n  return \"你的语法貌似不大正确。
+      确保将___替换成正确的关键字！\"\nend\n\nif
+      exception.kind_of? SyntaxError\n  return \"你的语法貌似不大正确。确保将___替换成正确的关键字！\"\nend\n\nfor
+      num in (1..10).to_a\n  unless prints.include? num.to_s\n    return \"不要修改函数的主体！
+      它应当使用'puts'打印出从1到10的数。\"\n  end\nend\n\nreturn true"
     updated_at: 2012-10-16 09:56:32.354000000 Z
     view: console_and_editor
   - _id: !ruby/object:Moped::BSON::ObjectId
       raw_data: !binary |-
         UGD2bqV/6AACACSY
     created_at: 2012-09-25 00:10:22.000000000 Z
-    default_code: ! "# Define your method below!\n\n\n\n\n\n# Define your method above
-      this line.\n\ngreeting # Ignore this for now. We'll explain\n         # it in
-      the next exercise!"
-    entry: ! "Now it's time for you to build your own method. Remember, the syntax
-      looks like this:\n\n    def method_name\n      # Do something!\n    end"
+    default_code: ! "# 在下面定义你的方法！\n\n\n\n\n\n# 在该行以上定义你的方法。\n\n
+      greeting # 不用管这一句。我们将在下一个练习解释！"
+    entry: ! "现在，是时候打造你自己的方法了。记住，语法是这样的：\n\n
+      def method_name\n
+        # Do something!\n
+      end"
     expect_error: false
     feedback_stats:
       other: 1
@@ -145,18 +133,16 @@ sections:
       positive_feedback: 1
     from_console: false
     hint: ''
-    instruction: Create a method, `greeting`, in the editor. It should use `puts`
-      to print a greeting to the console.
+    instruction: 在编辑器中创建一个`greeting`方法。它应当使用`puts`向控制台打印一个问候。
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: Create Your Own
+    name: 创建你自己的
     solution_code: ''
     solution_entry: ''
     tabs: []
-    test_functions: ! "begin\n  greeting\nrescue NameError\n  return \"Did you create
-      a method called greeting?\"\nend\n\nif prints.length == 0\n  return \"It looks
-      like you didn't print anything to the console.\"\nend\n\nreturn true"
+    test_functions: ! "begin\n  greeting\nrescue NameError\n  return \"你创建了一个名叫greeting的方法吗？\"
+      \nend\n\nif prints.length == 0\n  return \"貌似你没有向控制台打印任何东西。\"\nend\n\nreturn true"
     updated_at: 2012-10-06 22:11:01.000000000 Z
     view: console_and_editor
   - _id: !ruby/object:Moped::BSON::ObjectId
@@ -164,36 +150,30 @@ sections:
         UGD3HX4ozgACACNX
     created_at: 2012-09-25 00:13:17.000000000 Z
     default_code: ! "def array_of_10\n  puts (1..10).to_a\nend\n\n"
-    entry: ! 'Defining a method is great, but it''s not much use to you unless you
-      **call** it. For example, if you call a method called `cartoon_fox`, Ruby will
-      start looking for the method with that name and try to execute the code inside
-      it. (If Ruby doesn''t find a method called `cartoon_fox`, it will return a `NameError`.
-      We''ll cover errors in another lesson.)
+    entry: ! '定义一个方法是很好的，但是只有你去 **调用** 它，它才能发挥作用。
+      比如，如果你调用一个名叫`cartoon_fox`的方法，Ruby就会寻找使用这个名字的方法，然后尝试执行它里面的代码。
+      （如果Ruby没找到名叫`cartoon_fox`的方法，它会返回`NameError`。在另一个课程中我们会讲到错误处理。）
 
 
-      You call a method just by typing its name. Remember when you saw us type `puts_1_to_10`
-      or `greeting` after our method definition in the last two exercises? That was
-      us calling our methods!'
+      调用一个方法，你只需要打出它的名字。还记得前两个练习中我们在方法定义后面打出的`puts_1_to_10`或者`greeting`吗？
+      那就是我们在调用这些方法！'
     expect_error: false
     feedback_stats:
       instructional_text_issue: 3
       total: 3
     from_console: false
     hint: ''
-    instruction: We've set up a function, `array_of_10`, in the editor to the right.
-      Call it on line 5!
+    instruction: 我们在右边的编辑器里编写了一个函数`array_of_10`。在第5行（line 5）调用它！
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: Call It!
+    name: 调用它！
     solution_code: ''
     solution_entry: ''
     tabs: []
-    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"It looks like
-      your syntax isn't quite right. All you need to do is type the method's name
-      on line 6; that calls the method.\"\nend\n\nfor num in (1..10).to_a\n  unless
-      prints.include? num.to_s\n    return \"Make sure to call array_of_10 on line
-      5.\"\n  end\nend\n\nreturn true"
+    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"你的语法貌似不大正确。
+      你所需要做的就是在第5行打出方法的名字，这样就调用了方法。\"\nend\n\nfor num in (1..10).to_a\n  unless
+      prints.include? num.to_s\n    return \"确保在第5行调用array_of_10。\"\n  end\nend\n\nreturn true"
     updated_at: 2012-11-26 01:27:57.323000000 Z
     view: console_and_editor
   feedback_total: 6
@@ -201,7 +181,7 @@ sections:
   language_id: !ruby/object:Moped::BSON::ObjectId
     raw_data: !binary |-
       TyFOXyFuzxlcRMGV
-  name: A Method to the Madness
+  name: 方法也疯狂
   num_forum_answers: 6
   num_forum_questions: 3
   published: true
@@ -214,42 +194,41 @@ sections:
 - !ruby/hash:Moped::BSON::Document
   created_at: 2012-09-25 00:13:33.000000000 Z
   default_view: console_and_editor
-  entry: Let's learn how to specify input and output for our methods.
+  entry: 让我们来学习如何为方法指定输入和输出。
   exercises:
   - _id: !ruby/object:Moped::BSON::ObjectId
       raw_data: !binary |-
         UGD3Lj3Y+QACACkz
     created_at: 2012-09-25 00:13:34.000000000 Z
     default_code: ! "def cubertino(n)\n  puts n ** 3\nend\n\n"
-    entry: ! "If a method takes **arguments**, we say it **accepts** or **expects**
-      those arguments. We might define a function, `square`, like so:\n\n    def square(n)\n
-      \     puts n ** 2\n    end\n\nand call it like this:\n\n    square(12)\n    #
-      ==> prints \"144\"\n\nThe **argument** is the piece of code you actually put
-      between the method's parentheses when you **call** it, and the **parameter**
-      is the name you put between the method's parentheses when you **define** it.
-      For instance, when we defined `square` above, we gave it the parameter `n` (for
-      \"number\"), but passed it the argument `12` when we called it.\n\nYou can think
-      of parameters as nicknames the method definition gives to arguments, since it
-      doesn't know ahead of time exactly what argument it's going to get.\n\nParentheses
-      are usually optional in Ruby, but it's a good idea to put your parameters and
-      arguments in parentheses for readability."
+    entry: ! "如果一个方法带有 **实际参数** ，我们说它 **接受** 或者 **要求** 这些实际参数。
+      我们可能会定义一个函数`square`，像这样：\n\n
+      def square(n)\n
+      \     puts n ** 2\n
+      end\n\n
+      然后这样调用它：\n\n
+      square(12)\n    # ==> 打印\"144\"\n\n
+      **实际参数** 是在你 **调用** 方法时放在方法名后面括弧里面的代码段，
+      而 **形式参数** 则是在你 **定义** 方法时放在方法名后面括弧里面的一个名称。
+      举个例子，当定义上面的`square`方法时，我们给了它一个形式参数`n`（表示\"number\"）；
+      在调用它时，我们则将实际参数`12`传给了它。\n\n
+      你可以把形式参数看作是实际参数的昵称，因为它事先并不知道它到底会得到什么样的实际参数。\n\n
+      Ruby的括弧通常是可选的，不过为了提高可读性，最好将形式参数和实际参数用括弧括起来。"
     expect_error: false
     feedback_stats: {}
     from_console: false
     hint: ''
-    instruction: Call the `cubertino` method in the editor, passing it an argument
-      of `8`.
+    instruction: 在编辑器中调用`cubertino`方法，向它传入实际参数`8`。
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: Parameters and Arguments
+    name: 形式参数与实际参数
     solution_code: ''
     solution_entry: ''
     tabs: []
-    test_functions: ! "if code.scan(\"cubertino\").length < 2\n  return \"Make sure
-      to call cubertino and pass it the number 8 as an argument.\"\nend\n\nunless
-      prints.include? \"512\"\n  return \"It looks like you didn't print the value
-      of 8 ** 3 to the console.\"\nend\n\nreturn true"
+    test_functions: ! "if code.scan(\"cubertino\").length < 2\n  return \"确保调用
+      cubertino并传入数字8作为实际参数。\"\nend\n\nunless
+      prints.include? \"512\"\n  return \"貌似你没有向控制台打印8 ** 3的值。\"\nend\n\nreturn true"
     updated_at: 2012-09-27 22:23:39.000000000 Z
     view: console_and_editor
   - _id: !ruby/object:Moped::BSON::ObjectId
