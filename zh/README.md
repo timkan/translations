@@ -3,8 +3,8 @@ Translations
 
 # Worklog
 
-* File:
-* Started:
+* File: ruby-beginner-en-ET4bU.yml
+* Started: 29.11.2012
 * Finished: 
-* Contact
+* Contact: zoogar@163.com
 
