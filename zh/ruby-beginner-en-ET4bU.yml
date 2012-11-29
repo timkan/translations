@@ -4,16 +4,15 @@ classification: :lesson
 created_at: 2012-09-24 23:26:17.000000000 Z
 domain: :freestyle
 down_votes: 94
-entry: In this lesson, we'll cover how to define our own methods in Ruby, as well
-  as how to use blocks to develop powerful sorting algorithms.
+entry: 在这一课中，我们将介绍如何定义Ruby的方法，以及如何使用块来开发出功能强大的排序算法。
 feedback_total: 47
 is_project: false
 language_id: !ruby/object:Moped::BSON::ObjectId
   raw_data: !binary |-
     TyFOXyFuzxlcRMGV
 level: :beginner
-locale: en
-name: Methods, Blocks, & Sorting
+locale: zh
+name: 方法、块和排序
 num_exercises: 19
 num_published_exercises: 19
 num_published_sections: 5
@@ -41,48 +40,41 @@ sections:
 - !ruby/hash:Moped::BSON::Document
   created_at: 2012-09-24 23:26:17.000000000 Z
   default_view: console_and_editor
-  entry: A method is a reusable bit of code written to perform a specific task in
-    a program. We've shown you a bunch of built-in Ruby methods; now you'll write
-    your own!
+  entry: 方法是程序中为了执行特定任务而编写的一段可重复使用的代码。
+    我们已为你展示了很多Ruby的内建方法；现在，你将要编写你自己的了！
   exercises:
   - _id: !ruby/object:Moped::BSON::ObjectId
       raw_data: !binary |-
         UGD2a7z3ZwACAB4A
     created_at: 2012-09-25 00:10:19.000000000 Z
-    default_code: ! "def prime(n)\n  puts \"That's not an integer.\" unless n.is_a?
+    default_code: ! "def prime(n)\n  puts \"那不是整数。\" unless n.is_a?
       Integer\n  is_prime = true\n  for i in 2..n-1\n    if n % i == 0\n      is_prime
-      = false\n    end\n  end\n  if is_prime\n    puts \"#{n} is prime!\"\n  else\n
-      \   puts \"#{n} is not prime.\"\n  end\nend\n\nprime(2)\nprime(9)\nprime(11)\nprime(51)\nprime(97)"
-    entry: ! 'A **method** is a reusable section of code written to perform a specific
-      task in a program. You might be wondering why you need to separate your code
-      into methods, rather than just writing everything out in one big chunk. It turns
-      out there are a few good reasons to divide your programs into methods:
+      = false\n    end\n  end\n  if is_prime\n    puts \"#{n}是质数！\"\n  else\n
+      \   puts \"#{n}不是质数。\"\n  end\nend\n\nprime(2)\nprime(9)\nprime(11)\nprime(51)\nprime(97)"
+    entry: ! ' **方法** 是程序中为了执行特定任务而编写的一段可重复使用的代码。
+      你可能会奇怪，为什么要把代码分解为许多方法，而不是把代码全部堆在一起？
+      理由如下：
 
 
-      1. If something goes wrong in your code, it''s much easier to find and fix bugs
-      if you''ve organized your program well. Assigning specific tasks to separate
-      methods helps with this organization.
+      1. 如果程序出了问题，条理清晰的代码更容易发现错误并改正。
+      为特定任务编写单独的方法，使代码变得更有条理。
 
 
-      2. By assigning specific tasks to separate methods (an idea computer scientists
-      call **separation of concerns**), you make your program less redundant and your
-      code more reusable—not only can you repeatedly use the same method in a single
-      program without rewriting it each time, but you can even use that method in
-      *another* program.
+      2. 通过为特定任务编写单独的方法（计算机科学家们称之为 **关注点分离** 的一种思维方式），
+      使得程序代码更简洁，可重用性更高——不仅在单个程序内可以重复调用同一个方法，
+      甚至还可以在 **另一个** 程序中调用它。
 
 
-      3. When we learn more about **objects**, you''ll find out there are a lot of
-      interesting things we can do with methods in Ruby.'
+      3. 当我们学到更多关于 **对象** 的内容时，你会发现使用Ruby的方法可以做许多有趣的事情。'
     expect_error: false
     feedback_stats: {}
     from_console: false
     hint: ''
-    instruction: Check out the method we've written in the editor. Can you guess what
-      it will do? Click Run when you think you know!
+    instruction: 看一看我们在编辑器里编写的方法。你能猜出它的作用吗？在你想好之后请单击Run！
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: Why Methods?
+    name: 为什么要用方法？
     solution_code: ''
     solution_entry: ''
     tabs: []
