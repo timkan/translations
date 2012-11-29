@@ -41,7 +41,7 @@ sections:
   created_at: 2012-09-24 23:26:17.000000000 Z
   default_view: console_and_editor
   entry: 方法是程序中为了执行特定任务而编写的一段可重复使用的代码。
-    我们已为你展示了很多Ruby的内建方法；现在，你将要编写你自己的了！
+    我们已为你展示了很多Ruby的内建方法；现在，你将要编写你自己的方法了！
   exercises:
   - _id: !ruby/object:Moped::BSON::ObjectId
       raw_data: !binary |-
