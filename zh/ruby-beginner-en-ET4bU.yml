@@ -120,11 +120,12 @@ sections:
       raw_data: !binary |-
         UGD2bqV/6AACACSY
     created_at: 2012-09-25 00:10:22.000000000 Z
-    default_code: ! "# Define your method below!\n\n\n\n\n\n# Define your method above
-      this line.\n\ngreeting # Ignore this for now. We'll explain\n         # it in
-      the next exercise!"
-    entry: ! "Now it's time for you to build your own method. Remember, the syntax
-      looks like this:\n\n    def method_name\n      # Do something!\n    end"
+    default_code: ! "# 在下面定义你的方法！\n\n\n\n\n\n# 在该行以上定义你的方法。\n\n
+      greeting # 不用管这一句。我们将在下一个练习解释！"
+    entry: ! "现在，是时候打造你自己的方法了。记住，语法是这样的：\n\n
+      def method_name\n
+        # Do something!\n
+      end"
     expect_error: false
     feedback_stats:
       other: 1
@@ -132,18 +133,16 @@ sections:
       positive_feedback: 1
     from_console: false
     hint: ''
-    instruction: Create a method, `greeting`, in the editor. It should use `puts`
-      to print a greeting to the console.
+    instruction: 在编辑器中创建一个`greeting`方法。它应当使用`puts`向控制台打印一个问候。
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: Create Your Own
+    name: 创建你自己的
     solution_code: ''
     solution_entry: ''
     tabs: []
-    test_functions: ! "begin\n  greeting\nrescue NameError\n  return \"Did you create
-      a method called greeting?\"\nend\n\nif prints.length == 0\n  return \"It looks
-      like you didn't print anything to the console.\"\nend\n\nreturn true"
+    test_functions: ! "begin\n  greeting\nrescue NameError\n  return \"你创建了一个名叫greeting的方法吗？\"
+      \nend\n\nif prints.length == 0\n  return \"貌似你没有向控制台打印任何东西。\"\nend\n\nreturn true"
     updated_at: 2012-10-06 22:11:01.000000000 Z
     view: console_and_editor
   - _id: !ruby/object:Moped::BSON::ObjectId
