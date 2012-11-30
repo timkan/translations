@@ -4,8 +4,8 @@ classification: :game
 created_at: 2012-09-19 23:48:02.000000000 Z
 domain: :freestyle
 down_votes: 45
-entry: In this project, we'll write a program that reads a block of text and tells
-  us how many times each word appears.
+entry: 在这个项目中，我们将编写一个程序，读取一个文本块，并告诉
+  我们每个单词出现了多少次。
 feedback_total: 27
 is_project: false
 language_id: !ruby/object:Moped::BSON::ObjectId
@@ -43,8 +43,7 @@ sections:
 - !ruby/hash:Moped::BSON::Document
   created_at: 2012-09-19 23:48:02.000000000 Z
   default_view: console_and_editor
-  entry: Now that you know how to use iterators and more complex data structures in
-    Ruby, you can combine them to automate difficult tasks in a snap.
+  entry: 现在，你知道了在Ruby中如何使用迭代程序和更复杂的数据结构，你可以把它们和自动执行复杂任务的单元结合起来。
   exercises:
   - _id: !ruby/object:Moped::BSON::ObjectId
       raw_data: !binary |-
@@ -66,13 +65,9 @@ sections:
       frequencies.reverse!
 
       frequencies.each { |word, frequency| puts word + " " + frequency.to_s }'
-    entry: ! "In this project, we'll build a program that takes a user's input, then
-      builds a hash from that input. Each key in the hash will be a word from the
-      user; each value will be the number of times that word occurs. For example,
-      if our program gets the string \"the rain in Spain falls mainly on the plain,\"
-      it will return\n\n    the 2\n    falls 1\n    on 1\n    mainly 1\n    in 1\n
-      \   rain 1\n    plain 1\n    Spain 1\n\nA visual representation of data like
-      this is called a **histogram**."
+    entry: ! "在这个项目中，我们将建立一段程序，获得用户的输入，然后从该输入生成哈希表。哈希表的每个键将是来自
+      用户的单词;每个值对应该单词出现的次数。例如，如果我们的程序中获取字符串\"the rain in Spain falls mainly on the plain,\"
+      it will return\n\n    the 2\n    falls 1\n    on 1\n    mainly 1\n    in 1\n\   rain 1\n    plain 1\n    Spain 1\n\n 像这样数据的可视化表现被称为**直方图**。"
     expect_error: false
     feedback_stats:
       typo: 2
@@ -95,8 +90,7 @@ sections:
         UFpZ6rVyRwACADoa
     created_at: 2012-09-19 23:48:58.000000000 Z
     default_code: ''
-    entry: ! 'You know by now how we''ve gotta start: we need to get input from the
-      user.'
+    entry: ! '现在你知道了我们应该怎样开始：我们需要得到用户的输入。'
     expect_error: false
     feedback_stats:
       correctness_test_issue: 1
